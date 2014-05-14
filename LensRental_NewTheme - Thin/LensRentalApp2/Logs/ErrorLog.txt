@@ -526,3 +526,17 @@ DEBUG 2014-05-12 23:16:29,072 Utility                WriteDebugData     - SqlDat
 INFO  2014-05-13 15:15:29,125 Utility                WriteInfo          - entries@betterphotography.in Success
 
 ERROR 2014-05-13 15:18:45,928 Utility                HandleException    - entries@betterphotography.in insertion failed : Duplicate Email entries@betterphotography.in
+
+DEBUG 2014-05-14 21:32:53,569 Utility                WriteDebugData     - 49 Access to the path 'C:\Program Files (x86)\IIS Express\FWorkGitHub_UVFokal2LensRental_NewThemeThinLensRentalApp2PublishEvents201405Test_Testy120140515.aspx' is denied.
+
+DEBUG 2014-05-14 21:34:54,801 Utility                WriteDebugData     - 49 Access to the path 'C:\Program Files (x86)\IIS Express\FWorkGitHub_UVFokal2LensRental_NewThemeThinLensRentalApp2PublishEvents201405Test_Testy120140515.aspx' is denied.
+
+DEBUG 2014-05-14 21:36:54,652 Utility                WriteDebugData     - 49 Access to the path 'C:\Program Files (x86)\IIS Express\FWorkGitHub_UVFokal2LensRental_NewThemeThinLensRentalApp2PublishEvents201405Test_Testy120140515.aspx' is denied.
+
+DEBUG 2014-05-14 21:38:26,299 Utility                WriteDebugData     - 49 parsing "[^a-zA-Z0-9\_.]+" - Unrecognized escape sequence \_.
+
+DEBUG 2014-05-14 21:41:28,906 Utility                WriteDebugData     - 49 ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+DEBUG 2014-05-14 21:42:17,795 Utility                WriteDebugData     - 49 ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.
+
+DEBUG 2014-05-14 21:43:31,658 Utility                WriteDebugData     - 49 ExecuteNonQuery requires an open and available Connection. The connection's current state is closed.

@@ -94,7 +94,7 @@ namespace DAL
 
 
 
-        public void GenerateEventPage(int EventID, string pageToRead,string PagePathToWrite)
+        public void GenerateEventPage(int EventID, string pageToRead,string PagePathToWrite, string WebPath)
         {
             try
             {
@@ -131,10 +131,10 @@ namespace DAL
                 string EventComment = ds.Tables[0].Rows[0][20].ToString();
                 string VendorWebPage = ds.Tables[0].Rows[0][21].ToString();
 
+                VendorName = Regex.Replace(VendorName, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
+                EventName = Regex.Replace(EventName, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
                 OPFile = PagePathToWrite + (VendorName + "_" + EventName + EventStartDate.ToString("yyyyMMdd") + ".aspx").Replace(" ", "");
-                OPFile = Regex.Replace(OPFile, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
-
-
+                
                 StringBuilder readContents = new StringBuilder();
                 using (System.IO.StreamReader streamReader = new System.IO.StreamReader(pageToRead, Encoding.UTF8))
                 {
@@ -154,7 +154,7 @@ namespace DAL
                 readContents.Replace("{{EventTheme}}", ServiceTheme);
                 readContents.Replace("{{EventDetailedDescription}}", EventLargeDescription);
                 readContents.Replace("{{EventPagePath}}", EventPagePath);
-                if (String.IsNullOrEmpty(EventRegistrationEndDate))
+                if (String.IsNullOrEmpty(EventRegistrationEndDate) || EventRegistrationEndDate.Contains("1900"))
                     readContents.Replace("{{EventRegistrationLastDate}}", "");
                 else
                     readContents.Replace("{{EventRegistrationLastDate}}", "Register By: " + EventRegistrationEndDate);
@@ -186,7 +186,11 @@ namespace DAL
                 System.IO.StreamWriter writetext = new System.IO.StreamWriter(OPFile);
                 writetext.WriteLine(readContents.ToString());
                 writetext.Close();
-                string qry = "UPDATE TblEvent SET EventLocalPagePath=" + OPFile + " WHERE EventID=" + EventID.ToString();
+                OPFile = WebPath + (VendorName + "_" + EventName + EventStartDate.ToString("yyyyMMdd") + ".aspx").Replace(" ", "");
+                string qry = "UPDATE TblEvent SET EventLocalPagePath='" + OPFile + "' WHERE EventID=" + EventID.ToString();
+
+                con = new SqlConnection(_ConnectionString);
+                con.Open();
                 cmd = new SqlCommand(qry, con);
                 cmd.ExecuteNonQuery();
 
