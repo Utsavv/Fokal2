@@ -1,6 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="M_Vendor.master.cs" Inherits="Vendor" MasterPageFile="~/m_FokalPage.master" %>
 <asp:Content ID="javaScript" ContentPlaceHolderID="headscript" runat="server">
-    
+    <!--
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -59,7 +59,7 @@
              })();
 
 </script>
-
+    -->
 </asp:Content>
 <asp:Content ID="TopBannerImg" ContentPlaceHolderID="TopBannerImg" runat="server">
     <div class="article title-overview">

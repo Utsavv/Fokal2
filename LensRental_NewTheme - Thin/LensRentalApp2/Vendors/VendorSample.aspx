@@ -1,6 +1,6 @@
 ﻿<%@ Page Title="Vendor | Fokal.in" Language="C#" MasterPageFile="~/m_Vendor.master" AutoEventWireup="true" CodeFile="VendorSample.aspx.cs" Inherits="Home" %>
 
-<asp:Content ID="EventPicture"  ContentPlaceHolderID="eventPic" runat="server">
+<asp:Content ID="EventPicture"  ContentPlaceHolderID="vendorPic" runat="server">
     <img height="200" width="355" alt="Event Poster" title="Event Poster" src=".//images//banner.png" itemprop="image">
 </asp:Content>
 
