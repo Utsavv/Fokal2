@@ -1,0 +1,482 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="M_Fokal.master.cs" Inherits="Fokal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head" runat="server">
+    <title>
+        Fokal.in | Photography : Learn, Earn & Save!
+    </title>
+    
+    <meta name="title" content="Photography : Learn, Earn & Save!" />
+    <meta name="description" content= "Fokal.in: India's First Photography Portal! Discover photography courses, workshops, tours and event around you. Photography Tips for Beginners, Advanced and Professional Photgraphers " />
+    <meta name="keywords" content="photography, tours, phototours, courses, wedding photography, learn photography, photography studio, photography tips, best photography, photographers, blog, phototours, photowalks, adobe, photoshop, professional, beginner, advanced, candid photography, wildlife photography, fashion photography, product photography, basic photography, digital photography, institute, classes, walks, workshops, exhibitions, services, mentoring, lens,lenses,dslr,camera,india, delhi, bangaluru, bangalore, mumbai, pune, kolkata, chennai, lucknow" />  <meta name="robots" content="index,follow" />
+    
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="css/fokal.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen" />
+    <link rel="css/jrating.jquery.css" type="text/css" href="css/jrating.jquery.css" />
+    
+    <script type='text/javascript' src='/js/jquery-1.8.3.min.js'></script>
+    <script type='text/javascript' src='/js/knockout-3.0.0.js'></script>
+    <script type='text/javascript' src='/js/jquery-ui.js'></script>
+    <script type="text/javascript" src="/js/jquery.fancybox.pack.js"></script>
+    <script type='text/javascript' src='/js/login.js'></script>
+    
+<%--<script type="text/javascript" src="/js/jquery.js"></script>--%>
+ <script type="text/javascript" src="/js/jRating.jquery.js"></script> 
+     <script type="text/javascript" src="/js/jRating.jquery.min.js"></script> 
+    <%-- GOGLE ANALYTICS --%>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-48130019-1', 'fokal.in');
+        ga('send', 'pageview');
+
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-48130019-1', 'fokal.in');
+        ga('send', 'pageview');
+
+</script>
+<%-- FACEBOOK LIKE BOX --%><%--<div id="fb-root"></div>--%>
+<script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+    
+
+    <asp:ContentPlaceHolder ID="headcontent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body id="fokalStyle-v2">
+    <div id="wrapper">
+        <div id="root">
+           
+
+<%-- NAV BAR --%>
+<form id="LoginForm" runat="server">
+                <div id="nb20" class="navbarSprite">
+                    <div id="topNavBar">
+                          <div id="contactLeft">
+                            Welcome <span id="UserNameSpan" runat="server"></span>
+                            <strong>| </strong>
+                            <a href="UserProfile.aspx">My Account</a>
+                            <strong>| </strong>
+                             
+                            <a id="btnLogin" rel="nofollow" href="#logindivision" class="fancybox" runat="server">Login</a>
+                            <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" CausesValidation="false" CssClass=""></asp:LinkButton>
+
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="supertab">
+                      
+                        <span id="home_img_holder">
+                            <asp:HyperLink ID="home" runat="server" NavigateUrl="~/Home.aspx"><img alt="Home | Fokal.in" src="http://www.fokal.in/images/logo-v2.jpg" /></asp:HyperLink>
+                        </span>
+                    </div>
+                    <div id="navbar">
+
+                        <div id="megaMenu">
+                            <ul id="consumer_main_nav" class="main_nav">
+                                
+                                <li class="navTitleMenu">
+                                    <h1 class="navCategory">
+                                        Photography »
+                                    </h1>
+                                </li>
+                                <li>
+                                    <h1 class="navCategory">
+                                        <asp:HyperLink runat="server" ID="lnkListTours" NavigateUrl="~/PublishEvents/ListTours.aspx" ToolTip="Photography Tours">Tours</asp:HyperLink>
+                                    </h1>
+                                </li>
+                                <li class="spacer"></li>
+                                <li class="navTitleMenu">
+                                    <h1 class="navCategory">
+                                        <asp:HyperLink runat="server" ID="lnkListWalks" NavigateUrl="~/PublishEvents/ListWalks.aspx" ToolTip="Photo-Walks">Walks</asp:HyperLink>
+                                    </h1>
+                                </li>
+                                <li class="spacer"></li>
+                                <li class="navTitleMenu">
+                                    <h1 class="navCategory">
+                                        <asp:HyperLink runat="server" ID="lnkListCourses" NavigateUrl="~/PublishEvents/ListCourses.aspx" ToolTip="Photography Courses/Workshops">Courses</asp:HyperLink>
+                                    </h1>
+                                </li>
+                                <li class="spacer"></li>
+                                <li class="navTitleMenu">
+                                    <h1 class="navCategory">
+                                        <asp:HyperLink runat="server" ID="lnkListEvents" NavigateUrl="~/PublishEvents/ListEvents.aspx" ToolTip="Photography Contests, Exhibitions, Festivals">Events</asp:HyperLink>
+                                    </h1>
+                                </li>
+                                <li class="spacer"></li>
+                                <li class="navTitleMenu">
+                                    <h1 class="navCategory">
+                                        <asp:HyperLink runat="server" ID="lnkListBlog" NavigateUrl="~/blog/blog.aspx">Blog</asp:HyperLink>
+                                    </h1>
+                                </li>
+                                <li class="spacer"></li>
+                                <li class="navTitleMenu">
+                                    <h1 class="navCategory">
+                                        <asp:HyperLink runat="server" ID="lnkRental" NavigateUrl="http://www.fokal.in/rental/home.aspx" Target="_blank">Lens Rental Delhi</asp:HyperLink>
+                                    </h1>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <asp:ContentPlaceHolder ID="navBar" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+    <%-- LOGIN CODE --%>
+
+               
+<%-- PAGE CONTENT --%>
+                <div id="pagecontent">
+                    <div id="content-2-wide">
+                        <div id="top-rhs">
+                            <div id="top">
+                                <asp:ContentPlaceHolder ID="TopBanner" runat="server"></asp:ContentPlaceHolder>
+                            </div>
+                        </div>
+                        <div id="main" class="homepage_centre">
+                                <div id="homepage_center_top">
+                                
+                        <asp:ContentPlaceHolder ID="pageCentre" runat="server">
+                        </asp:ContentPlaceHolder>
+                             </div>
+                           
+<%-- SIDEBAR --%>
+                        <div id="sidebar" class="homepage_sidebar">
+                            <div id="homepage_sidebar_top">
+                                <asp:ContentPlaceHolder ID="sidebarclass" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                <%--  <script></script>--%>
+                                <div class="aux-content-widget-2" style="background-color:#ededed">
+                                    <style>
+                                         div#otw-row { 
+                                          padding-top:7px;
+                                          padding-bottom:5px
+                                          }
+                                          div.otw-row {
+                                          padding-top:7px;
+                                          padding-bottom:5px
+                                          }
+                                         div#otw-showtimes { float:right; }
+                                         div#otw-title {
+                                           width:220px;
+                                         }
+                                         div#otw-showtimes-link  {
+                                           font-family:verdana, arial, helvetica, sans-serif;
+                                           font-size:11px;
+                                         }
+
+                                    </style>
+                                    <div id="opening-this-week" >
+                                        <h3>Photography Services Provider</h3>
+                                        <div id="opening-this-week-list-loading">  
+                                            <div id="opening-this-week-list">
+                                                <b>Increase your business </b>by reaching more photographers today!
+                                                <ul>
+                                                    <li>
+                                                        <asp:HyperLink runat="server" ID="lnkVendorRegistrationForm" NavigateUrl="~/VendorRegistration.aspx">Create your Business Page</asp:HyperLink>
+                                                    </li>
+                                                    <li>
+                                                        <asp:HyperLink runat="server" ID="lnkEventRegistrationForm" NavigateUrl="~/EventRegistration.aspx">Create your Event Page</asp:HyperLink>
+                                                    </li>
+                                                </ul>
+                                                <p>It's FREE!!</p>   
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="aux-content-widget-2" >
+                                    <h3>Subscribe to our Foto Digest!</h3>
+                                    <!-- Begin MailChimp Signup Form -->
+                                    <%--<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">--%>
+                            
+                            <div id="mc_embed_signup">
+                                 <%--<form action="http://www.fokal.in/MailSubscription.aspx" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+
+                            
+	                            <label for="mce-EMAIL" >Stay updated on latest events </label>
+                       
+	                            <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required="required"/>
+                                <select name="CustomerType" class="customertype">
+                                  <option value="" default selected style="color:#808080;">I am a...</option>
+                                  <option value="Beginner">Beginner Photographer</option>
+                                  <option value="Advanced">Advanced Photographer</option>
+                                  <option value="Proffesional">Proffesional Photographer</option>
+                                  <option value="Photogrpahy Service Provider">Photogrpahy Service Provider</option>                                  
+                                </select>
+                                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                <div style="position: absolute; left: -5000px;"><input type="text" name="b_dae49cb71cd06bb06b98b8331_4e7e664609" value=""></div>
+                                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                                </form>--%>
+                                <%--<form id="Form1" runat="server">--%>
+                                <label for="mce-EMAIL" >Stay updated on latest events </label>
+                                    <asp:TextBox ID="txtEmailAdd" runat="server" placeholder="email address" CssClass="email"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="txtEmailValidator" Display="Dynamic" ControlToValidate="txtEmail" runat="server" ErrorMessage="*" ValidationGroup="SubscribeGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="correctEmailValidator1" Display="Dynamic" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter valid email" ValidationGroup="InquiryGroup" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    
+                                    <asp:DropDownList Id="txtSignupType" runat="server" DataTextField="signupType" DataValueField="id" class="customertype">
+                                        <asp:ListItem Text="" Value="0">I am a...</asp:ListItem>
+                                        <asp:ListItem Text="Beginner Photographer" Value="1"></asp:ListItem>
+                                        <asp:ListItem Text="Amateur Photographer" Value="2"></asp:ListItem>
+                                        <asp:ListItem Text="Professional Photographer" Value="3"></asp:ListItem>
+                                        <asp:ListItem Text="Photography Course Provider" Value="4"></asp:ListItem>
+                                    </asp:DropDownList>
+                                <%--<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>--%>
+                                <div class="clear">
+                                    <asp:Button ID="btnSubscribe" runat="server" OnClick="btnSubscribe_Click" Text="Subscribe" ValidationGroup="SubscribeGroup" class="button"/>
+                                </div>
+
+                            <%--</form>--%>
+                            </div>
+                                </div>
+                            </div>
+                            <div id="homepage_sidebar_bottom">
+                                <div class="aux-content-widget-2" style="padding-left:0px">
+                                    <div id="fb-root" class="fb_reset"></div>
+                                    <div class="fb-like-box" data-href="https://www.facebook.com/fokaldotin" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+                                </div>
+                                <div class="aux-content-widget-2">
+                                    <h3> From our Blog</h3>
+                                    <table border="0" width="100%" cellspacing="0" cellpadding="5px">
+                                        <tbody>
+                                            <tr>
+                                                <td style=" border-bottom:1px #ededed solid">
+                                                    <asp:HyperLink runat="server" ID="lnkBlogPost1" NavigateUrl="~/blog/Getting off auto mode - 5 Things beginners need to know.aspx">Getting off auto mode? - 5 Things beginners need to know</asp:HyperLink>
+                                                </td>
+                                                <td>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style=" border-bottom:1px #ededed solid">
+                                                    <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="~/blog/PhotoWalks.aspx">Photo Walks – What do you stand to gain from one?</asp:HyperLink>
+                                                </td>
+                                                <td>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    
+                                                </td>
+                                                <td>
+                                                    
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    
+                                                </td>
+                                                <td>
+                                                    
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                                <div class="aux-content-widget-2" style="visibility:hidden" >
+                                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                    <!-- Fokal Side bar top -->
+                                    <ins class="adsbygoogle"
+                                         style="display:inline-block;width:250px;height:250px"
+                                         data-ad-client="ca-pub-8648329451771082"
+                                         data-ad-slot="3957106055"></ins>
+                                    <script>
+                                        (adsbygoogle = window.adsbygoogle || []).push({});
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br style="clear:both" />
+        </div>
+        <div style="display: none" id="logindivision">
+                    
+                    <section class="grid customers--login">
+                    <div class="clearfix">
+                        <h3>LOGIN</h3>
+                        <div style=""><asp:Label ID="lblMessage" runat="server" Text="lblMessage" Width="" Font-Bold="True" Font-Size="Large" ForeColor="#C00000" Visible="false"></asp:Label></div>
+                        <section class="grid grid-row returning">
+                            <div class="full">
+                                <h2>Returning Customers</h2>
+                            </div>
+                            <div class="grid grid-row">
+                                <h3>Welcome Back!</h3>
+                            </div>
+                            <div class="grid grid-row form-container">
+                                <ul class="form_errors">
+                                </ul>
+                                <%--<asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender1" TargetControlID="txtUserName" WatermarkCssClass="txtBox" WatermarkText="Email/UserName.." runat="server"></asp:TextBoxWatermarkExtender>--%>
+                                <asp:TextBox ID="txtUserName" CssClass="grid grid-row" ToolTip="UserName.." placeholder="Email/UserName.." runat="server" ValidationGroup="LoginGroup"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="UserNameValidator" ControlToValidate="txtUserName" runat="server" ErrorMessage="*" ValidationGroup="LoginGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+
+                                <%--<asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender2" TargetControlID="txtLoginPassword" WatermarkCssClass="txtBox" WatermarkText="Password.." runat="server"></asp:TextBoxWatermarkExtender>--%>
+                                <asp:TextBox ID="txtLoginPassword" CssClass="grid grid-row" ToolTip="Password.." placeholder="Password.." runat="server" ValidationGroup="LoginGroup" TextMode="Password"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="LoginPasswordValidator" ControlToValidate="txtLoginPassword" runat="server" ErrorMessage="*" ValidationGroup="LoginGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+
+                                <footer class="grid grid-row submit">
+                                    <p class="grid grid-row forget-password" ><asp:LinkButton ID="lnkForgetPassword" runat="server" CssClass="red-active" OnClick ="lnkForgetPassword_Click" CausesValidation="false">Forgot your password?</asp:LinkButton></p>
+                                    <asp:Button ID="tblLogin" runat="server" Text="Login" CausesValidation="true" ValidationGroup="LoginGroup" CssClass="test blueBtn" OnClick="tblLogin_Click" />
+                                </footer>
+                                
+                                
+
+
+
+                                <%--<asp:LinkButton ID="lnkFacebook" runat="server" OnClick="lnkFacebook_Click" Text="Login with Facebook"></asp:LinkButton>--%>
+                            </div>
+                        </section>
+                        <section class="grid create">
+                            <div class="full">
+                                <h2>Create an Account</h2>
+                            </div>
+                            <div class="grid grid-row">
+                                <h3 style="border-left:none;">Sign up Today</h3>
+                            </div>
+                            <div class="grid grid-row form-container">
+                                <div class="clearfix">
+                                    <%--<asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender3" TargetControlID="txtFirstName" WatermarkCssClass="grid grid-row small" WatermarkText="First Name.." runat="server"></asp:TextBoxWatermarkExtender>--%>
+                                <asp:TextBox ID="txtFirstName" CssClass="grid grid-row small" ToolTip="First Name.." placeholder="First Name.." runat="server" ValidationGroup="RegisterGroup"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="firstNameValidator" ControlToValidate="txtFirstName" runat="server" ErrorMessage="*" ValidationGroup="RegisterGroup" ForeColor="Red" CssClass="float-left marginR-5px "></asp:RequiredFieldValidator>
+                                
+                                
+                                
+                                <%--<asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender4" TargetControlID="txtLastName" WatermarkCssClass="grid small" WatermarkText="Last Name.." runat="server"></asp:TextBoxWatermarkExtender>--%>
+                                <asp:TextBox ID="txtLastName" CssClass="grid small" ToolTip="Last Name.." placeholder="Last Name.." runat="server" ValidationGroup="RegisterGroup"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="lastNameValidator" ControlToValidate="txtLastName" runat="server" ErrorMessage="*" ValidationGroup="RegisterGroup" ForeColor="Red" CssClass="float-left"></asp:RequiredFieldValidator>
+                                </div>
+
+                                <div class="clearfix">
+                                <asp:RegularExpressionValidator ID="correctEmailValidator" Display="Dynamic" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter valid email" ValidationGroup="RegisterGroup" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" CssClass="error-text"></asp:RegularExpressionValidator>
+                                    <%--<asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender5" TargetControlID="txtEmail" WatermarkCssClass="grid grid-row" WatermarkText="Email.." runat="server"></asp:TextBoxWatermarkExtender>--%>
+                                <asp:TextBox ID="txtEmail" CssClass="grid grid-row" ToolTip="Email.." placeholder="Email.." runat="server" ValidationGroup="RegisterGroup"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="emailValidator" Display="Dynamic" ControlToValidate="txtEmail" runat="server" ErrorMessage="*" ValidationGroup="RegisterGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+                                
+                                </div>
+
+                                <div class="float-left width-50-prcent">
+                                    <%--<asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender6" TargetControlID="txtPassword" WatermarkCssClass="grid grid-row small" WatermarkText="Password.." runat="server"></asp:TextBoxWatermarkExtender>--%>
+                                <asp:TextBox ID="txtPassword" CssClass="" ToolTip="Password.." placeholder="Password.." runat="server" TextMode="Password" ValidationGroup="RegisterGroup"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="passwordValidator" ControlToValidate="txtPassword" runat="server" ErrorMessage="*" ValidationGroup="RegisterGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="valPassword" Display="Dynamic" runat="server" ControlToValidate="txtPassword" ErrorMessage="Minimum password length is 6 with 1 Numeric and Special Character manadatory" ValidationExpression="^((?=.{8,}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*|(?=.{8,}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!\u0022#$%&'()*+,./:;<=>?@[\]\^_`{|}~-]).*)" ForeColor="Red" ValidationGroup="RegisterGroup" CssClass="error-text"/>
+                                </div>
+
+                                <div class="float-left width-50-prcent">
+                                    <%--<asp:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender7" TargetControlID="txtConfirmPassword" WatermarkCssClass="grid small" WatermarkText="Confirm Password.." runat="server"></asp:TextBoxWatermarkExtender>--%>
+                                <asp:TextBox ID="txtConfirmPassword" CssClass="" ToolTip="Confirm Password.." placeholder="Confirm Password.." runat="server" TextMode="Password" ValidationGroup="RegisterGroup"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="confirmPasswordValidator" ControlToValidate="txtConfirmPassword" runat="server" ErrorMessage="*" ForeColor="Red" CssClass="error-text"></asp:RequiredFieldValidator>
+                                <asp:CompareValidator ID="confirmpasswordValdiator2" runat="server" ControlToCompare="txtConfirmPassword" ErrorMessage="Password do not match" ControlToValidate="txtPassword" ForeColor="Red" ValueToCompare="txtPassword" ValidationGroup="RegisterGroup" CssClass="error-text"></asp:CompareValidator>
+                                </div>
+
+                                <footer class="grid grid-row submit">
+                                    <asp:Button ID="btnRegister" runat="server" Text="Register" CausesValidation="true" ValidationGroup="RegisterGroup" CssClass="test blueBtn" OnClick="btnRegister_Click"/>
+                                </footer>
+
+                                
+                            </div>
+                        </section>
+                        </div>
+                        <div class="btnLoginToGoogle clearfix">
+                            
+                                <asp:ImageButton ID="btnFBLogin" runat="server" Text="FB Login" ImageUrl="images/FB1.png" BorderStyle="None" CausesValidation="False" OnClick="btnFBLogin_Click" CssClass="facebook-login-btn"/>
+                            
+                            
+                                <asp:ImageButton ID="btnLoginToGoogle" runat="server" ImageUrl="images/Google1.png" 
+                                    ToolTip="Google_Login"
+                                    CommandArgument="https://www.google.com/accounts/o8/id" BorderStyle="None" OnCommand="btnLoginToGoogle_Command" CausesValidation="False" CssClass="facebook-login-btn"/>
+                            
+                        </div>
+                    </section>
+                </div>
+        </form>
+
+                <%-- FOOTER--%>
+                <div id="footer" class="ft">
+                    <hr  />
+                    <p class="footer" >
+                        <asp:HyperLink runat="server" ID="lnkHome" NavigateUrl="~/home.aspx">Home</asp:Hyperlink>
+                         |
+                       <asp:HyperLink runat="server" ID="lnkAbout" NavigateUrl="~/About.aspx">About Us</asp:HyperLink>
+                         | 
+                        <asp:HyperLink runat="server" ID="lnkPrivacyPolicy" NavigateUrl="~/PrivacyPolicy.aspx">Privacy Policy</asp:HyperLink>
+                         | 
+                        <asp:HyperLink runat="server" ID="lnkContactUs" NavigateUrl="~/Contact.aspx">Contact Us</asp:HyperLink>
+                         | 
+                        <asp:HyperLink runat="server" ID="lnkHelp" NavigateUrl="~/Help.aspx">Help</asp:HyperLink>
+                         
+                       <%-- <a href="Sitemap.aspx">Site Index</a>
+                         |--%>
+
+
+                        <br>
+                        <asp:HyperLink runat="server" ID="lnkWalks" NavigateUrl="~/PublishEvents/ListWalks.aspx">Walks</asp:HyperLink>
+                         | 
+                        <asp:HyperLink runat="server" ID="lnkTours" NavigateUrl="~/PublishEvents/ListTours.aspx">Tours</asp:HyperLink>
+                         |
+                        <asp:HyperLink runat="server" ID="lnkEvents" NavigateUrl="~/PublishEvents/ListEvents.aspx">Events</asp:HyperLink>
+                         |
+                        <asp:HyperLink runat="server" ID="lnkCourses" NavigateUrl="~/PublishEvents/ListCourses.aspx">Courses</asp:HyperLink>
+                         |
+                        <asp:HyperLink runat="server" ID="lnkSearchEvents" NavigateUrl="~/PublishEvents/SearchEvents.aspx">Search Events</asp:HyperLink>
+                         |
+                        <asp:HyperLink runat="server" ID="lnkVendorRegistration" NavigateUrl="~/VendorRegistration.aspx">Vendor Registration</asp:HyperLink> 
+                        |
+                        <asp:HyperLink runat="server" ID="lnkEventRegistration" NavigateUrl="~/EventRegistration.aspx">Event Registration</asp:HyperLink>
+                        <br>
+                        <a href="http://www.facebook.com/fokaldotin" target="_blank">Facebook</a>
+                        | 
+                        <a href="http://www.google.com/+fokalin" target="_blank">Google Plus</a>
+                        <br>
+                        © 2014 Fokal.in
+                        <br />
+                        <div style="margin-left:37%">
+
+                        <div class="g-follow" style="vertical-align:top"  data-annotation="bubble" data-height="20" data-href="https://plus.google.com/109027541041467780360" data-rel="publisher"></div>
+                        <div class="fb-like" data-href="https://www.facebook.com/fokaldotin" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false"></div>
+                            <a href="https://twitter.com/fokalDotIn" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @fokalDotIn</a>
+                            </div>
+                    <%-- GOGLE PLUS --%>
+    <script type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/platform.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>    
+                    <%-- TWITTER --%>
+<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+<script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>          
+                            
+                    </p>
+                </div>
+                
+       
+        </div>
+    </div>
+</body>

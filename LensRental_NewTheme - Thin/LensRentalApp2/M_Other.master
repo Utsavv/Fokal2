@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="M_Other.master.cs" Inherits="Other" MasterPageFile="~/m_Fokal.master" %>
+
+    <asp:Content ID="head" ContentPlaceHolderID="headcontent" runat="server">
+        <asp:ContentPlaceHolder ID="headscript" runat="server"></asp:ContentPlaceHolder>
+    </asp:Content>
+<asp:Content ID="TopBanner" ContentPlaceHolderID="TopBanner" runat="Server">
+    <asp:ContentPlaceholder ID="TopBannerImg" runat="server"></asp:ContentPlaceholder>
+                                      
+</asp:Content>
+<%--<asp:Content ID="homepage_centre_top" ContentPlaceHolderID="pageCentreTop" runat="server">--%>
+    <asp:Content ID="PageCentre" ContentPlaceHolderID="pageCentre" runat="Server">
+    <%--<div id="main" class="homepage_centre">    --%>
+
+
+
+                                <%--<div id="otherpage_center_top">--%>
+
+
+                                <div class="article" id="registration_details">
+                                    <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+
+                                    
+                                  
+                                    <div class="">
+                                        
+                                       
+                                            <asp:ContentPlaceHolder ID="mainContent" runat="server"></asp:ContentPlaceHolder>
+                                        
+                                        <div class="see-more clear">
+                                            <asp:ContentPlaceHolder ID="shareBar" runat="server"></asp:ContentPlaceHolder>
+                                        </div>
+                                    </div>
+
+                                </div>
+        <div class="article">
+                            <div style="float:left; position:relative; width:25%;">
+                                <div class="fb-share-button" data-type="button_count"></div>
+                            </div>
+                            <div style="float:left; position:relative ; width:25%;">
+                                <div class="g-plusone" data-size="medium"></div>
+                            </div>
+                            <div style="float:left; position:relative ; width:25%;">
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
+                            </div>
+                            </div>
+                       <%-- </div>--%>
+   
+
+<%--</div>--%>
+
+<%--                                <div id="homepage_centre_bottom">
+                                <div class="article">
+
+                                    
+                                        <asp:ContentPlaceHolder ID="upcomingEvents" runat="server">
+                                        </asp:ContentPlaceHolder>
+
+
+                                </div>
+
+                                <div class="article">
+
+                                    <asp:ContentPlaceHolder ID="featuredEvents" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+
+                               
+                                <div class="article">
+
+
+                                    <asp:ContentPlaceHolder ID="featuredPhotographers" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </div>--%>
+                        </div>
+</asp:Content>
+ <%-- CENTRE BOTTOM THIRD UPCOMING/OTHER EVENTS--%> 
+
+
+
+
+
+<%-- SIDEBAR --%>
+ <%--<asp:Content ID="SideBarClass" ContentPlaceHolderID="sidebarclasstop" runat="server">--%>
+<asp:Content ID="SideBarClass" ContentPlaceHolderID="sidebarclass" runat="server">
+                       
+                           <%-- <div id="otherpage_sidebar_top">--%>
+   </asp:Content>                           

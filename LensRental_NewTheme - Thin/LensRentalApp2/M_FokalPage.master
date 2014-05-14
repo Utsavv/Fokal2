@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="M_FokalPage.master.cs" Inherits="FokalPage"  MasterPageFile="~/m_fokal.master"%>
+<asp:Content ID="head" ContentPlaceHolderID="headcontent" runat="server">
+    <asp:ContentPlaceHolder ID="headscript" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+
+<asp:Content ID="TopBanner" ContentPlaceHolderID="TopBanner" runat="Server">
+    <asp:ContentPlaceHolder ID="TopBannerImg" runat="server"></asp:ContentPlaceHolder>
+</asp:Content>
+<asp:Content ID="PageCentre" ContentPlaceHolderID="pageCentre" runat="Server">
+    <%--<div id="main" class="homepage_centre">--%>    
+                            <asp:ContentPlaceHolder ID="pageCentreTop" runat="server">
+
+                            </asp:ContentPlaceHolder>
+<%-- CENTRE TOP PICTURE PLUS BRIEF--%>
+
+
+                                    
+                                
+
+<%-- CENTRE SECOND PICTURE DETAILS--%>
+                                    <asp:ContentPlaceHolder ID="centreTopArticle" runat="server">
+                                    </asp:ContentPlaceHolder>
+
+<%--                                <asp:ContentPlaceHolder ID="pageCentreTop" runat="server">
+                                </asp:ContentPlaceHolder>--%>
+                            </div>
+
+                                <div id="homepage_centre_bottom">
+                                <div class="article">
+
+ <%-- CENTRE BOTTOM THIRD UPCOMING/OTHER EVENTS--%>                                       
+                                        <asp:ContentPlaceHolder ID="upcomingEvents" runat="server">
+                                        </asp:ContentPlaceHolder>
+
+
+                                </div>
+<%-- FEATURED Events --%>
+                                <div class="article">
+
+                                    <asp:ContentPlaceHolder ID="featuredEvents" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+
+<%-- FEATURED PHOTOGRAPHERS --%>                                
+                                <div class="article">
+
+
+                                    <asp:ContentPlaceHolder ID="featuredPhotographers" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </div>
+    <%-- SHARE BAR --%>
+    <div class="article">
+                            <div style="float:left; position:relative; width:25%;">
+                                <div class="fb-share-button" data-type="button_count"></div>
+                            </div>
+                            <div style="float:left; position:relative ; width:25%;">
+                                <div class="g-plusone" data-size="medium"></div>
+                            </div>
+                            <div style="float:left; position:relative ; width:25%;">
+                                <a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
+                            </div>
+                            </div>
+                       <%-- </div>--%>
+    </asp:Content>
+
+<asp:Content ID="SideBarClass" ContentPlaceHolderID="sidebarclass" runat="server">
+    
+    <asp:ContentPlaceHolder ID="sidebarclasstop" runat="server">
+
+    </asp:ContentPlaceHolder>
+</asp:Content>

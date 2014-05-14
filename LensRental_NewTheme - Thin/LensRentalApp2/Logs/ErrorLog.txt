@@ -1,0 +1,528 @@
+
+ERROR 2014-03-09 22:17:15,826 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 20:00:20,024 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 20:24:01,156 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 20:24:39,267 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 20:25:43,167 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 20:26:09,156 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 20:28:59,816 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 20:29:16,498 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 20:29:56,827 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 20:30:13,185 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 23:13:55,163 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 23:14:10,963 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-10 23:45:46,446 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 20:57:49,951 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 20:58:03,663 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 20:58:18,812 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 21:09:40,363 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 21:10:08,022 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 21:10:21,463 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:45:18,997 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:48:55,462 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:49:01,086 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:49:07,335 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:49:23,120 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:49:53,554 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:50:00,665 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:50:20,755 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:54:21,161 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:54:26,001 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:54:26,401 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:55:23,059 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:55:53,635 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:58:25,283 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:58:33,992 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 22:58:34,452 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 23:00:41,199 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 23:00:48,608 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 23:00:49,026 Utility                HandleException    - sfdsfdsfd
+
+ERROR 2014-03-11 23:25:41,016 Utility                HandleException    - Page Loading on 11-03-2014 23:25:40
+
+ERROR 2014-03-11 23:25:46,002 Utility                HandleException    - Page Loading on 11-03-2014 23:25:46
+
+ERROR 2014-03-11 23:25:46,445 Utility                HandleException    - Page Loading on 11-03-2014 23:25:46
+
+ERROR 2014-03-11 23:27:11,183 Utility                HandleException    - Page Loading on 11-03-2014 23:27:11
+
+ERROR 2014-03-11 23:28:24,194 Utility                HandleException    - Page Loading on 11-03-2014 23:28:24
+
+ERROR 2014-03-11 23:28:29,190 Utility                HandleException    - Page Loading on 11-03-2014 23:28:29
+
+ERROR 2014-03-11 23:28:37,652 Utility                HandleException    - Page Loading on 11-03-2014 23:28:37
+
+ERROR 2014-03-11 23:28:38,112 Utility                HandleException    - Page Loading on 11-03-2014 23:28:38
+
+ERROR 2014-03-11 23:43:46,156 Utility                HandleException    - Page Loading on 11-03-2014 23:43:46
+
+ERROR 2014-03-11 23:43:50,403 Utility                HandleException    - Page Loading on 11-03-2014 23:43:50
+
+ERROR 2014-03-15 21:20:25,349 Utility                HandleException    - Page Loading on 15-03-2014 21:20:25
+
+ERROR 2014-03-15 22:45:40,040 Utility                HandleException    - Page Loading on 15-03-2014 22:45:40
+
+ERROR 2014-03-18 14:25:54,749 Utility                HandleException    - Page Loading on 18-03-2014 14:25:54
+
+ERROR 2014-03-18 14:26:01,393 Utility                HandleException    - Page Loading on 18-03-2014 14:26:01
+
+ERROR 2014-03-18 14:26:01,809 Utility                HandleException    - Page Loading on 18-03-2014 14:26:01
+
+ERROR 2014-03-18 14:26:39,961 Utility                HandleException    - Page Loading on 18-03-2014 14:26:39
+
+ERROR 2014-03-18 14:27:47,813 Utility                HandleException    - Page Loading on 18-03-2014 14:27:47
+
+ERROR 2014-03-18 14:27:56,877 Utility                HandleException    - Page Loading on 18-03-2014 14:27:56
+
+ERROR 2014-03-18 14:28:41,489 Utility                HandleException    - Page Loading on 18-03-2014 14:28:41
+
+ERROR 2014-03-18 14:29:02,779 Utility                HandleException    - Page Loading on 18-03-2014 14:29:02
+
+ERROR 2014-03-18 14:29:11,480 Utility                HandleException    - Page Loading on 18-03-2014 14:29:11
+
+ERROR 2014-03-18 14:29:15,860 Utility                HandleException    - Page Loading on 18-03-2014 14:29:15
+
+ERROR 2014-03-18 14:36:23,624 Utility                HandleException    - Page Loading on 18-03-2014 14:36:23
+
+ERROR 2014-03-18 14:36:30,127 Utility                HandleException    - Page Loading on 18-03-2014 14:36:30
+
+ERROR 2014-03-18 14:41:41,536 Utility                HandleException    - Page Loading on 18-03-2014 14:41:41
+
+ERROR 2014-03-18 20:43:36,571 Utility                HandleException    - Page Loading on 18-03-2014 20:43:36
+
+ERROR 2014-03-18 20:43:53,696 Utility                HandleException    - Page Loading on 18-03-2014 20:43:53
+
+ERROR 2014-03-18 20:50:02,638 Utility                HandleException    - Page Loading on 18-03-2014 20:50:02
+
+ERROR 2014-03-18 20:50:17,309 Utility                HandleException    - Page Loading on 18-03-2014 20:50:17
+
+ERROR 2014-03-18 21:34:45,046 Utility                HandleException    - Page Loading on 18-03-2014 21:34:44
+
+ERROR 2014-03-18 21:34:50,800 Utility                HandleException    - Page Loading on 18-03-2014 21:34:50
+
+ERROR 2014-03-18 21:34:51,252 Utility                HandleException    - Page Loading on 18-03-2014 21:34:51
+
+ERROR 2014-03-18 21:42:10,962 Utility                HandleException    - Page Loading on 18-03-2014 21:42:10
+
+ERROR 2014-03-18 21:44:03,439 Utility                HandleException    - Page Loading on 18-03-2014 21:44:03
+
+ERROR 2014-03-18 21:44:25,605 Utility                HandleException    - Page Loading on 18-03-2014 21:44:25
+
+ERROR 2014-03-18 21:44:26,136 Utility                HandleException    - Page Loading on 18-03-2014 21:44:26
+
+ERROR 2014-03-19 14:13:10,985 Utility                HandleException    - Page Loading on 19-03-2014 14:13:10
+
+ERROR 2014-03-19 14:13:39,224 Utility                HandleException    - Page Loading on 19-03-2014 14:13:39
+
+ERROR 2014-03-19 14:13:52,246 Utility                HandleException    - Page Loading on 19-03-2014 14:13:52
+
+ERROR 2014-03-19 14:14:13,094 Utility                HandleException    - Page Loading on 19-03-2014 14:14:13
+
+ERROR 2014-03-19 21:43:21,586 Utility                HandleException    - Page Loading on 19-03-2014 21:43:21
+
+ERROR 2014-03-19 21:43:33,719 Utility                HandleException    - Page Loading on 19-03-2014 21:43:33
+
+ERROR 2014-03-19 21:43:34,146 Utility                HandleException    - Page Loading on 19-03-2014 21:43:34
+
+ERROR 2014-03-20 22:32:27,835 Utility                HandleException    - Page Loading on 20-03-2014 22:32:27
+
+ERROR 2014-03-20 22:35:14,245 Utility                HandleException    - Page Loading on 20-03-2014 22:35:14
+
+ERROR 2014-03-20 22:35:41,153 Utility                HandleException    - Page Loading on 20-03-2014 22:35:41
+
+ERROR 2014-03-20 22:35:41,851 Utility                HandleException    - Page Loading on 20-03-2014 22:35:41
+
+ERROR 2014-03-20 22:38:18,821 Utility                HandleException    - Page Loading on 20-03-2014 22:38:18
+
+ERROR 2014-03-20 22:38:42,699 Utility                HandleException    - Page Loading on 20-03-2014 22:38:42
+
+ERROR 2014-03-20 22:49:38,013 Utility                HandleException    - Page Loading on 20-03-2014 22:49:38
+
+ERROR 2014-03-20 23:00:00,249 Utility                HandleException    - Page Loading on 20-03-2014 23:00:00
+
+ERROR 2014-03-23 10:30:04,743 Utility                HandleException    - Page Loading on 23-03-2014 10:30:04
+
+ERROR 2014-03-23 10:33:20,180 Utility                HandleException    - Page Loading on 23-03-2014 10:33:20
+
+ERROR 2014-03-23 10:33:22,642 Utility                HandleException    - Page Loading on 23-03-2014 10:33:22
+
+ERROR 2014-03-23 10:33:40,499 Utility                HandleException    - Page Loading on 23-03-2014 10:33:40
+
+ERROR 2014-03-23 10:35:05,737 Utility                HandleException    - Page Loading on 23-03-2014 10:35:05
+
+ERROR 2014-03-23 10:35:07,845 Utility                HandleException    - Page Loading on 23-03-2014 10:35:07
+
+ERROR 2014-03-23 10:36:09,592 Utility                HandleException    - Page Loading on 23-03-2014 10:36:09
+
+ERROR 2014-03-23 10:39:18,142 Utility                HandleException    - Page Loading on 23-03-2014 10:39:18
+
+ERROR 2014-03-23 10:39:18,236 Utility                HandleException    - Page Loading on 23-03-2014 10:39:18
+
+ERROR 2014-03-23 10:40:58,796 Utility                HandleException    - Page Loading on 23-03-2014 10:40:58
+
+ERROR 2014-03-23 10:42:52,411 Utility                HandleException    - Page Loading on 23-03-2014 10:42:52
+
+ERROR 2014-03-23 10:46:19,702 Utility                HandleException    - Page Loading on 23-03-2014 10:46:19
+
+ERROR 2014-03-23 10:48:32,845 Utility                HandleException    - Page Loading on 23-03-2014 10:48:32
+
+ERROR 2014-03-23 11:00:38,337 Utility                HandleException    - Page Loading on 23-03-2014 11:00:38
+
+ERROR 2014-03-23 11:00:41,394 Utility                HandleException    - Page Loading on 23-03-2014 11:00:41
+
+ERROR 2014-03-23 11:02:49,235 Utility                HandleException    - Page Loading on 23-03-2014 11:02:49
+
+ERROR 2014-03-23 11:04:09,921 Utility                HandleException    - Page Loading on 23-03-2014 11:04:09
+
+ERROR 2014-03-23 11:07:05,830 Utility                HandleException    - Page Loading on 23-03-2014 11:07:05
+
+ERROR 2014-03-23 11:09:07,699 Utility                HandleException    - Page Loading on 23-03-2014 11:09:07
+
+ERROR 2014-03-23 11:14:35,563 Utility                HandleException    - Page Loading on 23-03-2014 11:14:35
+
+ERROR 2014-03-23 11:17:00,751 Utility                HandleException    - Page Loading on 23-03-2014 11:17:00
+
+ERROR 2014-03-23 11:19:02,685 Utility                HandleException    - Page Loading on 23-03-2014 11:19:02
+
+ERROR 2014-03-23 11:29:22,611 Utility                HandleException    - Page Loading on 23-03-2014 11:29:22
+
+ERROR 2014-03-23 11:31:24,746 Utility                HandleException    - Page Loading on 23-03-2014 11:31:24
+
+ERROR 2014-03-23 11:31:33,201 Utility                HandleException    - Page Loading on 23-03-2014 11:31:33
+
+ERROR 2014-03-23 11:33:08,906 Utility                HandleException    - Page Loading on 23-03-2014 11:33:08
+
+ERROR 2014-03-23 11:33:13,254 Utility                HandleException    - Page Loading on 23-03-2014 11:33:13
+
+ERROR 2014-03-23 11:35:09,490 Utility                HandleException    - Page Loading on 23-03-2014 11:35:09
+
+ERROR 2014-03-23 11:35:11,217 Utility                HandleException    - Page Loading on 23-03-2014 11:35:11
+
+ERROR 2014-03-23 11:35:11,320 Utility                HandleException    - Page Loading on 23-03-2014 11:35:11
+
+ERROR 2014-03-23 11:35:22,265 Utility                HandleException    - Page Loading on 23-03-2014 11:35:22
+
+ERROR 2014-03-23 11:36:04,651 Utility                HandleException    - Page Loading on 23-03-2014 11:36:04
+
+ERROR 2014-03-23 11:36:06,635 Utility                HandleException    - Page Loading on 23-03-2014 11:36:06
+
+ERROR 2014-03-23 11:36:27,063 Utility                HandleException    - Page Loading on 23-03-2014 11:36:27
+
+ERROR 2014-03-23 11:36:32,221 Utility                HandleException    - Page Loading on 23-03-2014 11:36:32
+
+ERROR 2014-03-23 11:37:18,799 Utility                HandleException    - Page Loading on 23-03-2014 11:37:18
+
+ERROR 2014-03-23 11:37:28,012 Utility                HandleException    - Page Loading on 23-03-2014 11:37:28
+
+ERROR 2014-03-23 11:37:56,412 Utility                HandleException    - Page Loading on 23-03-2014 11:37:56
+
+ERROR 2014-03-23 11:38:13,481 Utility                HandleException    - Page Loading on 23-03-2014 11:38:13
+
+ERROR 2014-03-23 11:38:17,797 Utility                HandleException    - Page Loading on 23-03-2014 11:38:17
+
+ERROR 2014-03-23 11:38:20,888 Utility                HandleException    - Page Loading on 23-03-2014 11:38:20
+
+ERROR 2014-03-23 14:30:51,495 Utility                HandleException    - Page Loading on 23-03-2014 14:30:51
+
+ERROR 2014-03-23 14:31:18,145 Utility                HandleException    - Page Loading on 23-03-2014 14:31:18
+
+ERROR 2014-03-23 14:31:18,595 Utility                HandleException    - Error in Saving Activation Code
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'UserActivation'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at DAL.RegistrationDAO.SaveActivationCode(Int32 userId, Guid ActivationCode) in e:\LensRental\20-03-2014\LensRental_NewTheme\LensRentalApp2\DAL\DAL\RegistrationDAO.cs:line 180
+ClientConnectionId:aa956c44-21d2-4e25-84d4-995257e6066b
+
+ERROR 2014-03-23 14:32:08,182 Utility                HandleException    - Error in Activating User
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'UserActivation'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at DAL.RegistrationDAO.ActivateUser(Guid ActivationCode) in e:\LensRental\20-03-2014\LensRental_NewTheme\LensRentalApp2\DAL\DAL\RegistrationDAO.cs:line 199
+ClientConnectionId:aa956c44-21d2-4e25-84d4-995257e6066b
+
+ERROR 2014-03-23 14:32:08,380 Utility                HandleException    - Page Loading on 23-03-2014 14:32:08
+
+ERROR 2014-03-23 14:33:24,564 Utility                HandleException    - Page Loading on 23-03-2014 14:33:24
+
+ERROR 2014-03-23 14:33:42,005 Utility                HandleException    - Error in Saving Activation Code
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'UserActivation'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.InternalExecuteNonQuery(TaskCompletionSource`1 completion, String methodName, Boolean sendToPipe, Int32 timeout, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.ExecuteNonQuery()
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoExecuteNonQuery(DbCommand command)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteNonQuery(DbCommand command)
+   at DAL.RegistrationDAO.SaveActivationCode(Int32 userId, Guid ActivationCode) in e:\LensRental\20-03-2014\LensRental_NewTheme\LensRentalApp2\DAL\DAL\RegistrationDAO.cs:line 180
+ClientConnectionId:aa956c44-21d2-4e25-84d4-995257e6066b
+
+ERROR 2014-03-23 14:36:48,811 Utility                HandleException    - Page Loading on 23-03-2014 14:36:48
+
+ERROR 2014-03-23 14:37:07,029 Utility                HandleException    - Page Loading on 23-03-2014 14:37:07
+
+ERROR 2014-03-23 14:39:41,373 Utility                HandleException    - Page Loading on 23-03-2014 14:39:41
+
+ERROR 2014-03-23 14:40:05,973 Utility                HandleException    - Page Loading on 23-03-2014 14:40:05
+
+ERROR 2014-03-23 14:40:07,911 Utility                HandleException    - Page Loading on 23-03-2014 14:40:07
+
+ERROR 2014-03-23 14:40:08,082 Utility                HandleException    - Page Loading on 23-03-2014 14:40:08
+
+ERROR 2014-03-23 14:42:36,478 Utility                HandleException    - Page Loading on 23-03-2014 14:42:36
+
+ERROR 2014-03-23 14:42:54,356 Utility                HandleException    - Page Loading on 23-03-2014 14:42:54
+
+ERROR 2014-03-23 14:43:40,074 Utility                HandleException    - Page Loading on 23-03-2014 14:43:40
+
+ERROR 2014-03-23 14:44:49,578 Utility                HandleException    - Page Loading on 23-03-2014 14:44:49
+
+ERROR 2014-03-23 14:45:04,194 Utility                HandleException    - Page Loading on 23-03-2014 14:45:04
+
+ERROR 2014-03-23 14:45:43,317 Utility                HandleException    - Page Loading on 23-03-2014 14:45:43
+
+ERROR 2014-03-23 14:46:33,614 Utility                HandleException    - Page Loading on 23-03-2014 14:46:33
+
+ERROR 2014-03-23 14:48:52,185 Utility                HandleException    - Page Loading on 23-03-2014 14:48:52
+
+ERROR 2014-03-23 14:51:04,681 Utility                HandleException    - Page Loading on 23-03-2014 14:51:04
+
+ERROR 2014-03-23 14:51:27,085 Utility                HandleException    - Page Loading on 23-03-2014 14:51:26
+
+ERROR 2014-03-23 14:52:56,140 Utility                HandleException    - Page Loading on 23-03-2014 14:52:55
+
+ERROR 2014-03-23 14:53:57,388 Utility                HandleException    - Page Loading on 23-03-2014 14:53:57
+
+ERROR 2014-03-23 14:54:25,757 Utility                HandleException    - Page Loading on 23-03-2014 14:54:25
+
+ERROR 2014-03-23 14:54:58,156 Utility                HandleException    - Page Loading on 23-03-2014 14:54:58
+
+ERROR 2014-03-23 14:55:21,871 Utility                HandleException    - Page Loading on 23-03-2014 14:55:21
+
+ERROR 2014-03-23 14:55:35,398 Utility                HandleException    - Page Loading on 23-03-2014 14:55:35
+
+ERROR 2014-03-23 14:55:57,303 Utility                HandleException    - Page Loading on 23-03-2014 14:55:57
+
+ERROR 2014-03-23 14:56:06,197 Utility                HandleException    - Page Loading on 23-03-2014 14:56:06
+
+ERROR 2014-03-23 14:58:44,753 Utility                HandleException    - Page Loading on 23-03-2014 14:58:44
+
+ERROR 2014-03-23 14:58:54,485 Utility                HandleException    - Page Loading on 23-03-2014 14:58:54
+
+ERROR 2014-03-23 14:58:55,059 Utility                HandleException    - Page Loading on 23-03-2014 14:58:55
+
+ERROR 2014-03-23 14:59:00,538 Utility                HandleException    - Page Loading on 23-03-2014 14:59:00
+
+ERROR 2014-03-23 14:59:00,628 Utility                HandleException    - Page Loading on 23-03-2014 14:59:00
+
+ERROR 2014-03-23 14:59:38,076 Utility                HandleException    - Page Loading on 23-03-2014 14:59:38
+
+ERROR 2014-03-23 14:59:49,710 Utility                HandleException    - Page Loading on 23-03-2014 14:59:49
+
+ERROR 2014-03-23 15:00:02,041 Utility                HandleException    - Page Loading on 23-03-2014 15:00:02
+
+ERROR 2014-03-23 15:00:12,616 Utility                HandleException    - Page Loading on 23-03-2014 15:00:12
+
+ERROR 2014-03-23 15:00:13,227 Utility                HandleException    - Page Loading on 23-03-2014 15:00:13
+
+ERROR 2014-03-23 15:03:04,760 Utility                HandleException    - Page Loading on 23-03-2014 15:03:04
+
+ERROR 2014-03-23 15:03:04,760 Utility                HandleException    - Page Loading on 23-03-2014 15:03:04
+
+ERROR 2014-03-23 15:03:33,582 Utility                HandleException    - Page Loading on 23-03-2014 15:03:33
+
+ERROR 2014-03-23 15:03:45,819 Utility                HandleException    - Page Loading on 23-03-2014 15:03:45
+
+ERROR 2014-03-23 15:04:01,674 Utility                HandleException    - Page Loading on 23-03-2014 15:04:01
+
+ERROR 2014-03-23 15:06:54,164 Utility                HandleException    - Page Loading on 23-03-2014 15:06:54
+
+ERROR 2014-03-26 08:35:33,351 Utility                HandleException    - Error in GetUserDetailsFromActivationCode
+System.InvalidCastException: Failed to convert parameter value from a String to a Guid. ---> System.InvalidCastException: Invalid cast from 'System.String' to 'System.Guid'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   at System.Data.SqlClient.SqlParameter.GetCoercedValue()
+   at System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   at System.Data.SqlClient.SqlCommand.SetUpRPCParameters(_SqlRPC rpc, Int32 startCount, Boolean inSchema, SqlParameterCollection parameters)
+   at System.Data.SqlClient.SqlCommand.BuildRPC(Boolean inSchema, SqlParameterCollection parameters, _SqlRPC& rpc)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(IDbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at DAL.RegistrationDAO.GetUserDetailsFromActivationCode(String ActivationCode) in f:\Work\Chitrotsav.in\Chitrotsav WebSite Code\LensRental_NewTheme\LensRentalApp2\DAL\DAL\RegistrationDAO.cs:line 136
+
+ERROR 2014-03-26 08:39:13,722 Utility                HandleException    - Error in GetUserDetailsFromActivationCode
+System.InvalidCastException: Failed to convert parameter value from a String to a Guid. ---> System.InvalidCastException: Invalid cast from 'System.String' to 'System.Guid'.
+   at System.Convert.DefaultToType(IConvertible value, Type targetType, IFormatProvider provider)
+   at System.String.System.IConvertible.ToType(Type type, IFormatProvider provider)
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   --- End of inner exception stack trace ---
+   at System.Data.SqlClient.SqlParameter.CoerceValue(Object value, MetaType destinationType, Boolean& coercedToDataFeed, Boolean& typeChanged, Boolean allowStreaming)
+   at System.Data.SqlClient.SqlParameter.GetCoercedValue()
+   at System.Data.SqlClient.SqlParameter.Validate(Int32 index, Boolean isCommandProc)
+   at System.Data.SqlClient.SqlCommand.SetUpRPCParameters(_SqlRPC rpc, Int32 startCount, Boolean inSchema, SqlParameterCollection parameters)
+   at System.Data.SqlClient.SqlCommand.BuildRPC(Boolean inSchema, SqlParameterCollection parameters, _SqlRPC& rpc)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.DoLoadDataSet(IDbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String[] tableNames)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.LoadDataSet(DbCommand command, DataSet dataSet, String tableName)
+   at Microsoft.Practices.EnterpriseLibrary.Data.Database.ExecuteDataSet(DbCommand command)
+   at DAL.RegistrationDAO.GetUserDetailsFromActivationCode(String ActivationCode) in f:\Work\Chitrotsav.in\Chitrotsav WebSite Code\LensRental_NewTheme\LensRentalApp2\DAL\DAL\RegistrationDAO.cs:line 136
+
+ERROR 2014-04-16 22:15:33,456 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+ERROR 2014-04-16 22:18:03,038 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+ERROR 2014-04-16 22:21:09,661 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+ERROR 2014-04-16 22:22:18,438 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+INFO  2014-04-16 22:22:38,172 Utility                WriteInfo          - utsav.verma@gmail.comp Success
+
+INFO  2014-04-16 22:29:50,529 Utility                WriteInfo          - utsav.verma Success
+
+INFO  2014-04-16 23:17:19,401 Utility                WriteInfo          - utsav.verma@gmail.com9 Success
+
+INFO  2014-04-27 13:03:28,776 Utility                WriteInfo          -  Success
+
+INFO  2014-04-28 14:34:38,240 Utility                WriteInfo          - 123 Success
+
+ERROR 2014-04-28 14:37:23,168 Utility                HandleException    - 123 insertion failed : Duplicate Email 123
+
+INFO  2014-04-28 14:37:34,540 Utility                WriteInfo          - 123dfdeswfew Success
+
+ERROR 2014-04-28 14:52:16,316 Utility                HandleException    -  insertion failed : Duplicate Email 
+
+INFO  2014-04-28 14:52:24,320 Utility                WriteInfo          - xsdvx Success
+
+INFO  2014-04-28 14:52:42,393 Utility                WriteInfo          - xsdvxdd Success
+
+INFO  2014-04-28 14:53:07,103 Utility                WriteInfo          - xsdvxddxsc Success
+
+INFO  2014-04-28 14:53:37,128 Utility                WriteInfo          - xsdvxddxscss Success
+
+INFO  2014-04-28 14:55:02,386 Utility                WriteInfo          - dffgg Success
+
+INFO  2014-04-28 14:58:15,364 Utility                WriteInfo          - d Success
+
+ERROR 2014-05-01 18:13:53,516 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+INFO  2014-05-01 18:14:09,502 Utility                WriteInfo          - utsav.verma1@gmail.com Success
+
+ERROR 2014-05-01 23:34:31,355 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+INFO  2014-05-01 23:35:01,894 Utility                WriteInfo          - utsav.verma3@gmail.com Success
+
+ERROR 2014-05-01 23:46:20,522 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+ERROR 2014-05-01 23:46:21,656 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+ERROR 2014-05-01 23:47:09,955 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+INFO  2014-05-03 23:48:58,680 Utility                WriteInfo          - 1utsav.verma@gmail.com Success
+
+ERROR 2014-05-04 12:33:19,832 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+INFO  2014-05-04 16:47:24,594 Utility                WriteInfo          - uv@gmail.com Success
+
+ERROR 2014-05-04 16:50:09,270 Utility                HandleException    - uv@gmail.com insertion failed : Duplicate Email uv@gmail.com
+
+ERROR 2014-05-04 16:52:26,576 Utility                HandleException    - uv@gmail.com insertion failed : Duplicate Email uv@gmail.com
+
+INFO  2014-05-04 16:53:11,841 Utility                WriteInfo          - uv3@gmail.com Success
+
+INFO  2014-05-04 17:01:52,995 Utility                WriteInfo          - uv5@gmail.com Success
+
+ERROR 2014-05-04 17:59:54,967 Utility                HandleException    - uv@gmail.com insertion failed : Duplicate Email uv@gmail.com
+
+INFO  2014-05-04 23:47:51,602 Utility                WriteInfo          - utsav123@gmail.com Success
+
+ERROR 2014-05-06 00:13:53,632 Utility                HandleException    - utsav.verma@gmail.com insertion failed : Duplicate Email utsav.verma@gmail.com
+
+INFO  2014-05-06 00:14:21,754 Utility                InsertVendor       - utsav.verm5a@gmail.com Success
+
+DEBUG 2014-05-12 23:16:29,072 Utility                WriteDebugData     - SqlDateTime overflow. Must be between 1/1/1753 12:00:00 AM and 12/31/9999 11:59:59 PM.
+
+INFO  2014-05-13 15:15:29,125 Utility                WriteInfo          - entries@betterphotography.in Success
+
+ERROR 2014-05-13 15:18:45,928 Utility                HandleException    - entries@betterphotography.in insertion failed : Duplicate Email entries@betterphotography.in
