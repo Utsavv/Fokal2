@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data;
 //using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Text.RegularExpressions;
 
 namespace DAL
 {
@@ -95,97 +96,106 @@ namespace DAL
 
         public void GenerateEventPage(int EventID, string pageToRead,string PagePathToWrite)
         {
-            SqlConnection con = new SqlConnection(_ConnectionString);
-            SqlCommand cmd = new SqlCommand("pGetEventPageData", con);
-            DataSet ds = new DataSet();
-            SqlDataAdapter da = new SqlDataAdapter();         
-            cmd.Parameters.Add(new SqlParameter("@EventID", EventID));
-            cmd.CommandType = CommandType.StoredProcedure;
-            da.SelectCommand = cmd;
-            da.Fill(ds);
-            String OPFile="";   
-                     
-            string	EventName	=ds.Tables[0].Rows[0][0].ToString();
-            DateTime	EventStartDate	= Convert.ToDateTime(ds.Tables[0].Rows[0][1]);
-            string	City	=ds.Tables[0].Rows[0][2].ToString();
-            string	EventLevel	=ds.Tables[0].Rows[0][3].ToString();
-            string	ServiceTheme	=ds.Tables[0].Rows[0][4].ToString();
-            string	EventSmallDescription	=ds.Tables[0].Rows[0][5].ToString();
-            string	VendorName	=ds.Tables[0].Rows[0][6].ToString();
-            string	LocalPagePath	=ds.Tables[0].Rows[0][7].ToString();
-            string	EventCharges	=ds.Tables[0].Rows[0][8].ToString();
-            string	IsRegistrationRequired	=ds.Tables[0].Rows[0][9].ToString();
-            string	EventLargeDescription	=ds.Tables[0].Rows[0][10].ToString();
-            string	EventPagePath	=ds.Tables[0].Rows[0][11].ToString();
-            string	EventRegistrationEndDate	=ds.Tables[0].Rows[0][12].ToString();
-            string	AddressLine1	=ds.Tables[0].Rows[0][13].ToString();
-            string	AddressLine2	=ds.Tables[0].Rows[0][14].ToString();
-            string	LandMark	=ds.Tables[0].Rows[0][15].ToString();
-            string	MobileNo	=ds.Tables[0].Rows[0][16].ToString();
-            string	RegisteredEmail	=ds.Tables[0].Rows[0][17].ToString();
-            string	FacebookLink	=ds.Tables[0].Rows[0][18].ToString();
-            string	GooglePlusLink	=ds.Tables[0].Rows[0][19].ToString();
-            string	EventComment	=ds.Tables[0].Rows[0][20].ToString();
-            string	VendorWebPage	=ds.Tables[0].Rows[0][21].ToString();
-
-
-            OPFile = PagePathToWrite+(VendorName + "_" + EventName + EventStartDate.ToString("yyyyMMdd")+".aspx").Replace(" ", "");
-
-
-            StringBuilder readContents=new StringBuilder();
-            using (System.IO.StreamReader streamReader = new System.IO.StreamReader(pageToRead, Encoding.UTF8))
+            try
             {
-                 readContents.Append(streamReader.ReadToEnd());
-            }
-            readContents.Replace("CodeFile=\"EventTemplate.aspx.cs\"", "CodeFile=\"..\\EventTemplate.aspx.cs\"");
-            
-            readContents.Replace("{{EventName}}",EventName);
-            readContents.Replace("{{EventStartDate}}",EventStartDate.ToString("dd/MM/yyyy"));
-            readContents.Replace("{{EventStartTime}}",EventStartDate.ToString("HH:mm"));
-            readContents.Replace("{{EventCity}}",City);
-            readContents.Replace("{{EventAudienceLevel}}",EventLevel);
-            readContents.Replace("{{EventPriorRegistrationRequirement}}", IsRegistrationRequired);            
-            readContents.Replace("{{EventShortDescription}}",EventSmallDescription);
-            readContents.Replace("{{VendorName}}",VendorName);
-            readContents.Replace("{{EventFee}}",EventCharges);
-            readContents.Replace("{{EventTheme}}", ServiceTheme);
-            readContents.Replace("{{EventDetailedDescription}}", EventLargeDescription);
-            readContents.Replace("{{EventPagePath}}", EventPagePath);
-            if(String.IsNullOrEmpty(EventRegistrationEndDate))
-                readContents.Replace("{{EventRegistrationLastDate}}", "");
-            else
-                readContents.Replace("{{EventRegistrationLastDate}}", "Register By: " + EventRegistrationEndDate);
+                SqlConnection con = new SqlConnection(_ConnectionString);
+                SqlCommand cmd = new SqlCommand("pGetEventPageData", con);
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter();
+                cmd.Parameters.Add(new SqlParameter("@EventID", EventID));
+                cmd.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+                String OPFile = "";
 
-            readContents.Replace("{{EventRegistrationMode}}", "Online");
-            readContents.Replace("{{AddressLine1}}", AddressLine1);
-            readContents.Replace("{{AddressLine2}}", AddressLine2);
-            readContents.Replace("{{Landmark}}", LandMark);
-            readContents.Replace("{{City}}", City);
-            readContents.Replace("{{EventContactNumber}}", MobileNo);
-            readContents.Replace("{{EMail}}", RegisteredEmail);
-            readContents.Replace("{{EventContent}}", EventComment);
+                string EventName = ds.Tables[0].Rows[0][0].ToString();
+                DateTime EventStartDate = Convert.ToDateTime(ds.Tables[0].Rows[0][1]);
+                string City = ds.Tables[0].Rows[0][2].ToString();
+                string EventLevel = ds.Tables[0].Rows[0][3].ToString();
+                string ServiceTheme = ds.Tables[0].Rows[0][4].ToString();
+                string EventSmallDescription = ds.Tables[0].Rows[0][5].ToString();
+                string VendorName = ds.Tables[0].Rows[0][6].ToString();
+                string LocalPagePath = ds.Tables[0].Rows[0][7].ToString();
+                string EventCharges = ds.Tables[0].Rows[0][8].ToString();
+                string IsRegistrationRequired = ds.Tables[0].Rows[0][9].ToString();
+                string EventLargeDescription = ds.Tables[0].Rows[0][10].ToString();
+                string EventPagePath = ds.Tables[0].Rows[0][11].ToString();
+                string EventRegistrationEndDate = ds.Tables[0].Rows[0][12].ToString();
+                string AddressLine1 = ds.Tables[0].Rows[0][13].ToString();
+                string AddressLine2 = ds.Tables[0].Rows[0][14].ToString();
+                string LandMark = ds.Tables[0].Rows[0][15].ToString();
+                string MobileNo = ds.Tables[0].Rows[0][16].ToString();
+                string RegisteredEmail = ds.Tables[0].Rows[0][17].ToString();
+                string FacebookLink = ds.Tables[0].Rows[0][18].ToString();
+                string GooglePlusLink = ds.Tables[0].Rows[0][19].ToString();
+                string EventComment = ds.Tables[0].Rows[0][20].ToString();
+                string VendorWebPage = ds.Tables[0].Rows[0][21].ToString();
 
-            if(String.IsNullOrEmpty(VendorWebPage))
+                OPFile = PagePathToWrite + (VendorName + "_" + EventName + EventStartDate.ToString("yyyyMMdd") + ".aspx").Replace(" ", "");
+                OPFile = Regex.Replace(OPFile, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
+
+
+                StringBuilder readContents = new StringBuilder();
+                using (System.IO.StreamReader streamReader = new System.IO.StreamReader(pageToRead, Encoding.UTF8))
+                {
+                    readContents.Append(streamReader.ReadToEnd());
+                }
+                readContents.Replace("CodeFile=\"EventTemplate.aspx.cs\"", "CodeFile=\"..\\EventTemplate.aspx.cs\"");
+
+                readContents.Replace("{{EventName}}", EventName);
+                readContents.Replace("{{EventStartDate}}", EventStartDate.ToString("dd/MM/yyyy"));
+                readContents.Replace("{{EventStartTime}}", EventStartDate.ToString("HH:mm"));
+                readContents.Replace("{{EventCity}}", City);
+                readContents.Replace("{{EventAudienceLevel}}", EventLevel);
+                readContents.Replace("{{EventPriorRegistrationRequirement}}", IsRegistrationRequired);
+                readContents.Replace("{{EventShortDescription}}", EventSmallDescription);
                 readContents.Replace("{{VendorName}}", VendorName);
-            else
-                readContents.Replace("{{VendorName}}", addHTTPToLink(CreateHyperLink(VendorWebPage, VendorName, true)));
+                readContents.Replace("{{EventFee}}", EventCharges);
+                readContents.Replace("{{EventTheme}}", ServiceTheme);
+                readContents.Replace("{{EventDetailedDescription}}", EventLargeDescription);
+                readContents.Replace("{{EventPagePath}}", EventPagePath);
+                if (String.IsNullOrEmpty(EventRegistrationEndDate))
+                    readContents.Replace("{{EventRegistrationLastDate}}", "");
+                else
+                    readContents.Replace("{{EventRegistrationLastDate}}", "Register By: " + EventRegistrationEndDate);
 
-            if (String.IsNullOrEmpty(FacebookLink))
-                readContents.Replace("{{VendorNameFB}}", "");
-            else
-                readContents.Replace("{{VendorNameFB}}", addHTTPToLink(CreateHyperLink(FacebookLink, VendorName + " On FB", true)));
+                readContents.Replace("{{EventRegistrationMode}}", "Online");
+                readContents.Replace("{{AddressLine1}}", AddressLine1);
+                readContents.Replace("{{AddressLine2}}", AddressLine2);
+                readContents.Replace("{{Landmark}}", LandMark);
+                readContents.Replace("{{City}}", City);
+                readContents.Replace("{{EventContactNumber}}", MobileNo);
+                readContents.Replace("{{EMail}}", RegisteredEmail);
+                readContents.Replace("{{EventContent}}", EventComment);
 
-            if (String.IsNullOrEmpty(GooglePlusLink))
-                readContents.Replace("{{VendorNameGooglePlus}}", "");
-            else
-                readContents.Replace("{{VendorNameGooglePlus}}", addHTTPToLink(CreateHyperLink(GooglePlusLink, VendorName + " On Google Plus", true)));
+                if (String.IsNullOrEmpty(VendorWebPage))
+                    readContents.Replace("{{VendorName}}", VendorName);
+                else
+                    readContents.Replace("{{VendorName}}", addHTTPToLink(CreateHyperLink(VendorWebPage, VendorName, true)));
 
-           
-            
-            System.IO.StreamWriter writetext = new System.IO.StreamWriter(OPFile);
-            writetext.WriteLine(readContents.ToString());
-            writetext.Close();
+                if (String.IsNullOrEmpty(FacebookLink))
+                    readContents.Replace("{{VendorNameFB}}", "");
+                else
+                    readContents.Replace("{{VendorNameFB}}", addHTTPToLink(CreateHyperLink(FacebookLink, VendorName + " On FB", true)));
 
+                if (String.IsNullOrEmpty(GooglePlusLink))
+                    readContents.Replace("{{VendorNameGooglePlus}}", "");
+                else
+                    readContents.Replace("{{VendorNameGooglePlus}}", addHTTPToLink(CreateHyperLink(GooglePlusLink, VendorName + " On Google Plus", true)));
+
+                System.IO.StreamWriter writetext = new System.IO.StreamWriter(OPFile);
+                writetext.WriteLine(readContents.ToString());
+                writetext.Close();
+                string qry = "UPDATE TblEvent SET EventLocalPagePath=" + OPFile + " WHERE EventID=" + EventID.ToString();
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                Logger.Utility.WriteDebugData(""+EventID.ToString()+" "+ ex.Message);
+            }
         }
 
         static string addHTTPToLink(string link)

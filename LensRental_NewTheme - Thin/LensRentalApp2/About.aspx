@@ -8,7 +8,7 @@
 
 
                              <p>
-                                    At Fokal.in, we are committed to make a complete and comprehensive for photography community for both photographers in India. 
+                                    At Fokal.in, we are committed to make a complete and comprehensive portal for photography community for both photographers in India. 
                                  We strive to bring you the latest photography events, courses and tours being offered by industry service providers along with easy ways of contacting the vendors of these services. 
                                     </p>
                                     <p>
