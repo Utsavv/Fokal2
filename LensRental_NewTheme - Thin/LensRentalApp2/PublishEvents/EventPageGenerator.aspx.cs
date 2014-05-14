@@ -19,14 +19,18 @@ public partial class PublishEvents_EventPageGenerator : System.Web.UI.Page
         GridViewRow selectedRow = GridView1.Rows[index];
         Response.Write(selectedRow.Cells[0].Text + Server.MapPath("/"));
         
-        string destinationPath = "", webPath="";
-        destinationPath = Server.MapPath("/")  + "PublishEvents\\"+(DateTime.Now.Year * 100 + DateTime.Now.Month).ToString()+"\\";
-        webPath = (HttpContext.Current.Request.Url.AbsoluteUri+(DateTime.Now.Year * 100 + DateTime.Now.Month).ToString()).Replace("EventPageGenerator.aspx", "")+@"/";
+        string destinationPath = "", webPath="",FolderName="";
+
+        destinationPath = Server.MapPath("/") + "PublishEvents\\" + (DateTime.Now.Year * 100 + DateTime.Now.Month).ToString() + "\\";
+        webPath = (HttpContext.Current.Request.Url.AbsoluteUri + (DateTime.Now.Year * 100 + DateTime.Now.Month).ToString()).Replace("EventPageGenerator.aspx", "") + @"/";
         if (!System.IO.Directory.Exists(destinationPath)) System.IO.Directory.CreateDirectory(destinationPath);
+
+
+        //if (!System.IO.Directory.Exists(destinationPath)) System.IO.Directory.CreateDirectory(destinationPath);
 
         FD.GenerateEventPage(
             Convert.ToInt32(selectedRow.Cells[0].Text),
-            Server.MapPath("/")+"PublishEvents/EventTemplate.aspx",
+            Server.MapPath("/")+"PSP/VendorTemplate.aspx",
             destinationPath,
             webPath);
 

@@ -92,7 +92,90 @@ namespace DAL
         
         }
 
+        public void GenerateVendorPage(int VendorID, string pageToRead, string PagePathToWrite, string WebPath)
+        {
+            try
+            {
+                SqlConnection con = new SqlConnection(_ConnectionString);
+                SqlCommand cmd = new SqlCommand("pGetVendorPageData", con);
+                DataSet ds = new DataSet();
+                SqlDataAdapter da = new SqlDataAdapter();
+                cmd.Parameters.Add(new SqlParameter("@VendorID", VendorID));
+                cmd.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+                String OPFile = "";
 
+                string VendorName= ds.Tables[0].Rows[0][1].ToString();
+                string VendorDescription= ds.Tables[0].Rows[0][2].ToString();
+                string City= ds.Tables[0].Rows[0][3].ToString();
+                string VendorDetailedDescription= ds.Tables[0].Rows[0][4].ToString();
+                string ContactPerson= ds.Tables[0].Rows[0][5].ToString();
+                string AddressLine1= ds.Tables[0].Rows[0][6].ToString();
+                string AddressLine2= ds.Tables[0].Rows[0][7].ToString();
+                string LandMark= ds.Tables[0].Rows[0][8].ToString();
+                string State= ds.Tables[0].Rows[0][9].ToString();
+                string PinCode= ds.Tables[0].Rows[0][10].ToString();
+                string MobileNo= ds.Tables[0].Rows[0][11].ToString();
+                string website= ds.Tables[0].Rows[0][12].ToString();
+                string RegisteredEmail= ds.Tables[0].Rows[0][13].ToString();
+                string FacebookLink= ds.Tables[0].Rows[0][14].ToString();
+                string GooglePlusLink= ds.Tables[0].Rows[0][15].ToString();
+
+                VendorName = Regex.Replace(VendorName, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
+                OPFile = PagePathToWrite + (VendorName+".aspx").Replace(" ", "");
+
+                StringBuilder readContents = new StringBuilder();
+                using (System.IO.StreamReader streamReader = new System.IO.StreamReader(pageToRead, Encoding.UTF8))
+                {
+                    readContents.Append(streamReader.ReadToEnd());
+                }
+                readContents.Replace("CodeFile=\"VendorTemplate.aspx.cs\"", "CodeFile=\"..\\VendorTemplate.aspx.cs\"");
+                readContents.Replace("{{VendorName}}", VendorName);
+                readContents.Replace("{{VendorShortDescription}}", VendorDescription);
+                readContents.Replace("{{VendorCity}} ", City);
+                readContents.Replace("{{VendorDetailedDescription}}", VendorDetailedDescription);
+                readContents.Replace("{{ContactPerson}}", ContactPerson);
+                readContents.Replace("{{AddressLine1}}", AddressLine1);
+                readContents.Replace("{{AddressLine2}}", AddressLine2);
+                readContents.Replace("{{Landmark}}", LandMark);
+                readContents.Replace("{{state}}", State);
+                readContents.Replace("{{PinCode}}", PinCode);
+                readContents.Replace("{{ContactNumber}} ", MobileNo);
+                readContents.Replace("{{VendorWebPage}}", website);
+                readContents.Replace("{{VendorEmail}}", RegisteredEmail);
+
+                if (String.IsNullOrEmpty(FacebookLink))
+                    readContents.Replace("{{VendorNameFB}}", "");
+                else
+                    readContents.Replace("{{VendorNameFB}}", addHTTPToLink(CreateHyperLink(FacebookLink, VendorName + " On FB", true)));
+
+                if (String.IsNullOrEmpty(GooglePlusLink))
+                    readContents.Replace("{{VendorNameGooglePlus}}", "");
+                else
+                    readContents.Replace("{{VendorNameGooglePlus}}", addHTTPToLink(CreateHyperLink(GooglePlusLink, VendorName + " On Google Plus", true)));
+
+
+                System.IO.StreamWriter writetext = new System.IO.StreamWriter(OPFile);
+                writetext.WriteLine(readContents.ToString());
+                writetext.Close();
+
+                OPFile = WebPath + (VendorName + ".aspx").Replace(" ", "");
+
+                string qry = "UPDATE TblVendor SET VendorLocalPagePath='" + OPFile + "' WHERE VendorID=" + VendorID.ToString();
+
+                con = new SqlConnection(_ConnectionString);
+                con.Open();
+                cmd = new SqlCommand(qry, con);
+                cmd.ExecuteNonQuery();
+
+                con.Close();
+            }
+            catch (Exception ex)
+            {
+                Logger.Utility.WriteDebugData(ex.Message);
+            }
+        }
 
         public void GenerateEventPage(int EventID, string pageToRead,string PagePathToWrite, string WebPath)
         {

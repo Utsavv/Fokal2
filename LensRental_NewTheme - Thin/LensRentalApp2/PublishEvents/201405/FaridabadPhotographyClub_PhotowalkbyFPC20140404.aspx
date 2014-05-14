@@ -5,7 +5,7 @@
 </asp:Content>
 
 <asp:Content ID="Title"  ContentPlaceHolderID="eventName" runat="server">
-Photowalk by FPC
+PhotowalkbyFPC
 </asp:Content>
 <asp:Content ID="Date"  ContentPlaceHolderID="eventDate" runat="server">
 <%-- Date format 'DD Month'yy' like 29 April'14 --%>
@@ -39,7 +39,7 @@ Photowalk by the amateurs
 <asp:Content ID="OrganizerName"  ContentPlaceHolderID="eventOrganizerName" runat="server">
 <%-- Add the local link of the vendor in href--%>
 
-    <span class="itemprop" itemprop="name">Faridabad Photography Club</span>
+    <span class="itemprop" itemprop="name">FaridabadPhotographyClub</span>
     
 </asp:Content>
 <asp:Content ID="RegistrationCharges"  ContentPlaceHolderID="eventRegistrationCharges" runat="server">
@@ -69,7 +69,7 @@ Photowalk by the amateurs
 
 <asp:Content ID="RegistrationHowTo"  ContentPlaceHolderID="registrationHowTo" runat="server">
 <%-- Any registration information goes here --%>
-    Register by: </asp:Content>
+   </asp:Content>
 <asp:Content ID="RegistrationHowTo2"  ContentPlaceHolderID="registrationHowTo2" runat="server">
 <%-- Any registration information goes here --%>
     Registration: Online
@@ -99,7 +99,7 @@ Photowalk by the amateurs
 </asp:Content>
 <asp:Content ID="VendorWebPage"  ContentPlaceHolderID="vendorWebPage" runat="server">
 
-    <span class="itemprop" itemprop="name">Faridabad Photography Club</span>
+    <span class="itemprop" itemprop="name">FaridabadPhotographyClub</span>
     
 &nbsp;
 </asp:Content>
@@ -108,11 +108,11 @@ Photowalk by the amateurs
 </asp:Content>
 <asp:Content ID="VendorFacebookPage"  ContentPlaceHolderID="vendorFacebookPage" runat="server">
 
-    http://<A HREF="" target="_blank">Faridabad Photography Club On FB</a>
+    
 </asp:Content>
 <asp:Content ID="VendorGooglePage"  ContentPlaceHolderID="vendorGooglePage" runat="server">
 
-    http://<A HREF="" target="_blank">Faridabad Photography Club On Google Plus</a>
+    
 </asp:Content>
 
 <asp:Content ID="CourseContent" ContentPlaceHolderID="Content" runat="server">
