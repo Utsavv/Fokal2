@@ -26,9 +26,9 @@ public partial class Contact : System.Web.UI.Page
             FolksploreDAL PerformSearch = new FolksploreDAL(ConfigurationManager.ConnectionStrings["Folksplore"].ToString());
             
             DataSet ds = PerformSearch.GetServices();
-            DDServiceType.DataSource = ds.Tables[0];
-            DDServiceType.DataValueField = "ServiceCategory";
-            DDServiceType.DataTextField = "ServiceCategory";
+            DDServiceType.DataSource = ds.Tables[4];
+            DDServiceType.DataValueField = "ServiceSubCategory";
+            DDServiceType.DataTextField = "ServiceSubCategory";
             DDServiceType.DataBind();
 
             //DDDestination.DataSource = ds.Tables[1];
@@ -90,7 +90,7 @@ public partial class Contact : System.Web.UI.Page
             this.Page.ClientScript.RegisterStartupScript(base.GetType(), "key", "alert('Error in Registration!!!')", true);
         }
 
-        EmailFunctions.SendEmail("sales@fokal.in", "code@fokal.in", "New Vendor registration " + txtRegisteredEmail.Text, txtRegisteredEmail.Text);
+        EmailFunctions.SendEmail("registration@fokal.in", "code@fokal.in", "New Vendor registration " + txtRegisteredEmail.Text, txtRegisteredEmail.Text);
     }
 
     [WebMethod]

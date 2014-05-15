@@ -562,3 +562,46 @@ DEBUG 2014-05-15 00:20:52,347 Utility                WriteDebugData     - There 
 DEBUG 2014-05-15 00:21:04,947 Utility                WriteDebugData     - There is no row at position 0.
 
 DEBUG 2014-05-15 00:21:40,646 Utility                WriteDebugData     - There is no row at position 0.
+
+INFO  2014-05-15 16:07:31,822 Utility                WriteInfo          - shruti@shruti.com Success
+
+DEBUG 2014-05-15 16:08:27,768 Utility                WriteDebugData     - There is no row at position 0.
+
+ERROR 2014-05-15 16:29:44,247 Utility                HandleException    - shruti1@shruti.com insertion failed : Error converting data type nvarchar to smallint.
+
+ERROR 2014-05-15 16:30:17,919 Utility                HandleException    - shruti1@shruti.com insertion failed : Error converting data type nvarchar to smallint.
+
+ERROR 2014-05-15 16:32:27,120 Utility                HandleException    - shruti1@shruti.com insertion failed : Error converting data type nvarchar to smallint.
+
+INFO  2014-05-15 16:34:11,182 Utility                WriteInfo          - shruti1@shruti.com Success
+
+DEBUG 2014-05-15 16:34:36,476 Utility                WriteDebugData     - Could not find a part of the path 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\Pages\ShrutiPhotographyClub.aspx'.
+
+DEBUG 2014-05-15 16:36:08,822 Utility                WriteDebugData     - Could not find a part of the path 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\Pages\ShrutiPhotographyClub.aspx'.
+
+DEBUG 2014-05-15 16:38:22,307 Utility                WriteDebugData     - Could not find a part of the path 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\Pages\ShrutiPhotographyClub.aspx'.
+
+DEBUG 2014-05-15 16:39:10,204 Utility                WriteDebugData     - Invalid column name 'VendorLocalPagePath'.
+
+DEBUG 2014-05-15 16:41:20,440 Utility                WriteDebugData     - Could not find a part of the path 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\Pages\ShrutiPhotographyClub.aspx'.
+
+DEBUG 2014-05-15 16:44:33,563 Utility                WriteDebugData     - Invalid column name 'VendorLocalPagePath'.
+
+INFO  2014-05-15 18:04:46,767 Utility                WriteInfo          - shruti2@shruti.com Success
+
+INFO  2014-05-15 18:06:40,531 Utility                WriteInfo          - shruti3@shruti.com Success
+
+DEBUG 2014-05-15 18:28:03,276 Utility                WriteDebugData     - 50 Could not find file 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\VendorTemplate.aspx'.
+
+DEBUG 2014-05-15 18:28:07,545 Utility                WriteDebugData     - 51 Could not find file 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\VendorTemplate.aspx'.
+
+DEBUG 2014-05-15 18:28:11,191 Utility                WriteDebugData     - 52 Could not find file 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\VendorTemplate.aspx'.
+
+DEBUG 2014-05-15 18:28:15,135 Utility                WriteDebugData     - 53 Could not find file 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\VendorTemplate.aspx'.
+
+DEBUG 2014-05-15 18:28:18,738 Utility                WriteDebugData     - 54 Could not find file 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\VendorTemplate.aspx'.
+
+DEBUG 2014-05-15 18:33:31,014 Utility                WriteDebugData     - 50 Could not find file 'F:\Work\GitHub_Shruti\Fokal2\LensRental_NewTheme - Thin\LensRentalApp2\PSP\VendorTemplate.aspx'.
+
+DEBUG 2014-05-15 18:35:20,543 Utility                WriteDebugData     - 50 Value cannot be null.
+Parameter name: path

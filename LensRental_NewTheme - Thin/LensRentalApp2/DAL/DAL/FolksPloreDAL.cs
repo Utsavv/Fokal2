@@ -92,7 +92,7 @@ namespace DAL
         
         }
 
-        public void GenerateVendorPage(int VendorID, string pageToRead, string PagePathToWrite, string WebPath)
+        public string GenerateVendorPage(int VendorID, string pageToRead, string PagePathToWrite, string WebPath)
         {
             try
             {
@@ -121,19 +121,31 @@ namespace DAL
                 string RegisteredEmail= ds.Tables[0].Rows[0][13].ToString();
                 string FacebookLink= ds.Tables[0].Rows[0][14].ToString();
                 string GooglePlusLink= ds.Tables[0].Rows[0][15].ToString();
+                string Services = ds.Tables[0].Rows[0][16].ToString();
 
-                VendorName = Regex.Replace(VendorName, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
-                OPFile = PagePathToWrite + (VendorName+".aspx").Replace(" ", "");
+                string Event1 = ds.Tables[0].Rows[0][17].ToString();
+                string EventLink1 = ds.Tables[0].Rows[0][18].ToString();
+
+                string Event2 = ds.Tables[0].Rows[0][19].ToString();
+                string EventLink2 = ds.Tables[0].Rows[0][20].ToString();
+
+                string Event3 = ds.Tables[0].Rows[0][21].ToString();
+                string EventLink3 = ds.Tables[0].Rows[0][22].ToString();
+
+                
+                
+
+                OPFile = PagePathToWrite + (Regex.Replace(VendorName, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled) + ".aspx").Replace(" ", "");
 
                 StringBuilder readContents = new StringBuilder();
                 using (System.IO.StreamReader streamReader = new System.IO.StreamReader(pageToRead, Encoding.UTF8))
                 {
                     readContents.Append(streamReader.ReadToEnd());
                 }
-                readContents.Replace("CodeFile=\"VendorTemplate.aspx.cs\"", "CodeFile=\"..\\VendorTemplate.aspx.cs\"");
+                readContents.Replace("CodeFile=\"PSPTemplate.aspx.cs\"", "CodeFile=\"..\\PSPTemplate.aspx.cs\"");
                 readContents.Replace("{{VendorName}}", VendorName);
                 readContents.Replace("{{VendorShortDescription}}", VendorDescription);
-                readContents.Replace("{{VendorCity}} ", City);
+                readContents.Replace("{{VendorCity}}", City);
                 readContents.Replace("{{VendorDetailedDescription}}", VendorDetailedDescription);
                 readContents.Replace("{{ContactPerson}}", ContactPerson);
                 readContents.Replace("{{AddressLine1}}", AddressLine1);
@@ -141,19 +153,29 @@ namespace DAL
                 readContents.Replace("{{Landmark}}", LandMark);
                 readContents.Replace("{{state}}", State);
                 readContents.Replace("{{PinCode}}", PinCode);
-                readContents.Replace("{{ContactNumber}} ", MobileNo);
+                readContents.Replace("{{ContactNumber}}", MobileNo);
                 readContents.Replace("{{VendorWebPage}}", website);
                 readContents.Replace("{{VendorEmail}}", RegisteredEmail);
+                readContents.Replace("{{ServiceType}}", Services);
+
+                readContents.Replace("{{VendorLatestEventLocalLink1}}", EventLink1);
+                readContents.Replace("{{VendorLatestEvent1}}", Event1);
+
+                readContents.Replace("{{VendorLatestEventLocalLink2}}", EventLink2);
+                readContents.Replace("{{VendorLatestEvent2}}", Event2);
+
+                readContents.Replace("{{VendorLatestEventLocalLink3}}", EventLink3);
+                readContents.Replace("{{VendorLatestEvent3}}", Event3);
 
                 if (String.IsNullOrEmpty(FacebookLink))
-                    readContents.Replace("{{VendorNameFB}}", "");
+                    readContents.Replace("{{VendorFBPageLink}}", "");
                 else
-                    readContents.Replace("{{VendorNameFB}}", addHTTPToLink(CreateHyperLink(FacebookLink, VendorName + " On FB", true)));
+                    readContents.Replace("{{VendorFBPageLink}}", addHTTPToLink(CreateHyperLink(FacebookLink, VendorName + " On FB", true)));
 
                 if (String.IsNullOrEmpty(GooglePlusLink))
-                    readContents.Replace("{{VendorNameGooglePlus}}", "");
+                    readContents.Replace("{{VendorGooglePlusPageLink}}", "");
                 else
-                    readContents.Replace("{{VendorNameGooglePlus}}", addHTTPToLink(CreateHyperLink(GooglePlusLink, VendorName + " On Google Plus", true)));
+                    readContents.Replace("{{VendorGooglePlusPageLink}}", addHTTPToLink(CreateHyperLink(GooglePlusLink, VendorName + " On Google Plus", true)));
 
 
                 System.IO.StreamWriter writetext = new System.IO.StreamWriter(OPFile);
@@ -162,7 +184,7 @@ namespace DAL
 
                 OPFile = WebPath + (VendorName + ".aspx").Replace(" ", "");
 
-                string qry = "UPDATE TblVendor SET VendorLocalPagePath='" + OPFile + "' WHERE VendorID=" + VendorID.ToString();
+                string qry = "UPDATE TblVendor SET LocalPagePath='" + OPFile + "' WHERE VendorID=" + VendorID.ToString();
 
                 con = new SqlConnection(_ConnectionString);
                 con.Open();
@@ -170,11 +192,16 @@ namespace DAL
                 cmd.ExecuteNonQuery();
 
                 con.Close();
+
+                return OPFile;
             }
             catch (Exception ex)
             {
                 Logger.Utility.WriteDebugData(ex.Message);
+                return null;
             }
+
+            return "";
         }
 
         public void GenerateEventPage(int EventID, string pageToRead,string PagePathToWrite, string WebPath)
@@ -223,8 +250,8 @@ namespace DAL
                 {
                     readContents.Append(streamReader.ReadToEnd());
                 }
-                readContents.Replace("CodeFile=\"EventTemplate.aspx.cs\"", "CodeFile=\"..\\EventTemplate.aspx.cs\"");
 
+                readContents.Replace("CodeFile=\"EventTemplate.aspx.cs\"", "CodeFile=\"..\\EventTemplate.aspx.cs\"");
                 readContents.Replace("{{EventName}}", EventName);
                 readContents.Replace("{{EventStartDate}}", EventStartDate.ToString("dd/MM/yyyy"));
                 readContents.Replace("{{EventStartTime}}", EventStartDate.ToString("HH:mm"));
@@ -250,7 +277,7 @@ namespace DAL
                 readContents.Replace("{{EventContactNumber}}", MobileNo);
                 readContents.Replace("{{EMail}}", RegisteredEmail);
                 readContents.Replace("{{EventContent}}", EventComment);
-
+                
                 if (String.IsNullOrEmpty(VendorWebPage))
                     readContents.Replace("{{VendorName}}", VendorName);
                 else
@@ -266,6 +293,7 @@ namespace DAL
                 else
                     readContents.Replace("{{VendorNameGooglePlus}}", addHTTPToLink(CreateHyperLink(GooglePlusLink, VendorName + " On Google Plus", true)));
 
+                //Create Page
                 System.IO.StreamWriter writetext = new System.IO.StreamWriter(OPFile);
                 writetext.WriteLine(readContents.ToString());
                 writetext.Close();
@@ -398,7 +426,7 @@ namespace DAL
                )
         {
             SqlConnection con = new SqlConnection(_ConnectionString);
-            SqlCommand cmd = new SqlCommand("uspInsertVendorDetails", con);
+            SqlCommand cmd = new SqlCommand("pInsertVendorDetails", con);
             try
             {
                 cmd.Parameters.Add(new SqlParameter("@Name", ContactPersonName));
@@ -413,7 +441,7 @@ namespace DAL
                 cmd.Parameters.Add(new SqlParameter("@MobileNo", MobileNo));
                 cmd.Parameters.Add(new SqlParameter("@AreaOfOperation", AreaOfOperation));
                 //cmd.Parameters.Add(new SqlParameter("@CreatedDateTime datetime=NULL
-                //cmd.Parameters.Add(new SqlParameter("@UserType smallint=1
+                cmd.Parameters.Add(new SqlParameter("@UserType", "vendor"));
                 //cmd.Parameters.Add(new SqlParameter("@CompleteAddressLine nvarchar(564)=NULL
                 //cmd.Parameters.Add(new SqlParameter("@Area varchar(250)=NULL
                 cmd.Parameters.Add(new SqlParameter("@registeredEmail", registeredemail));

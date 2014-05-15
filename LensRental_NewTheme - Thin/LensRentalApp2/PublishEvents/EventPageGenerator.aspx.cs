@@ -30,7 +30,7 @@ public partial class PublishEvents_EventPageGenerator : System.Web.UI.Page
 
         FD.GenerateEventPage(
             Convert.ToInt32(selectedRow.Cells[0].Text),
-            Server.MapPath("/")+"PSP/VendorTemplate.aspx",
+            Server.MapPath("/") + "PublishEvents/EventTemplate.aspx",
             destinationPath,
             webPath);
 

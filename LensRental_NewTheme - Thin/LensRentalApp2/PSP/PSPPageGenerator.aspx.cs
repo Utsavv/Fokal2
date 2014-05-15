@@ -23,14 +23,14 @@ public partial class PublishEvents_EventPageGenerator : System.Web.UI.Page
 
         
         destinationPath = Server.MapPath("/") + "PSP\\" + FolderName + "\\";
-        webPath = (HttpContext.Current.Request.Url.AbsoluteUri.Replace("PSPPageGenerator.aspx","") + FolderName + "//");
+        webPath = (HttpContext.Current.Request.Url.AbsoluteUri.Replace("PSPPageGenerator.aspx","") + FolderName + @"/");
 
 
-        FD.GenerateVendorPage(
+        Response.Redirect( FD.GenerateVendorPage(
             Convert.ToInt32(selectedRow.Cells[0].Text),
-            Server.MapPath("/")+"PublishEvents/EventTemplate.aspx",
+            Server.MapPath("/") + "PSP/PSPTemplate.aspx",
             destinationPath,
-            webPath);
+            webPath));
 
     }
 }
