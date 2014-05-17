@@ -115,7 +115,7 @@
 </asp:Content>
 
 <asp:Content ID="title" ContentPlaceHolderID="title" runat="server">
-<h2>Event Reigstration Form</h2>
+<h3>Event Reigstration Form</h3>
     Please <a href="/vendorregistration.aspx" target="_blank">register as service provider</a> first, if not already done. Thanks!
 </asp:Content>
 
@@ -142,7 +142,7 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>About Event</h3>
+                            <h5>About Event</h5>
                         </td>
                     </tr>
                     <tr>
@@ -222,7 +222,7 @@
                 <div class="registrationForm">
                 <table>
                     <tr><td>
-                        <h3>Date & Venue</h3>
+                        <h5>Date & Venue</h5>
                         </td>
                     </tr>
                     <tr>
@@ -318,7 +318,7 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>Registration etc.</h3>
+                            <h5>Registration Requirements</h5>
                         </td>
                     </tr>
                     

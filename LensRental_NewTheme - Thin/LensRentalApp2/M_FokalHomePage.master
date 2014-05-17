@@ -22,7 +22,7 @@
 <asp:Content ID="centreTopArticle" ContentPlaceHolderID="centreTopArticle" runat="Server">
 
                                     <div class="article">
-                                    <h2>About Fokal.in</h2>
+                                    <h5>About Fokal.in</h5>
                                     <div class="photo_strip">
                                         <p>
                                             <asp:ContentPlaceHolder ID="fokalDescription" runat="server">
@@ -39,8 +39,8 @@
 
 <asp:Content ID="UpcomingEvents" ContentPlaceHolderID="upcomingEvents" runat="server">
                                         <div class="newsWidget">
-                                            <h2 id="ndheadline">Latest Events</h2>
-                                            <br>
+                                            <h5 id="ndheadline">Photography Events</h5>
+                                            
                                        <%-- <ul class="newsTabs">
                                             
                                             <li href="/"><a>Tours</a></li>
@@ -51,54 +51,37 @@
                                         <table class="newsTable">
                                             <tbody>
                                                 <tr>
-                                                    <td width="48%" valign="top">
+                                                    <%--<td valign="top" style="border-bottom: 1px dotted #D5D5D5;">--%>
+                                                    <td valign="top" class="borderbottom">
                                                         <div class="newsItem">
                                                             <div class="headline">
                                                                 <asp:HyperLink runat="server" ID="event1" NavigateUrl="~/PublishEvents/201405/BetterPhotography_YourPictures-ByTheBeach(PhotoContest)20140506.aspx">Your Pictures : By The Beach (Photo Contest)</asp:HyperLink>
                                                                 <br>
                                                                 <small>
-                                                                    25 May'14 | Online | <asp:HyperLink runat="server" ID="vendor1" NavigateUrl="#">Better Photography</asp:HyperLink>
+                                                                    Organizer : <asp:HyperLink runat="server" ID="vendor1" NavigateUrl="#">Better Photography</asp:HyperLink> <br />
+                                                                    25 May'14 | Online
                                                                 </small>
                                             </div>
 
                                             </div>
+                                                        </td>
+                                                    </tr>
+                                                <tr>
+                                                    <td>
                                             <div class="newsItem">
 
                                             <div class="headline">
                                                                 <asp:HyperLink runat="server" ID="event2" NavigateUrl="~/PublishEvents/May2014/MyCommunityMyPlanetPhotoContest.aspx">Photo Contest - My Community, My Planet</asp:HyperLink>
                                                                 <br>
                                                                 <small>
-                                                                    13 May'14 | Online | <asp:HyperLink runat="server" ID="vendor2" NavigateUrl="~/Vendors/SpanMagazine.aspx">SPAN Magazine</asp:HyperLink>
+                                                                     Organizer : <asp:HyperLink runat="server" ID="vendor2" NavigateUrl="~/Vendors/SpanMagazine.aspx">SPAN Magazine</asp:HyperLink> <br />
+                                                                    13 May'14 | Online 
                                                                 </small>
                                             </div>
 
                                             </div>
-                                            </td><td>&nbsp;</td><td width="48%" valign="top" style="border-left:1px dotted #D5D5D5; padding-left: 2%;">
-                                            <div class="newsItem">
-
-                                            <div class="headline">
-                                                <a href=""> </a>
-                                            <small>
-                                             
-
-                                                 <a href=""></a>
-                                            </small>
-                                            </div>
-
-                                            </div>
-                                            <div class="newsItem">
-
-                                            <div class="headline">
-                                                <a href=""></a>
-                                            <small>
-                                            
-
-                                                 <a href=""> </a>
-                                            </small>
-                                            </div>
-
-                                            </div>
-                                            </td></tr></tbody>
+                                                        </td>
+</tbody>
 
                                         </table>
                                      </div>
@@ -122,7 +105,7 @@
                                         </div>
 </asp:Content>--%>
 <asp:Content ID="Content1"  ContentPlaceHolderID="featuredPhotographers" runat="server">
-                                    <h2>Featured Photographers</h2>
+                                    <h5>Featured Photographers</h5>
                                 <table cellpadding="0" cellspacing="0">
                                 <tbody><tr>
                                 

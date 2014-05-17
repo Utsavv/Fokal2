@@ -193,7 +193,7 @@
 
                                     </style>
                                     <div id="opening-this-week" >
-                                        <h3>Photography Services Provider</h3>
+                                        <h6>Photography Services Provider</h6>
                                         <div id="opening-this-week-list-loading">  
                                             <div id="opening-this-week-list">
                                                 <b>Increase your business </b>by reaching more photographers today!
@@ -211,7 +211,7 @@
                                     </div>
                                 </div>
                                 <div class="aux-content-widget-2" >
-                                    <h3>Subscribe to our Foto Digest!</h3>
+                                    <h6>Subscribe to our Foto Digest!</h6>
                                     <!-- Begin MailChimp Signup Form -->
                                     <%--<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">--%>
                             
@@ -261,7 +261,7 @@
                                     <div class="fb-like-box" data-href="https://www.facebook.com/fokaldotin" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
                                 </div>
                                 <div class="aux-content-widget-2">
-                                    <h3> From our Blog</h3>
+                                    <h6> From our Blog</h6>
                                     <table border="0" width="100%" cellspacing="0" cellpadding="5px">
                                         <tbody>
                                             <tr>

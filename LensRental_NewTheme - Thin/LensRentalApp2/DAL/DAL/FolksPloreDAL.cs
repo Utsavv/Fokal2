@@ -170,12 +170,12 @@ namespace DAL
                 if (String.IsNullOrEmpty(FacebookLink))
                     readContents.Replace("{{VendorFBPageLink}}", "");
                 else
-                    readContents.Replace("{{VendorFBPageLink}}", addHTTPToLink(CreateHyperLink(FacebookLink, VendorName + " On FB", true)));
+                    readContents.Replace("{{VendorFBPageLink}}", CreateHyperLink(addHTTPToLink(FacebookLink), VendorName + " On FB", true));
 
                 if (String.IsNullOrEmpty(GooglePlusLink))
                     readContents.Replace("{{VendorGooglePlusPageLink}}", "");
                 else
-                    readContents.Replace("{{VendorGooglePlusPageLink}}", addHTTPToLink(CreateHyperLink(GooglePlusLink, VendorName + " On Google Plus", true)));
+                    readContents.Replace("{{VendorGooglePlusPageLink}}", CreateHyperLink(addHTTPToLink(GooglePlusLink), VendorName + " On Google Plus", true));
 
 
                 System.IO.StreamWriter writetext = new System.IO.StreamWriter(OPFile);
@@ -281,17 +281,17 @@ namespace DAL
                 if (String.IsNullOrEmpty(VendorWebPage))
                     readContents.Replace("{{VendorName}}", VendorName);
                 else
-                    readContents.Replace("{{VendorName}}", addHTTPToLink(CreateHyperLink(VendorWebPage, VendorName, true)));
+                    readContents.Replace("{{VendorName}}", CreateHyperLink(addHTTPToLink(VendorWebPage), VendorName, true));
 
                 if (String.IsNullOrEmpty(FacebookLink))
                     readContents.Replace("{{VendorNameFB}}", "");
                 else
-                    readContents.Replace("{{VendorNameFB}}", addHTTPToLink(CreateHyperLink(FacebookLink, VendorName + " On FB", true)));
+                    readContents.Replace("{{VendorNameFB}}", CreateHyperLink(addHTTPToLink(FacebookLink), VendorName + " On FB", true));
 
                 if (String.IsNullOrEmpty(GooglePlusLink))
                     readContents.Replace("{{VendorNameGooglePlus}}", "");
                 else
-                    readContents.Replace("{{VendorNameGooglePlus}}", addHTTPToLink(CreateHyperLink(GooglePlusLink, VendorName + " On Google Plus", true)));
+                    readContents.Replace("{{VendorNameGooglePlus}}", CreateHyperLink(addHTTPToLink(GooglePlusLink), VendorName + " On Google Plus", true));
 
                 //Create Page
                 System.IO.StreamWriter writetext = new System.IO.StreamWriter(OPFile);

@@ -96,8 +96,8 @@
 </script>
 </asp:Content>
 <asp:Content ID="title" ContentPlaceHolderID="title" runat="server">
-<h2>Photography Services Provider Reigstration Form</h2>
-    <br />
+<h3> Register as a Photography Services Provider</h3>
+ 
 </asp:Content>
 <asp:Content ID="Vendorform" ContentPlaceHolderID="mainContent" runat="server">
                  
@@ -131,7 +131,7 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>Contact Details</h3>
+                            <h5>Contact Details</h5>
                         </td>
                     </tr>
                     <tr>
@@ -172,7 +172,7 @@
 
                        <tr>
                         <td>
-                            <h3>Adress Details</h3>
+                            <h5>Address Details</h5>
                         </td>
                     </tr>
                     <tr>
@@ -244,7 +244,7 @@
                     <table>
                         <tr>
                             <td>
-                                <h3>About</h3>
+                                <h5>About</h5>
                             </td>
                         </tr>
                         <tr>
@@ -281,7 +281,7 @@
                     <table>
                     <tr>
                         <td>
-                            <h3 >Connect Socially</h3><small>(Helps users connect with you)</small>
+                            <h5 >Connect Socially</h5><small>(Helps users connect with you)</small>
                         </td>
                     </tr>
                      <tr>
