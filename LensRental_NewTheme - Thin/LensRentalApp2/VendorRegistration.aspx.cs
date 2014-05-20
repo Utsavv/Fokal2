@@ -77,7 +77,7 @@ public partial class Contact : System.Web.UI.Page
         {
             string script = string.Format("alert('{0}');window.location = 'eventRegistration.aspx';", "Thanks for Registering with Fokal.in! You can now register your events!");
             Page.ClientScript.RegisterClientScriptBlock(Page.GetType(), "alert", script, true /* addScriptTags */);
-            
+            EmailFunctions.SendEmail("register@fokal.in", "code@fokal.in", "New Vendor registration " + txtRegisteredEmail.Text, txtRegisteredEmail.Text);
         }
         else if (InquiryResult == -1)
         {
@@ -90,7 +90,7 @@ public partial class Contact : System.Web.UI.Page
             this.Page.ClientScript.RegisterStartupScript(base.GetType(), "key", "alert('Error in Registration!!!')", true);
         }
 
-        EmailFunctions.SendEmail("registration@fokal.in", "code@fokal.in", "New Vendor registration " + txtRegisteredEmail.Text, txtRegisteredEmail.Text);
+        
     }
 
     [WebMethod]

@@ -32,7 +32,7 @@ public partial class Fokal : System.Web.UI.MasterPage
         if (SessionState.UserName != null && SessionState.UserName != string.Empty)
         {
             UserNameSpan.InnerHtml = SessionState.UserName;
-            btnLogout.Visible = true;
+            btnLogout.Visible = false;
             btnLogin.Visible = false;
             //btnLogin2.Visible = false;
             //btnUserProfile.Visible = true;
@@ -40,7 +40,7 @@ public partial class Fokal : System.Web.UI.MasterPage
         else
         {
             UserNameSpan.InnerHtml = "Guest";
-            btnLogin.Visible = true;
+            btnLogin.Visible = false;
             //btnLogin2.Visible = true;
             btnLogout.Visible = false;
 
@@ -285,6 +285,6 @@ public partial class Fokal : System.Web.UI.MasterPage
         DAL.FolksploreDAL InsertSubscription = new DAL.FolksploreDAL(System.Configuration.ConfigurationManager.ConnectionStrings["Folksplore"].ToString());
         x = InsertSubscription.InsertSubscriptionEmail(email, CType);
         this.Page.ClientScript.RegisterStartupScript(base.GetType(), "key", "alert('Thank you " + email + "! You have been successfully added to our subscription list!');", true);
-        EmailFunctions.SendEmail("sales@fokal.in", "code@fokal.in", "New subscription " + email, CType);
+        EmailFunctions.SendEmail("subscribe@fokal.in", "code@fokal.in", "New subscription " + email, CType);
     }
 }

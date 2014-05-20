@@ -15,9 +15,9 @@
                                      Please contact us <a href="Contact.aspx"> here</a>.
                                     </p>
                                     <p>
-                                        Awesome
+                                        
                                     Team Fokal.in
-                                        Shruti and Utsav
+                                        
                                     </p>
 
 

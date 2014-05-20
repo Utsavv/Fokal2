@@ -25,6 +25,15 @@ public partial class FokalEvents : System.Web.UI.MasterPage
 
        
     }
-
+    protected void btnSubscribe_Click1(object sender, EventArgs e)
+    {
+        string email = txtEmailAddress.Text;
+        string CType = txtSignupType1.SelectedItem.Text;
+        int x = -1;
+        DAL.FolksploreDAL InsertSubscription = new DAL.FolksploreDAL(System.Configuration.ConfigurationManager.ConnectionStrings["Folksplore"].ToString());
+        x = InsertSubscription.InsertSubscriptionEmail(email, CType);
+        this.Page.ClientScript.RegisterStartupScript(base.GetType(), "key", "alert('Thank you " + email + "! You have been successfully added to our subscription list!');", true);
+        EmailFunctions.SendEmail("subscribe@fokal.in", "code@fokal.in", "New subscription " + email, CType);
+    }
     
 }

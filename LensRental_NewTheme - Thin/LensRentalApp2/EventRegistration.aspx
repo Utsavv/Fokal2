@@ -112,28 +112,37 @@
 </script>
 
   
+    <style type="text/css">
+        .auto-style1 {
+            width: 24%;
+        }
+    </style>
+
+  
 </asp:Content>
 
 <asp:Content ID="title" ContentPlaceHolderID="title" runat="server">
 <h3>Event Reigstration Form</h3>
-    Please <a href="/vendorregistration.aspx" target="_blank">register as service provider</a> first, if not already done. Thanks!
+    <p>Please <a href="/vendorregistration.aspx" target="_blank">register as service provider</a> first, if not already done. Thanks!</p>
 </asp:Content>
 
 
 <asp:Content ID="Vendorform" ContentPlaceHolderID="mainContent" runat="server">
-
+    <div id="registrationforms">
             <%--          <br /><br /><br />--%>
-                <div class="registrationForm" id="vendorEmail">
+                <div class="registrationForm" >
                 
                 <table>
                     <tr>
-                        <td style="width: 200px" >
+                        <td >
                             <label for="vendoremailID">Registered Email ID</label>
                             <asp:RequiredFieldValidator ID="rfvVendorName" Display="Dynamic" ControlToValidate="txtvendoremailID" runat="server" ErrorMessage="Please enter registered email ID" ValidationGroup="EventGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
+                        &nbsp;<asp:RegularExpressionValidator ID="RevEmail" runat="server" ControlToValidate="txtvendorEmailID" ErrorMessage="Please provide in format 'name@domain.com'" ValidationExpression="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" ValidationGroup="VendorGroup" Font-Size="Smaller"></asp:RegularExpressionValidator>
+
                         </td>
-                        <td >
-                            <asp:TextBox ID="txtvendorEmailID" runat="server" CssClass="eventinput-style" Width="190px"></asp:TextBox>
-                            <asp:RegularExpressionValidator ID="RevEmail" runat="server" ControlToValidate="txtvendorEmailID" ErrorMessage="Please provide email in format 'name@domain.com'" ValidationExpression="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" ValidationGroup="VendorGroup"></asp:RegularExpressionValidator>
+                        <td style="height: 26px" >
+                            <asp:TextBox ID="txtvendorEmailID" runat="server" CssClass="eventinput-style"></asp:TextBox>
+                            
                         </td>
                     </tr>
                      </table>
@@ -146,27 +155,27 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td>
                             <label for="EventName">Event Name</label>
                             <asp:RequiredFieldValidator ID="RfvEventName" Display="Dynamic" ControlToValidate="txtEventName" runat="server" ErrorMessage="Please  enter Event Name" ValidationGroup="EventGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                         </td>
                         <td style="height: 26px">
-                            <asp:TextBox ID="txtEventName" runat="server" CssClass="eventinput-style" Width="190px" ></asp:TextBox>
+                            <asp:TextBox ID="txtEventName" runat="server" CssClass="eventinput-style"  ></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventSmallDescrition">Two line description</label>
                             <asp:RequiredFieldValidator ID="RfvEventType3" Display="Dynamic" ControlToValidate="txtEventSmallDescrition" runat="server" ErrorMessage="Please provide brief description"   ValidationGroup="EventGroup" ForeColor="#990000" >*</asp:RequiredFieldValidator>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtEventSmallDescrition" runat="server" CssClass="eventinput-style" Height="51px" Width="300px" TextMode="MultiLine" placeholder="Brief Description mentioning what users would achieve from the event"></asp:TextBox>
+                            <asp:TextBox ID="txtEventSmallDescrition" runat="server" CssClass="eventinput-style" Height="51px"  TextMode="MultiLine" MaxLength="400" placeholder="Brief Description mentioning what users would achieve from the event"></asp:TextBox>
                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
 
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventType">Event Type</label>
                             <asp:RequiredFieldValidator ID="RfvEventType" Display="Dynamic" ControlToValidate="DDServiceType" runat="server" ErrorMessage="Please select Event Type" ValidationGroup="EventGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                         </td>
@@ -176,7 +185,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventTheme">Event Theme</label>
                         </td>
                         <td>
@@ -185,7 +194,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventAudience">Event Target Audience</label>
                             <asp:RequiredFieldValidator ID="RfvEventType0" Display="Dynamic" ControlToValidate="txtEventAudience" runat="server" ErrorMessage="Please select Event Target Audience" ValidationGroup="EventGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                         </td>
@@ -194,13 +203,13 @@
                                 <asp:ListItem Text="Beginner" Value="Beginner"></asp:ListItem>
                                 <asp:ListItem Text="Advanced" Value="Advanced"></asp:ListItem>
                                 <asp:ListItem Text="Professional" Value="Professional"></asp:ListItem>
-                                <asp:ListItem Text="For All Levels" Value="For All"></asp:ListItem>
+                                <asp:ListItem Text="Everyone" Value="Everyone"></asp:ListItem>
                             </asp:DropDownList>
                             
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventLongDescription">Complete descritption</label>
                         </td>
                         <td>
@@ -209,7 +218,7 @@
                         </td>
                         </tr>
                         <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="txtComment">Additional Information</label>
                         </td>
                         <td>
@@ -226,12 +235,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventStartDate">Event Start Date</label>
                             <asp:RequiredFieldValidator ID="rfvEventStartDate" Display="Dynamic" ControlToValidate="txtEventStartDate" runat="server" ErrorMessage="Please enter start date" ValidationGroup="EventGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                         </td>
                         <td style="height: 26px">
-                            <asp:TextBox ID="txtEventStartDate" runat="server" CssClass="eventinput-style" Width="190px"  ></asp:TextBox>
+                            <asp:TextBox ID="txtEventStartDate" runat="server" CssClass="eventinput-style"   ></asp:TextBox>
                            
                                 <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                         </td>
@@ -243,12 +252,12 @@
                           </td>
                     </tr>
                      <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventEndDate">Event End Date <br><small>For one day event, enter start date</small></label>
                             <asp:RequiredFieldValidator ID="rfvEventEndDate" Display="Dynamic" ControlToValidate="txtEventEndDate" runat="server" ErrorMessage="Please enter Event End Date" ValidationGroup="EventGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtEventEndDate" runat="server" CssClass="eventinput-style" Width="190px" ></asp:TextBox>
+                            <asp:TextBox ID="txtEventEndDate" runat="server" CssClass="eventinput-style" ></asp:TextBox>
                             </td>
                          </tr>
                          <tr>
@@ -258,29 +267,43 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
+                            <label for="EventIsVirtual">Is it an Online Event?</label>
+                            
+                        </td>
+                        <td style="height: 26px">
+                            <asp:DropDownList ID="ddlIsVirtualEvent" runat="server" CssClass="eventinput-style"   placeholder="Select">
+                                <asp:ListItem Text="No" Value=0></asp:ListItem>
+                                <asp:ListItem Text="Yes" Value=1></asp:ListItem>
+                            </asp:DropDownList>
+                           
+                                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                        </td>
+                        </tr>
+                    <tr>
+                        <td >
                             <label for="txtEventVenue">Event Venue</label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtAddressLine1" runat="server" CssClass="eventinput-style" Width="190px" ></asp:TextBox>
+                            <asp:TextBox ID="txtAddressLine1" runat="server" CssClass="eventinput-style"  placeholder="Address Line 1"></asp:TextBox>
                         </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <asp:TextBox ID="txtAddressLine2" runat="server" CssClass="eventinput-style" Width="190px" ></asp:TextBox>
+                                <asp:TextBox ID="txtAddressLine2" runat="server" CssClass="eventinput-style" placeholder="Address Line 2"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 200px">
+                            <td >
                                 <label for="Landmark">Landmark</label>
                             </td>
                             <td>
-                                <asp:TextBox ID="txtLandmark" runat="server" CssClass="eventinput-style" Width="190px" ></asp:TextBox>
+                                <asp:TextBox ID="txtLandmark" runat="server" CssClass="eventinput-style" ></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 200px">
+                            <td >
                                 <label for="State">State</label>
                             <asp:RequiredFieldValidator ID="RfvEventType1" Display="Dynamic" ControlToValidate="ddlStates" runat="server" ErrorMessage="Please select State" ValidationGroup="EventGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                             </td>
@@ -292,7 +315,7 @@
                             </td>
                             </tr>
                         <tr>
-                            <td style="width: 200px">
+                            <td >
                                 <label for="City">City</label>
                             <asp:RequiredFieldValidator ID="RfvEventType2" Display="Dynamic" ControlToValidate="txtEventAudience" runat="server" ErrorMessage="Please select City" ValidationGroup="EventGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                             </td>
@@ -303,7 +326,7 @@
                             </td>
                         </tr>
                     <tr>
-                            <td style="width: 200px">
+                            <td >
                                 <label for="Pincode">Pincode</label>
                             </td>
                             <td>
@@ -323,7 +346,7 @@
                     </tr>
                     
                    <tr>
-                     <td style="width: 200px">
+                     <td >
                          <label for="EventRegistrationRequired">Is Registration Required?</label>
                             <asp:RequiredFieldValidator ID="RfvEventType4" Display="Dynamic" ControlToValidate="txtEventRegistrationRequired" runat="server" ErrorMessage="Please select City" ValidationGroup="EventGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
 
@@ -338,7 +361,7 @@
                      </td>
                      </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventRegistrationCharges">Registration Charges <br /><small>(In INR, 0 for No Fees)</small></label>
                         </td>
                         <td>
@@ -347,7 +370,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             
                             <label for="EventRegistrationLastDate">Last Date of Registration</label>
                         </td>
@@ -356,11 +379,11 @@
                         </td>
                     </tr>
                      <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventWebPage">Event Webpage<br /><small>(Share web or FB Page)</small></label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtEventWebPage" runat="server" CssClass="eventinput-style" Width="190px" ></asp:TextBox>
+                            <asp:TextBox ID="txtEventWebPage" runat="server" CssClass="eventinput-style"  ></asp:TextBox>
                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
@@ -379,7 +402,7 @@
                 <asp:HiddenField ID="SelectedState" runat="server" ClientIDMode="Static" />
             <%--</form>--%>
   <%--          <br /><br /><br />--%>
-
+        </div>
 </asp:Content>
 
 

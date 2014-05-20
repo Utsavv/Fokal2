@@ -5,11 +5,13 @@
        </div>
 </asp:Content>
 <asp:Content ID="centreTopArticle" ContentPlaceHolderID="mainContent" runat="Server">
-            <h1>Photography Events, Exhibitions, Contests etc.</h1>            
+            <h1>Photography Contests, Events & more</h1>            
                 <asp:Panel ID="PanelSearchResult" runat="server">
 
                 </asp:Panel>
  
 </asp:Content>
 
-   
+   <asp:Content ID="SubscriptionVendor" ContentPlaceHolderID="SubscribeTo" runat="server">
+    Photography Contests, Events & more
+</asp:Content>

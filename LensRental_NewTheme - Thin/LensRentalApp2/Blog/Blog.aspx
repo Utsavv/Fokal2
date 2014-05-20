@@ -41,3 +41,6 @@
         <div class="g-plusone" data-size="medium"></div>
     </div>--%>
 </asp:Content>
+<asp:Content ID="SubscriptionVendor" ContentPlaceHolderID="SubscribeTo" runat="server">
+    Photography Articles, Views, Reviews
+</asp:Content>

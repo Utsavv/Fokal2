@@ -1,22 +1,22 @@
-﻿<%@ Page Title="Vendor | Fokal.in" Language="C#" MasterPageFile="~/m_Vendor.master" AutoEventWireup="true" CodeFile="PSPTemplate.aspx.cs" Inherits="Home" %>
+<%@ Page Title="Vendor | Fokal.in" Language="C#" MasterPageFile="~/m_Vendor.master" AutoEventWireup="true" CodeFile="..\PSPTemplate.aspx.cs" Inherits="Home" %>
 
 <asp:Content ID="VendorPicture"  ContentPlaceHolderID="vendorPic" runat="server">
-    <img height="200" width="355" alt="Vendor Poster" title="Vendor Poster" src="{{VendorPic}}" itemprop="image">
+    <img height="200" width="355" alt="Vendor Poster" title="Vendor Poster" src="http://localhost:35475/PSP/Pages/../images/Udaan-School-of-Photography.png" itemprop="image">
 </asp:Content>
 
 <asp:Content ID="VendorName"  ContentPlaceHolderID="vendorName" runat="server">
-    {{VendorName}} 
+    Udaan School of Photography 
 </asp:Content>
 
 <asp:Content ID="Services"  ContentPlaceHolderID="vendorServiceType" runat="server">
-    {{ServiceType}} 
+     Workshop | Course 
 </asp:Content>
 
 
 <asp:Content ID="Location"  ContentPlaceHolderID="eventOrganizerName" runat="server">
     <%-- Add the local link of the vendor in href--%>
 
-    <a >  {{VendorCity}}
+    <a >  Delhi
     </a>
 </asp:Content>
 <asp:Content ID="vendorOrganizationType" ContentPlaceHolderID="vendorOrganizationType" runat="server">
@@ -25,21 +25,22 @@
 
 
 <asp:Content ID="ShortDescription"  ContentPlaceHolderID="eventShortDescription" runat="server">
-     {{VendorShortDescription}}
+     Udaan aims to add wings to your dreams in photography, irrespective of your final destination with your camera. 
 </asp:Content>
 
 
 <asp:Content ID="EventDetails" ContentPlaceHolderID="eventDetails" runat="server">
-     {{VendorDetailedDescription}}
+     The one thing that binds students at Udaan is - passion for photography. Every student of Udaan, whatever his or her final aspiration, will be tutored by leading working professionals. The courses in Udaan have been designed to meet the needs of photography-enthusiasts at different levels of learning and expertise -- from those who are interested in shooting good family photographs or landscapes to cutting-edge, world-class professionals. 
+
 </asp:Content>
 
 <asp:Content ID="RegistrationHowTo"  ContentPlaceHolderID="ContactPerson" runat="server">
     <%-- Contact Person --%>
-    <b>Contact Person: </b> {{ContactPerson}}
+    <b>Contact Person: </b> Udaan School
 </asp:Content>
 <asp:Content ID="ContactNumber"  ContentPlaceHolderID="vendorContactNumber" runat="server">
     
- <b>Contact Number: </b>{{ContactNumber}}
+ <b>Contact Number: </b>9619315130 
 
 </asp:Content>
 <asp:Content ID="RegistrationHowTo2"  ContentPlaceHolderID="registrationHowTo" runat="server">
@@ -50,52 +51,53 @@
 <%-- CONTACT DETAILS AND SOCIAL PROFILE --%>
 <asp:Content ID="EventAddressLine1"  ContentPlaceHolderID="eventAddressLine1" runat="server">
     <%-- AddressLine1 --%>
-     {{AddressLine1}}
+     "Saini Bhavan" No. T-806/C-2 (A-179 Pvt.),
 </asp:Content>
 <asp:Content ID="EventAddressLine2"  ContentPlaceHolderID="eventAddressLine2" runat="server">
     <%-- AddressLine2 --%>
-     {{AddressLine2}}
+     situated at Sukhdev Market, Bhishma Pithamah Marg,
 </asp:Content>
 <asp:Content ID="EventAddressLandmark"  ContentPlaceHolderID="eventAddressLandmark" runat="server">
     <%-- Near <Landmark> --%>
-     {{Landmark}}
+     Opposite A-Block Defence Colony,
 </asp:Content>
 <asp:Content ID="EventAddressCityState"  ContentPlaceHolderID="eventAddressCityState" runat="server">
     <%-- City, State--%>
-     {{VendorCity}}
+     Delhi
 </asp:Content>
 
 
 <asp:Content ID="VendorWebPage"  ContentPlaceHolderID="vendorWebPage" runat="server">
-    {{VendorWebPage}}
+    <A HREF="http://www.udaan.org.in/" target="_blank">http://www.udaan.org.in/</a>
     <%--<a href="http://www.delhiphotographyclub.com/" target="_blank"> Delhi Photography Club</a>--%>
 </asp:Content>
 <asp:Content ID="VendorEmail"  ContentPlaceHolderID="vendorEmail" runat="server">
-    {{VendorEmail}}
+    <A HREF="mailto:enquiry.udaan.delhi@gmail.com">enquiry.udaan.delhi@gmail.com</a>
     <%--<a href="mailto:hi@delhiphotographyclub.com"> hi@delhiphotographyclub.com</a>--%>
 </asp:Content>
 <asp:Content ID="VendorFacebookPage"  ContentPlaceHolderID="vendorFacebookPage" runat="server">
-    {{VendorFBPageLink}}
+    <A HREF="http://www.facebook.com/udaan.photoschool?ref=search#!/udaan.photoschool?v=wall&ref=search" target="_blank">Udaan School of Photography On FB</a>
     <%--<a href="http://www.facebook.com/fokaldotin" target="_blank">Delhi Photography Club on Facebook</a>--%>
 </asp:Content>
 <asp:Content ID="VendorGooglePage"  ContentPlaceHolderID="vendorGooglePage" runat="server">
-    {{VendorGooglePlusPageLink}}
+    
     <%--<a href="http://www.facebook.com/fokaldotin" target="_blank">DPC on Google Plus</a>--%>
 </asp:Content>
 
 <asp:Content ID="upcomingEvents" ContentPlaceHolderID="UpcomingEvents" runat="server" >
     <ul>
         <li>
-            <a href="{{VendorLatestEventLocalLink1}}" >{{VendorLatestEvent1}}</a>
+            <a href="http://localhost:35475/publishevents/201405/Udaan-School-of-Photography-The-Basic-Photography-Course-Weekends-20140607.aspx" >The Basic Photography Course (Weekends)</a>
         </li>
         <li>
-            <a href="{{VendorLatestEventLocalLink2}}" >{{VendorLatestEvent2}}</a>
+            <a href="" ></a>
         </li>
         <li>
-            <a href="{{VendorLatestEventLocalLink3}}" >{{VendorLatestEvent3}}</a>
+            <a href="" ></a>
         </li>
     </ul>
 </asp:Content>
 <asp:Content ID="SubscriptionVendor" ContentPlaceHolderID="SubscribeTo" runat="server">
-    {{VendorName}}
+    Udaan School of Photography
 </asp:Content>
+

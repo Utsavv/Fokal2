@@ -77,9 +77,9 @@
                     <div id="topNavBar">
                           <div id="contactLeft">
                             Welcome <span id="UserNameSpan" runat="server"></span>
-                            <strong>| </strong>
+                            <%--<strong>| </strong>
                             <a href="UserProfile.aspx">My Account</a>
-                            <strong>| </strong>
+                            <strong>| </strong>--%>
                              
                             <a id="btnLogin" rel="nofollow" href="#logindivision" class="fancybox" runat="server">Login</a>
                             <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" CausesValidation="false" CssClass=""></asp:LinkButton>
@@ -125,6 +125,12 @@
                                 <li class="navTitleMenu">
                                     <h1 class="navCategory">
                                         <asp:HyperLink runat="server" ID="lnkListEvents" NavigateUrl="~/PublishEvents/ListEvents.aspx" ToolTip="Photography Contests, Exhibitions, Festivals">Events</asp:HyperLink>
+                                    </h1>
+                                </li>
+                                <li class="spacer"></li>
+                                <li class="navTitleMenu">
+                                    <h1 class="navCategory">
+                                        <asp:HyperLink runat="server" ID="lnkListPSP" NavigateUrl="~/PSP/ListPSP.aspx">Service Providers</asp:HyperLink>
                                     </h1>
                                 </li>
                                 <li class="spacer"></li>
@@ -196,22 +202,19 @@
                                         <h6>Photography Services Provider</h6>
                                         <div id="opening-this-week-list-loading">  
                                             <div id="opening-this-week-list">
-                                                <b>Increase your business </b>by reaching more photographers today!
-                                                <ul>
-                                                    <li>
-                                                        <asp:HyperLink runat="server" ID="lnkVendorRegistrationForm" NavigateUrl="~/VendorRegistration.aspx">Create your Business Page</asp:HyperLink>
-                                                    </li>
-                                                    <li>
+                                                <b>Increase your business </b> 
+                                                <p>✓ Reach more Photography Aspirants</p>
+                                                <p>✓ Connect with Photographers</p>
+                                                        <asp:HyperLink runat="server" ID="lnkVendorRegistrationForm" NavigateUrl="~/VendorRegistration.aspx">Register & </asp:HyperLink>
                                                         <asp:HyperLink runat="server" ID="lnkEventRegistrationForm" NavigateUrl="~/EventRegistration.aspx">Create your Event Page</asp:HyperLink>
-                                                    </li>
-                                                </ul>
-                                                <p>It's FREE!!</p>   
+                                                
+                                                <p>No strings attached a.k.a Free!!</p>   
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="aux-content-widget-2" >
-                                    <h6>Subscribe to our Foto Digest!</h6>
+                                    <h6>Subscribe to Foto Digest!</h6>
                                     <!-- Begin MailChimp Signup Form -->
                                     <%--<link href="//cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">--%>
                             
@@ -236,8 +239,8 @@
                                 <%--<form id="Form1" runat="server">--%>
                                 <label for="mce-EMAIL" >Stay updated on latest events </label>
                                     <asp:TextBox ID="txtEmailAdd" runat="server" placeholder="email address" CssClass="email"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="txtEmailValidator" Display="Dynamic" ControlToValidate="txtEmail" runat="server" ErrorMessage="*" ValidationGroup="SubscribeGroup" ForeColor="Red"></asp:RequiredFieldValidator>
-                                    <asp:RegularExpressionValidator ID="correctEmailValidator1" Display="Dynamic" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter valid email" ValidationGroup="InquiryGroup" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    <asp:RequiredFieldValidator ID="txtEmailValidator" Display="Dynamic" ControlToValidate="txtEmailAdd" runat="server" ErrorMessage="*" ValidationGroup="SubscribeGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="correctEmailValidator1" Display="Dynamic" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter valid Email Address" ValidationGroup="SubscribeGroup" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
                                     
                                     <asp:DropDownList Id="txtSignupType" runat="server" DataTextField="signupType" DataValueField="id" class="customertype">
                                         <asp:ListItem Text="" Value="0">I am a...</asp:ListItem>
@@ -420,7 +423,7 @@
                 <div id="footer" class="ft">
                     <hr  />
                     <p class="footer" >
-                        <asp:HyperLink runat="server" ID="lnkHome" NavigateUrl="~/home.aspx">Home</asp:Hyperlink>
+                        <asp:HyperLink runat="server" ID="lnkHome" NavigateUrl="~/home.aspx">Home</asp:HyperLink>
                          |
                        <asp:HyperLink runat="server" ID="lnkAbout" NavigateUrl="~/About.aspx">About Us</asp:HyperLink>
                          | 
@@ -443,8 +446,8 @@
                          |
                         <asp:HyperLink runat="server" ID="lnkCourses" NavigateUrl="~/PublishEvents/ListCourses.aspx">Courses</asp:HyperLink>
                          |
-                        <asp:HyperLink runat="server" ID="lnkSearchEvents" NavigateUrl="~/PublishEvents/SearchEvents.aspx">Search Events</asp:HyperLink>
-                         |
+                        <%--<asp:HyperLink runat="server" ID="lnkSearchEvents" NavigateUrl="~/PublishEvents/SearchEvents.aspx">Search Events</asp:HyperLink>
+                         |--%>
                         <asp:HyperLink runat="server" ID="lnkVendorRegistration" NavigateUrl="~/VendorRegistration.aspx">Vendor Registration</asp:HyperLink> 
                         |
                         <asp:HyperLink runat="server" ID="lnkEventRegistration" NavigateUrl="~/EventRegistration.aspx">Event Registration</asp:HyperLink>
@@ -453,7 +456,7 @@
                         | 
                         <a href="http://www.google.com/+fokalin" target="_blank">Google Plus</a>
                         <br>
-                        © 2014 Fokal.in
+                        <small>© 2014 Fokal.in</small>
                         <br />
                         <div style="margin-left:37%">
 

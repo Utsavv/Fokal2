@@ -1,58 +1,48 @@
 <%@ Page Title="Vendor | Fokal.in" Language="C#" MasterPageFile="~/m_Vendor.master" AutoEventWireup="true" CodeFile="..\PSPTemplate.aspx.cs" Inherits="Home" %>
 
-<asp:Content ID="EventPicture"  ContentPlaceHolderID="vendorPic" runat="server">
-    <img height="200" width="355" alt="Event Poster" title="Event Poster" src=".//images//banner.png" itemprop="image">
+<asp:Content ID="VendorPicture"  ContentPlaceHolderID="vendorPic" runat="server">
+    <img height="200" width="355" alt="Vendor Poster" title="Vendor Poster" src="http://localhost:35475/PSP/Pages/../images/Span-Magazine.png" itemprop="image">
 </asp:Content>
 
-<asp:Content ID="VendorName"  ContentPlaceHolderID="eventName" runat="server">
-    Shruti Photography Club 
+<asp:Content ID="VendorName"  ContentPlaceHolderID="vendorName" runat="server">
+    Span Magazine 
 </asp:Content>
 
-<asp:Content ID="Service1"  ContentPlaceHolderID="eventDate" runat="server">
-    {{ServiceType1}} 
+<asp:Content ID="Services"  ContentPlaceHolderID="vendorServiceType" runat="server">
+     Event 
 </asp:Content>
 
-<asp:Content ID="Service2"  ContentPlaceHolderID="eventCity" runat="server">
-     {{ServiceType2}}
-</asp:Content>
-
-<asp:Content ID="Service3"  ContentPlaceHolderID="eventLevel" runat="server">
-
-     {{ServiceType3}}
-</asp:Content>
-<asp:Content ID="Service4"  ContentPlaceHolderID="eventTheme" runat="server">
-
-     {{ServiceType4}}
-</asp:Content>
-
-<asp:Content ID="Service5"  ContentPlaceHolderID="eventTime" runat="server">
-    <%-- OPTIONAL - ANY OTHER EVENT IF THERE IS ONE --%>
-<%--    <a>9:00 am</a>
-    <span class="ghost">|</span>--%>
-</asp:Content>
 
 <asp:Content ID="Location"  ContentPlaceHolderID="eventOrganizerName" runat="server">
     <%-- Add the local link of the vendor in href--%>
 
-    <a >  Port Blair
+    <a >  Delhi
     </a>
+</asp:Content>
+<asp:Content ID="vendorOrganizationType" ContentPlaceHolderID="vendorOrganizationType" runat="server">
+   <%-- {{OrgType}}--%>
 </asp:Content>
 
 
 <asp:Content ID="ShortDescription"  ContentPlaceHolderID="eventShortDescription" runat="server">
-     fsdfsdf
+     Since 1960, SPAN has linked India and the United States, offering articles from writers in both countries.
 </asp:Content>
 
 
 <asp:Content ID="EventDetails" ContentPlaceHolderID="eventDetails" runat="server">
-     sdfsdgfdfghdgh
+     Since 1960, SPAN has linked India and the United States, offering articles from writers in both countries on culture, business, technology, education, health, social development, arts and achievements in U.S.-India relations. Beautiful photography and also articles from the best American publications are showcased in every issue of SPAN, which is published in English, Hindi and Urdu.
 </asp:Content>
 
-<asp:Content ID="RegistrationHowTo"  ContentPlaceHolderID="registrationHowTo" runat="server">
+<asp:Content ID="RegistrationHowTo"  ContentPlaceHolderID="ContactPerson" runat="server">
     <%-- Contact Person --%>
-    <b>Contact Person: </b> shruti
+    <b>Contact Person: </b> Chetna Khera
 </asp:Content>
-<asp:Content ID="RegistrationHowTo2"  ContentPlaceHolderID="registrationHowTo2" runat="server">
+<asp:Content ID="ContactNumber"  ContentPlaceHolderID="vendorContactNumber" runat="server">
+    
+ <b>Contact Number: </b>011-2347-2135
+
+</asp:Content>
+<asp:Content ID="RegistrationHowTo2"  ContentPlaceHolderID="registrationHowTo" runat="server">
     <%-- Any registration information goes here --%>
    <%-- Registration:  {{RegistrationModes}}--%>
 </asp:Content>
@@ -60,54 +50,53 @@
 <%-- CONTACT DETAILS AND SOCIAL PROFILE --%>
 <asp:Content ID="EventAddressLine1"  ContentPlaceHolderID="eventAddressLine1" runat="server">
     <%-- AddressLine1 --%>
-     Network18 Media & Investments Ltd
+     American Center
 </asp:Content>
 <asp:Content ID="EventAddressLine2"  ContentPlaceHolderID="eventAddressLine2" runat="server">
     <%-- AddressLine2 --%>
-     234
+     24 Kasturba Gandhi Marg,
 </asp:Content>
 <asp:Content ID="EventAddressLandmark"  ContentPlaceHolderID="eventAddressLandmark" runat="server">
     <%-- Near <Landmark> --%>
-     345
+     
 </asp:Content>
 <asp:Content ID="EventAddressCityState"  ContentPlaceHolderID="eventAddressCityState" runat="server">
     <%-- City, State--%>
-     Port Blair
+     Delhi
 </asp:Content>
 
-<asp:Content ID="ContactNumber"  ContentPlaceHolderID="vendorContactNumber" runat="server">
-    <%-- Contact number If multiple do comma seperated --%>
- 9971510317
 
-</asp:Content>
 <asp:Content ID="VendorWebPage"  ContentPlaceHolderID="vendorWebPage" runat="server">
-    www.shruti.com
+    
     <%--<a href="http://www.delhiphotographyclub.com/" target="_blank"> Delhi Photography Club</a>--%>
 </asp:Content>
 <asp:Content ID="VendorEmail"  ContentPlaceHolderID="vendorEmail" runat="server">
-    shruti1@shruti.com
+    <A HREF="mailto:ezinespan@state.gov">ezinespan@state.gov</a>
     <%--<a href="mailto:hi@delhiphotographyclub.com"> hi@delhiphotographyclub.com</a>--%>
 </asp:Content>
 <asp:Content ID="VendorFacebookPage"  ContentPlaceHolderID="vendorFacebookPage" runat="server">
-    {{VendorFBPageLink}}
+    
     <%--<a href="http://www.facebook.com/fokaldotin" target="_blank">Delhi Photography Club on Facebook</a>--%>
 </asp:Content>
 <asp:Content ID="VendorGooglePage"  ContentPlaceHolderID="vendorGooglePage" runat="server">
-    {{VendorGooglePlusPageLink}}
+    
     <%--<a href="http://www.facebook.com/fokaldotin" target="_blank">DPC on Google Plus</a>--%>
 </asp:Content>
 
 <asp:Content ID="upcomingEvents" ContentPlaceHolderID="UpcomingEvents" runat="server" >
     <ul>
         <li>
-            {{VendorLatestEventLocalLink1}}
+            <a href="http://localhost:35475/publishevents/201405/Span-Magazine-My-Community-My-Planet-Photo-Contest19000101.aspx" >My Community My Planet - Photo Contest</a>
         </li>
         <li>
-            {{VendorLatestEventLocalLink2}}
+            <a href="" ></a>
         </li>
         <li>
-            {{VendorLatestEventLocalLink3}}
+            <a href="" ></a>
         </li>
     </ul>
+</asp:Content>
+<asp:Content ID="SubscriptionVendor" ContentPlaceHolderID="SubscribeTo" runat="server">
+    Span Magazine
 </asp:Content>
 

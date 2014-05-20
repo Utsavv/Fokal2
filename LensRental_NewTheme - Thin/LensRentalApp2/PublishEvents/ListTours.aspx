@@ -12,3 +12,6 @@
                 </asp:Panel>
  
 </asp:Content>
+<asp:Content ID="SubscriptionVendor" ContentPlaceHolderID="SubscribeTo" runat="server">
+    Photography Tours
+</asp:Content>

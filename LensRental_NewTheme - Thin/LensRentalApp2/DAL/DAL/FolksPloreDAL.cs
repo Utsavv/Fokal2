@@ -46,50 +46,204 @@ namespace DAL
             string arg = SearchType;
             ds = this.GetSearchResults(arg, null, null, 0, null, 0);
 
+
+
             string HTML = "";
             for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
             {
+                string eventName                = ds.Tables[0].Rows[i][2].ToString();
+                string eventCity                = ds.Tables[0].Rows[i][3].ToString();
+                string eventStartDate           = ds.Tables[0].Rows[i][4].ToString();
+                string vendorName               = ds.Tables[0].Rows[i][5].ToString();
+                string eventShortDescription    = ds.Tables[0].Rows[i][6].ToString();
+                //string eventPage                = ds.Tables[0].Rows[i][7].ToString();
+                string vendorLocalPagePath      = ds.Tables[0].Rows[i][8].ToString();
+                string eventSubCategory         = ds.Tables[0].Rows[i][9].ToString();
+                string eventLocalPagePath       = ds.Tables[0].Rows[i][10].ToString();
+                string eventLevel               = ds.Tables[0].Rows[i][11].ToString();
+                string eventTheme               = ds.Tables[0].Rows[i][12].ToString();
+                string eventThumbImage          = ds.Tables[0].Rows[i][13].ToString();
 
-                string path = ds.Tables[0].Rows[i][7].ToString();
+                string path = eventLocalPagePath;
                 string Eventdate = "";
                 string VendorLocalPath = "";
-                switch (String.IsNullOrEmpty(ds.Tables[0].Rows[i][4].ToString()))
+                switch (String.IsNullOrEmpty(eventStartDate))
                 {
                     case true: { Eventdate = "19000101"; break; }
-                    default: { Eventdate = Convert.ToDateTime(ds.Tables[0].Rows[i][4]).ToString("yyyyMMdd"); break; }
+                    default: { Eventdate = Convert.ToDateTime(eventStartDate).ToString("yyyyMMdd"); break; }
                 }
 
-                switch (String.IsNullOrEmpty(ds.Tables[0].Rows[i][8].ToString()))
+                switch (String.IsNullOrEmpty(vendorLocalPagePath))
                 {
                     case true: { VendorLocalPath = ""; break; }
-                    default: { VendorLocalPath = ds.Tables[0].Rows[i][8].ToString(); break; }
+                    default: { VendorLocalPath = vendorLocalPagePath; break; }
                 }
 
-                if (ds.Tables[0].Rows[i][7].ToString().Length > 0 && ds.Tables[0].Rows[i][7].ToString().Contains("http") == false)
+                if (eventLocalPagePath.Length > 0 && eventLocalPagePath.Contains("http") == false)
                     path = "http://" + path;
 
-                //Event Name as title
-                HTML += "<TR> <TD>" + ds.Tables[0].Rows[i][4].ToString() + "</TD>";
-                //Event Local Path
-                HTML += " <TD colspan=3><B><A href=\""+ds.Tables[0].Rows[i][10].ToString()+"\">"
-                                                                                + ds.Tables[0].Rows[i][2].ToString() + "</A></B></TD>";
-                //Event City
-                HTML += "<TD style=\"text-align:right; \">" + ds.Tables[0].Rows[i][3].ToString() + "</TR>";
-                //Organizer
-                HTML += " <TR> <TD></TD><TD colspan=3> <A href=\"" + VendorLocalPath + "\">" + ds.Tables[0].Rows[i][5].ToString() + "</A></TD>";
-                // Event Date
-                //HTML += " <TD> " + ds.Tables[0].Rows[i][4].ToString() + "</TD></TR>";
-                //Event Description
-                HTML += "<TR><TD></TD><TD colspan=3> " + ds.Tables[0].Rows[i][6].ToString() + "</TD></TR>";
-                //Website Path
-                HTML += "<TR><TD></TD><TD colspan=3><small>Registration Details | <A HREF=\"" + path + "\" target=\"_blank\">Visit Website</A>" + "</small></TD></TR>";
-                HTML += "<TR><TD><br>" + " " + "</TD></TR>";
+                HTML += "<tr >";
+                HTML += "<td class=\"imagebox\">";
+                HTML += "<div class=\"image\">";
+                HTML += "<a href=\"" + path + "\">"; //Event Local Page Path
+                HTML += "<img  src=\"" + eventThumbImage + "\" />"; // Image path
+                HTML += "</a>";
+                HTML += "</div>";
+                HTML += "</td>";
+                HTML += "<td class=\"eventDetails\">";
+                HTML += "<h2 >";
+                HTML += "<a href=\"" + path + "\">" + eventName + "</a>";
+                HTML += "</h2>";
+                HTML += "<small >";
+                HTML += "<span >";
+                HTML += "Organizer: ";
+                HTML += "</span>";
+                HTML += "<a href=\"" + VendorLocalPath + "\">" + vendorName + "</a>";
+                HTML += "</small>";
+                HTML += "<div>";
+                HTML += "<small>";
+                HTML += "<span >";
+                HTML += eventSubCategory; //Event Sub Category
+                HTML += "</span> | <span >";
+                if(String.IsNullOrEmpty(eventCity))
+                    HTML += "Online"; 
+                else
+                    HTML += eventCity;
+                HTML += "</span> | <span >";
+                HTML += eventLevel; //Event Level
+                HTML += "</span>"; 
+                HTML += "</small>";
+                HTML += "</div>";
+                            
+                HTML += "</td>";
+                HTML += "<td class=\"dateContainer\">";
+                HTML += "<div class=\"expired\">";
+                HTML += "<div class=\"pic\">";
+                HTML += "<div class=\"dateSmallIcon\">";
+                HTML += "<p>";
+                if(String.IsNullOrEmpty(eventStartDate))
+                    HTML += DateTime.Now.ToString("MMM");
+                else
+                    HTML += Convert.ToDateTime(eventStartDate).ToString("MMM"); //Event Start Month in three letters
+                HTML += "</p>";
+                HTML += "<h2>";
+                if (String.IsNullOrEmpty(eventStartDate))
+                    HTML += DateTime.Now.Day.ToString();
+                else
+                    HTML += Convert.ToDateTime(eventStartDate).Day.ToString(); //Event Start day
+                HTML += "</h2>";
+                HTML += "</div></div></div>";
+                HTML += "</td>";
+                HTML += "</tr>";
+
+
             }
             table.InnerHtml = HTML;
             return table;
 
 
         
+        }
+
+        public System.Web.UI.HtmlControls.HtmlGenericControl GetHTMLTableForVendorSearch(string SearchType)
+        {
+            System.Web.UI.HtmlControls.HtmlGenericControl table = new System.Web.UI.HtmlControls.HtmlGenericControl("Table");
+            DataSet ds;
+            string arg = SearchType;
+            ds = this.GetVendorResults(arg, null, null, 0, null, 0);
+
+
+
+            string HTML = "";
+            for (int i = 0; i < ds.Tables[0].Rows.Count; i++)
+            {
+
+                string vendorName = ds.Tables[0].Rows[i][1].ToString();
+                string vendorCity = ds.Tables[0].Rows[i][2].ToString();
+                string vendorShortDescription = ds.Tables[0].Rows[i][3].ToString();
+                string vendorLocalPagePath = ds.Tables[0].Rows[i][4].ToString();
+                string vendorSubCategory = ds.Tables[0].Rows[i][5].ToString();
+                string vendorThumbImage = ds.Tables[0].Rows[i][6].ToString();
+
+                string path = vendorLocalPagePath;
+                
+                string VendorLocalPath = "";
+
+
+                switch (String.IsNullOrEmpty(vendorLocalPagePath))
+                {
+                    case true: { VendorLocalPath = ""; break; }
+                    default: { VendorLocalPath = vendorLocalPagePath; break; }
+                }
+
+                if (vendorLocalPagePath.Length > 0 && vendorLocalPagePath.Contains("http") == false)
+                    path = "http://" + path;
+
+                HTML += "<tr >";
+                HTML += "<td class=\"vendorimagebox\">";
+                HTML += "<div class=\"vendorimage\">";
+                HTML += "<a href=\"" + path + "\">"; //Vendor Local Page Path
+                HTML += "<img  class=\"smallvendorimage\" src=\"" + vendorThumbImage + "\" />"; // Image path
+                HTML += "</a>";
+                HTML += "</div>";
+                HTML += "</td>";
+                HTML += "<td class=\"vendorDetails\">";
+                HTML += "<h2 >";
+                HTML += "<a href=\"" + path + "\">" + vendorName + "</a>";
+                HTML += "</h2>";
+                HTML += "<small >";
+                HTML += "City: ";
+                HTML += "<span >";
+                HTML += vendorCity;
+                HTML += "</span>";
+                HTML += "</small>";
+                HTML += "<div>";
+                HTML += "<small >";
+                HTML += "<span >";
+                HTML += "</span>";
+                HTML += vendorShortDescription;
+                HTML += "</small>";
+                HTML += "</div>";
+                HTML += "<div>";
+                HTML += "<small> <b> Organizes: Photography  </b>»";
+                HTML += "<span >";
+                HTML += vendorSubCategory; //Vendor Sub Category
+                
+                
+                //HTML += "</span> | <span >";
+                //HTML += eventLevel; //Event Level
+                HTML += "</span>";
+                HTML += "</small>";
+                HTML += "</div>";
+
+                HTML += "</td>";
+                //HTML += "<td class=\"dateContainer\">";
+                //HTML += "<div class=\"expired\">";
+                //HTML += "<div class=\"pic\">";
+                //HTML += "<div class=\"dateSmallIcon\">";
+                //HTML += "<p>";
+                //if (String.IsNullOrEmpty(eventStartDate))
+                //    HTML += DateTime.Now.ToString("MMM");
+                //else
+                //    HTML += Convert.ToDateTime(eventStartDate).ToString("MMM"); //Event Start Month in three letters
+                //HTML += "</p>";
+                //HTML += "<h2>";
+                //if (String.IsNullOrEmpty(eventStartDate))
+                //    HTML += DateTime.Now.Day.ToString();
+                //else
+                //    HTML += Convert.ToDateTime(eventStartDate).Day.ToString(); //Event Start day
+                //HTML += "</h2>";
+                //HTML += "</div></div></div>";
+                //HTML += "</td>";
+                HTML += "</tr>";
+
+
+            }
+            table.InnerHtml = HTML;
+            return table;
+
+
+
         }
 
         public string GenerateVendorPage(int VendorID, string pageToRead, string PagePathToWrite, string WebPath)
@@ -132,10 +286,11 @@ namespace DAL
                 string Event3 = ds.Tables[0].Rows[0][21].ToString();
                 string EventLink3 = ds.Tables[0].Rows[0][22].ToString();
 
-                
-                
+                string VendorNameCompressed = Regex.Replace(VendorName, "[^a-zA-Z0-9_.]+", "-", RegexOptions.Compiled);
+                string VendorLargeImage = WebPath +"../images/" + VendorNameCompressed + ".png";
+                string VendorThumbImage = WebPath + "../images/thumb-" + VendorNameCompressed + ".png";
 
-                OPFile = PagePathToWrite + (Regex.Replace(VendorName, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled) + ".aspx").Replace(" ", "");
+                OPFile = PagePathToWrite + (VendorNameCompressed + ".aspx").Replace(" ", "-");
 
                 StringBuilder readContents = new StringBuilder();
                 using (System.IO.StreamReader streamReader = new System.IO.StreamReader(pageToRead, Encoding.UTF8))
@@ -143,6 +298,7 @@ namespace DAL
                     readContents.Append(streamReader.ReadToEnd());
                 }
                 readContents.Replace("CodeFile=\"PSPTemplate.aspx.cs\"", "CodeFile=\"..\\PSPTemplate.aspx.cs\"");
+                readContents.Replace("{{VendorPic}}", VendorLargeImage);
                 readContents.Replace("{{VendorName}}", VendorName);
                 readContents.Replace("{{VendorShortDescription}}", VendorDescription);
                 readContents.Replace("{{VendorCity}}", City);
@@ -154,8 +310,13 @@ namespace DAL
                 readContents.Replace("{{state}}", State);
                 readContents.Replace("{{PinCode}}", PinCode);
                 readContents.Replace("{{ContactNumber}}", MobileNo);
-                readContents.Replace("{{VendorWebPage}}", website);
-                readContents.Replace("{{VendorEmail}}", RegisteredEmail);
+                if (String.IsNullOrEmpty(website))
+                    readContents.Replace("{{VendorWebPage}}", "");
+                else
+                    readContents.Replace("{{VendorWebPage}}", CreateHyperLink(addHTTPToLink(website), website, true));
+ 
+                readContents.Replace("{{VendorEmail}}", CreateHyperLink("mailto:" + RegisteredEmail, RegisteredEmail, false));
+                
                 readContents.Replace("{{ServiceType}}", Services);
 
                 readContents.Replace("{{VendorLatestEventLocalLink1}}", EventLink1);
@@ -182,9 +343,13 @@ namespace DAL
                 writetext.WriteLine(readContents.ToString());
                 writetext.Close();
 
-                OPFile = WebPath + (VendorName + ".aspx").Replace(" ", "");
+                OPFile = WebPath + (VendorNameCompressed + ".aspx").Replace(" ", "-");
 
-                string qry = "UPDATE TblVendor SET LocalPagePath='" + OPFile + "' WHERE VendorID=" + VendorID.ToString();
+                string qry = "UPDATE TblVendor SET LocalPagePath='" + OPFile + 
+                    "',ThumbImagePath='" + VendorThumbImage +         
+                    "',LargeImagePath='" + VendorLargeImage + 
+                    "' WHERE VendorID=" + VendorID.ToString();
+
 
                 con = new SqlConnection(_ConnectionString);
                 con.Open();
@@ -204,8 +369,9 @@ namespace DAL
             return "";
         }
 
-        public void GenerateEventPage(int EventID, string pageToRead,string PagePathToWrite, string WebPath)
+        public string GenerateEventPage(int EventID, string pageToRead,string PagePathToWrite, string WebPath)
         {
+            
             try
             {
                 SqlConnection con = new SqlConnection(_ConnectionString);
@@ -225,7 +391,7 @@ namespace DAL
                 string ServiceTheme = ds.Tables[0].Rows[0][4].ToString();
                 string EventSmallDescription = ds.Tables[0].Rows[0][5].ToString();
                 string VendorName = ds.Tables[0].Rows[0][6].ToString();
-                string LocalPagePath = ds.Tables[0].Rows[0][7].ToString();
+                string VendorLocalPagePath = ds.Tables[0].Rows[0][7].ToString();
                 string EventCharges = ds.Tables[0].Rows[0][8].ToString();
                 string IsRegistrationRequired = ds.Tables[0].Rows[0][9].ToString();
                 string EventLargeDescription = ds.Tables[0].Rows[0][10].ToString();
@@ -240,11 +406,16 @@ namespace DAL
                 string GooglePlusLink = ds.Tables[0].Rows[0][19].ToString();
                 string EventComment = ds.Tables[0].Rows[0][20].ToString();
                 string VendorWebPage = ds.Tables[0].Rows[0][21].ToString();
-
-                VendorName = Regex.Replace(VendorName, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
-                EventName = Regex.Replace(EventName, "[^a-zA-Z0-9_.]+", "", RegexOptions.Compiled);
-                OPFile = PagePathToWrite + (VendorName + "_" + EventName + EventStartDate.ToString("yyyyMMdd") + ".aspx").Replace(" ", "");
+                string EventType = ds.Tables[0].Rows[0][23].ToString();
+                string VendorContactNumber = ds.Tables[0].Rows[0][24].ToString();
+                string VendorContactPerson = ds.Tables[0].Rows[0][25].ToString();
                 
+                string VendorNameCompressed = Regex.Replace(VendorName, "[^a-zA-Z0-9_.]+", "-", RegexOptions.Compiled);
+                string EventNameCompressed = Regex.Replace(EventName, "[^a-zA-Z0-9_.]+", "-", RegexOptions.Compiled);
+                OPFile = PagePathToWrite + (VendorNameCompressed + "-" + EventNameCompressed + EventStartDate.ToString("yyyyMMdd") + ".aspx").Replace(" ", "-");
+
+                string EventLargeImage = WebPath + "./images/" + EventNameCompressed + EventStartDate.ToString("yyyyMMdd") + ".png";
+                string EventThumbImage = WebPath + "./images/thumb-" + EventNameCompressed + EventStartDate.ToString("yyyyMMdd") + ".png";
                 StringBuilder readContents = new StringBuilder();
                 using (System.IO.StreamReader streamReader = new System.IO.StreamReader(pageToRead, Encoding.UTF8))
                 {
@@ -252,14 +423,17 @@ namespace DAL
                 }
 
                 readContents.Replace("CodeFile=\"EventTemplate.aspx.cs\"", "CodeFile=\"..\\EventTemplate.aspx.cs\"");
+                readContents.Replace("{{EventPic}}", EventLargeImage);
                 readContents.Replace("{{EventName}}", EventName);
-                readContents.Replace("{{EventStartDate}}", EventStartDate.ToString("dd/MM/yyyy"));
+                readContents.Replace("{{EventType}}", EventType);
+                readContents.Replace("{{EventStartDate}}", EventStartDate.ToString("MMM") + " " + EventStartDate.Day.ToString());
                 readContents.Replace("{{EventStartTime}}", EventStartDate.ToString("HH:mm"));
                 readContents.Replace("{{EventCity}}", City);
                 readContents.Replace("{{EventAudienceLevel}}", EventLevel);
                 readContents.Replace("{{EventPriorRegistrationRequirement}}", IsRegistrationRequired);
                 readContents.Replace("{{EventShortDescription}}", EventSmallDescription);
                 readContents.Replace("{{VendorName}}", VendorName);
+                readContents.Replace("{{VendorLocalName}}", VendorLocalPagePath);
                 readContents.Replace("{{EventFee}}", EventCharges);
                 readContents.Replace("{{EventTheme}}", ServiceTheme);
                 readContents.Replace("{{EventDetailedDescription}}", EventLargeDescription);
@@ -279,9 +453,9 @@ namespace DAL
                 readContents.Replace("{{EventContent}}", EventComment);
                 
                 if (String.IsNullOrEmpty(VendorWebPage))
-                    readContents.Replace("{{VendorName}}", VendorName);
+                    readContents.Replace("{{VendorWebName}}", VendorName);
                 else
-                    readContents.Replace("{{VendorName}}", CreateHyperLink(addHTTPToLink(VendorWebPage), VendorName, true));
+                    readContents.Replace("{{VendorWebName}}", CreateHyperLink(addHTTPToLink(VendorWebPage), VendorName, true));
 
                 if (String.IsNullOrEmpty(FacebookLink))
                     readContents.Replace("{{VendorNameFB}}", "");
@@ -292,13 +466,19 @@ namespace DAL
                     readContents.Replace("{{VendorNameGooglePlus}}", "");
                 else
                     readContents.Replace("{{VendorNameGooglePlus}}", CreateHyperLink(addHTTPToLink(GooglePlusLink), VendorName + " On Google Plus", true));
+                readContents.Replace("{{VendorContactNumber}}", VendorContactNumber);
+                readContents.Replace("{{VendorContactPerson}}", VendorContactPerson);
 
                 //Create Page
                 System.IO.StreamWriter writetext = new System.IO.StreamWriter(OPFile);
                 writetext.WriteLine(readContents.ToString());
                 writetext.Close();
-                OPFile = WebPath + (VendorName + "_" + EventName + EventStartDate.ToString("yyyyMMdd") + ".aspx").Replace(" ", "");
-                string qry = "UPDATE TblEvent SET EventLocalPagePath='" + OPFile + "' WHERE EventID=" + EventID.ToString();
+                OPFile = WebPath + (VendorNameCompressed + "-" + EventNameCompressed + EventStartDate.ToString("yyyyMMdd") + ".aspx").Replace(" ", "-");
+                
+                string qry = "UPDATE TblEvent SET EventLocalPagePath='" + OPFile +
+                    "',ThumbImagePath='" + EventThumbImage +
+                    "',LargeImagePath='" + EventLargeImage + 
+                    "' WHERE EventID=" + EventID.ToString();
 
                 con = new SqlConnection(_ConnectionString);
                 con.Open();
@@ -306,11 +486,16 @@ namespace DAL
                 cmd.ExecuteNonQuery();
 
                 con.Close();
+
+                return OPFile;
             }
             catch (Exception ex)
             {
                 Logger.Utility.WriteDebugData(""+EventID.ToString()+" "+ ex.Message);
+                return "Error";
             }
+            return "OK";
+
         }
 
         static string addHTTPToLink(string link)
@@ -323,11 +508,12 @@ namespace DAL
         static string CreateHyperLink(String link, String text, bool newWindow)
         { 
             string str;
-            if (newWindow)
-                str="<A HREF=\"" + link + "\" target=\"_blank\">" + text + "</a>";
-            else
-                str = "<A HREF=\"" + link + "\">" + text + "</a>";
-
+            
+                if (newWindow)
+                    str = "<A HREF=\"" + link + "\" target=\"_blank\">" + text + "</a>";
+                else
+                    str = "<A HREF=\"" + link + "\">" + text + "</a>";
+           
             return str;
         }
 
@@ -601,10 +787,10 @@ namespace DAL
             {
                 cmd.Parameters.Add(new SqlParameter("@ServiceName", _serviceName));
                 cmd.Parameters.Add(new SqlParameter("@Destination",_destination));
-                cmd.Parameters.Add(new SqlParameter("@Theme",_theme));
-                cmd.Parameters.Add(new SqlParameter("@DurationInDays",_DurationInDays));
-                cmd.Parameters.Add(new SqlParameter("@TargetDate",_targetDate));
-                cmd.Parameters.Add(new SqlParameter("@Delta",_Delta));    
+                cmd.Parameters.Add(new SqlParameter("@Theme", _theme));
+                cmd.Parameters.Add(new SqlParameter("@DurationInDays", _DurationInDays));
+                cmd.Parameters.Add(new SqlParameter("@TargetDate", _targetDate));
+                cmd.Parameters.Add(new SqlParameter("@Delta", _Delta));    
            
                 
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -624,6 +810,43 @@ namespace DAL
             }
         }
 
+        public DataSet GetVendorResults(string serviceID, string destination = null, string theme = null, int DurationInDays = 0, DateTime? targetDate = null, int Delta = 0)
+        {
+            _serviceName = null;
+            _destination = destination;
+            //_theme = theme;
+            
+
+            SqlConnection con = new SqlConnection(_ConnectionString);
+            SqlCommand cmd = new SqlCommand("pSearchVendor", con);
+            DataSet ds = new DataSet();
+            SqlDataAdapter da = new SqlDataAdapter();
+            try
+            {
+                cmd.Parameters.Add(new SqlParameter("@ServiceName", _serviceName));
+                cmd.Parameters.Add(new SqlParameter("@Destination", _destination));
+                //cmd.Parameters.Add(new SqlParameter("@Theme",_theme));
+                //cmd.Parameters.Add(new SqlParameter("@DurationInDays",_DurationInDays));
+                //cmd.Parameters.Add(new SqlParameter("@TargetDate",_targetDate));
+                //cmd.Parameters.Add(new SqlParameter("@Delta",_Delta));    
+
+
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+                return ds;
+            }
+            catch (Exception ex)
+            {
+                return ds;
+            }
+            finally
+            {
+                cmd.Dispose();
+                con.Close();
+            }
+        }
         public DataSet GetServices()
         {
             SqlConnection con= new SqlConnection(_ConnectionString);

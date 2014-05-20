@@ -143,6 +143,7 @@ public partial class Contact : System.Web.UI.Page
             ,PinCode: txtPincode.Text
             , vendorID: txtvendorEmailID.Text
             , EventRegistrationEndDate: dtEventRegistrationEndDate
+            ,isVirtualEvent: Convert.ToInt32(ddlIsVirtualEvent.SelectedValue)
             );
 
         if (InquiryResult > 0)
@@ -159,7 +160,7 @@ public partial class Contact : System.Web.UI.Page
             //    Server.MapPath("/") + "PublishEvents/EventTemplate.aspx",
             //    destinationPath);
 
-            EmailFunctions.SendEmail("sales@fokal.in", "code@fokal.in", "New Event registration "+InquiryResult.ToString(), "Vendorname = " + txtvendorEmailID.Text + ", EventName = " + txtEventName.Text);
+            EmailFunctions.SendEmail("register@fokal.in", "code@fokal.in", "New Event registration "+InquiryResult.ToString(), "Vendorname = " + txtvendorEmailID.Text + ", EventName = " + txtEventName.Text);
         }
         
         {

@@ -40,50 +40,128 @@
 <asp:Content ID="UpcomingEvents" ContentPlaceHolderID="upcomingEvents" runat="server">
                                         <div class="newsWidget">
                                             <h5 id="ndheadline">Photography Events</h5>
-                                            
-                                       <%-- <ul class="newsTabs">
-                                            
-                                            <li href="/"><a>Tours</a></li>
-                                            <li><a>Walks</a></li>
-                                            <li><a>Events</a></li>
-                                            <li class="active"><a>Courses</a></li>
-                                        </ul>--%>
-                                        <table class="newsTable">
-                                            <tbody>
-                                                <tr>
-                                                    <%--<td valign="top" style="border-bottom: 1px dotted #D5D5D5;">--%>
-                                                    <td valign="top" class="borderbottom">
-                                                        <div class="newsItem">
-                                                            <div class="headline">
-                                                                <asp:HyperLink runat="server" ID="event1" NavigateUrl="~/PublishEvents/201405/BetterPhotography_YourPictures-ByTheBeach(PhotoContest)20140506.aspx">Your Pictures : By The Beach (Photo Contest)</asp:HyperLink>
-                                                                <br>
-                                                                <small>
-                                                                    Organizer : <asp:HyperLink runat="server" ID="vendor1" NavigateUrl="#">Better Photography</asp:HyperLink> <br />
-                                                                    25 May'14 | Online
+
+                                        
+                                                <table >
+                                                    <tbody>
+                                                        <tr >
+                                                            <td class="imagebox">
+                                                                <div class="image">
+                                                                    
+                                                                        <asp:ContentPlaceHolder ID="EventLinkImage1" runat="server"></asp:ContentPlaceHolder>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td class="eventDetails">
+                        
+                                                                <h2 >
+                                                                    <asp:ContentPlaceHolder ID="EventLink1" runat="server"></asp:ContentPlaceHolder>
+                                                                </h2>
+                                                                <small >
+                                                                    <span >
+                                                                        Organizer: 
+                                                                    </span>
+                                                                        <asp:ContentPlaceHolder ID="EventPSPLink1" runat="server"></asp:ContentPlaceHolder>
                                                                 </small>
-                                            </div>
-
-                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                <tr>
-                                                    <td>
-                                            <div class="newsItem">
-
-                                            <div class="headline">
-                                                                <asp:HyperLink runat="server" ID="event2" NavigateUrl="~/PublishEvents/May2014/MyCommunityMyPlanetPhotoContest.aspx">Photo Contest - My Community, My Planet</asp:HyperLink>
-                                                                <br>
+                                                                <div>
                                                                 <small>
-                                                                     Organizer : <asp:HyperLink runat="server" ID="vendor2" NavigateUrl="~/Vendors/SpanMagazine.aspx">SPAN Magazine</asp:HyperLink> <br />
-                                                                    13 May'14 | Online 
+                                                                    <asp:ContentPlaceHolder ID="EventInfo1" runat="server"></asp:ContentPlaceHolder>
                                                                 </small>
-                                            </div>
+                                                                    </div>
+                            
+                                                            </td>
 
-                                            </div>
-                                                        </td>
-</tbody>
+                                                        </tr>
+                                                        <tr >
+                                                            <td class="imagebox">
+                                                                <div class="image">
+                                                                    
+                                                                        <asp:ContentPlaceHolder ID="EventLinkImage2" runat="server"></asp:ContentPlaceHolder>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td class="eventDetails">
+                        
+                                                                <h2 >
+                                                                    <asp:ContentPlaceHolder ID="EventLink2" runat="server"></asp:ContentPlaceHolder>
+                                                                </h2>
+                                                                <small >
+                                                                    <span >
+                                                                        Organizer: 
+                                                                    </span>
+                                                                        <asp:ContentPlaceHolder ID="EventPSPLink2" runat="server"></asp:ContentPlaceHolder>
+                                                                </small>
+                                                                <div>
+                                                                <small>
+                                                                    <asp:ContentPlaceHolder ID="EventInfo2" runat="server"></asp:ContentPlaceHolder>
+                                                                </small>
+                                                                    </div>
+                            
+                                                            </td>
 
-                                        </table>
+                                                        </tr>
+                                                        <tr >
+                                                            <td class="imagebox">
+                                                                <div class="image">
+                                                                    
+                                                                        <asp:ContentPlaceHolder ID="EventLinkImage3" runat="server"></asp:ContentPlaceHolder>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td class="eventDetails">
+                        
+                                                                <h2 >
+                                                                    <asp:ContentPlaceHolder ID="EventLink3" runat="server"></asp:ContentPlaceHolder>
+                                                                </h2>
+                                                                <small >
+                                                                    <span >
+                                                                        Organizer: 
+                                                                    </span>
+                                                                        <asp:ContentPlaceHolder ID="EventPSPLink3" runat="server"></asp:ContentPlaceHolder>
+                                                                </small>
+                                                                <div>
+                                                                <small>
+                                                                    <asp:ContentPlaceHolder ID="EventInfo3" runat="server"></asp:ContentPlaceHolder>
+                                                                </small>
+                                                                    </div>
+                            
+                                                            </td>
+
+                                                        </tr>
+                                                        <tr >
+                                                            <td class="imagebox">
+                                                                <div class="image">
+                                                                    
+                                                                        <asp:ContentPlaceHolder ID="EventLinkImage4" runat="server"></asp:ContentPlaceHolder>
+                                                                    
+                                                                </div>
+                                                            </td>
+                                                            <td class="eventDetails">
+                        
+                                                                <h2 >
+                                                                    <asp:ContentPlaceHolder ID="EventLink4" runat="server"></asp:ContentPlaceHolder>
+                                                                </h2>
+                                                                <small >
+                                                                    <span >
+                                                                        Organizer: 
+                                                                    </span>
+                                                                        <asp:ContentPlaceHolder ID="EventPSPLink4" runat="server"></asp:ContentPlaceHolder>
+                                                                </small>
+                                                                <div>
+                                                                <small>
+                                                                    <asp:ContentPlaceHolder ID="EventInfo4" runat="server"></asp:ContentPlaceHolder>
+                                                                </small>
+                                                                    </div>
+                            
+                                                            </td>
+
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            
+                                       
+
+                                       
                                      </div>
 </asp:Content>
 <%--<asp:Content ID="FeaturedEvents"  ContentPlaceHolderID="featuredEvents" runat="server">
@@ -110,47 +188,43 @@
                                 <tbody><tr>
                                 
                                     <td>
-                                        <a href="https://www.facebook.com/KidoClicko" target="_blank">
-                                            <img height="150" width="150" style="padding-top: 0px; padding-bottom: 0px; border: solid #808080 1px;" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn1/t1.0-9/1535429_698248940216064_844477602_n.jpg" alt="Kidoclicko" border="0"></a>
+                                        <asp:ContentPlaceHolder ID="FeaturedPhotorgapherPci1" runat="server"></asp:ContentPlaceHolder>
                                     </td>
                                     <td width="17">&nbsp;</td>
-                                    <%--<td>
-                                        <a href="https://www.facebook.com/JassiOberaiPhotography" target="_blank">
-                                        <img height="150" width="150" style="padding-top: 0px; padding-bottom: 0px; border: solid #808080 1px; " src="https://scontent-b-sin.xx.fbcdn.net/hphotos-ash3/t1.0-9/48099_562410357124843_65630530_n.jpg" alt="JAS fotography" border="0"></a>
+                                    <td>
+                                        <asp:ContentPlaceHolder ID="FeaturedPhotorgapherPci2" runat="server"></asp:ContentPlaceHolder>
                                     </td>
                                     <td width="18">&nbsp;</td>
                                     <td>
-                                        <a href="https://www.facebook.com/shaileshpics?ref=br_rs" target="_blank">
-                                            <img height="150" width="150" style="padding-top: 0px; padding-bottom: 0px; border: solid #808080 1px; " src="https://scontent-b-sin.xx.fbcdn.net/hphotos-frc3/t1.0-9/261596_214377528606418_3756191_n.jpg" alt="Shailesh Sharma photography" border="0"></a>
+                                        <asp:ContentPlaceHolder ID="FeaturedPhotorgapherPci3" runat="server"></asp:ContentPlaceHolder>
                                     </td>
                                     <td width="18">&nbsp;</td>
                                     <td>
-                                        <a href="https://www.facebook.com/shreyasenphotography?ref=profile" target="_blank">
-                                            <img height="150" width="150" style="padding-top: 0px; padding-bottom: 0px; border: solid #808080 1px; " src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-ash2/t1.0-9/418060_359462407420316_1253712395_n.jpg" alt="Shreya Sen Photography" border="0"></a>
-                                    </td>--%>
+                                        <asp:ContentPlaceHolder ID="FeaturedPhotorgapherPci4" runat="server"></asp:ContentPlaceHolder>
+                                    </td>
                                 </tr>
                                 <tr>
 
                                     <td valign="top">
-                                        <a href="https://www.facebook.com/KidoClicko" target="_blank">Kidoclicko</a>
+                                        <asp:ContentPlaceHolder ID="FeaturedPhotorgapherName1" runat="server"></asp:ContentPlaceHolder>
                                     </td>
                                     <td width="17">&nbsp;</td>
-                                <%--    <td valign="top">
-                                        <a href="https://www.facebook.com/JassiOberaiPhotography"target="_blank" >JAS fotography</a>
+                                    <td valign="top">
+                                        <asp:ContentPlaceHolder ID="FeaturedPhotorgapherName2" runat="server"></asp:ContentPlaceHolder>
                                     </td>
                                     <td width="18">&nbsp;</td>
                                     <td valign="top">
-                                        <a href="https://www.facebook.com/shaileshpics?ref=br_rs">Shailesh Sharma photography</a>
+                                        <asp:ContentPlaceHolder ID="FeaturedPhotorgapherName3" runat="server"></asp:ContentPlaceHolder>
                                     </td>
                                     <td width="18">&nbsp;</td>
                                     <td valign="top">
-                                        <a href="https://www.facebook.com/shreyasenphotography?ref=profile">Harvarinder Singh Photography</a>
-                                    </td>--%>
+                                        <asp:ContentPlaceHolder ID="FeaturedPhotorgapherName4" runat="server"></asp:ContentPlaceHolder>
+                                    </td>
                                 </tr>
                                 </tbody></table>
 
 <%--                                <div class="see-more clear">
-                                <a href="http://www.imdb.com/sections/spotlight/?ref_=hm_eds_sm">View all Professional Photographers</a> »
+                                             »
                                 </div>--%>
 
 </asp:Content>

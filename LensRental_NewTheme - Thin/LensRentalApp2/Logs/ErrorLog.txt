@@ -605,3 +605,15 @@ DEBUG 2014-05-15 18:33:31,014 Utility                WriteDebugData     - 50 Cou
 
 DEBUG 2014-05-15 18:35:20,543 Utility                WriteDebugData     - 50 Value cannot be null.
 Parameter name: path
+
+ERROR 2014-05-17 17:15:01,733 Utility                HandleException    - entries@betterphotography.in insertion failed : Duplicate Email entries@betterphotography.in
+
+INFO  2014-05-17 17:15:13,766 Utility                WriteInfo          - entries@fgfg.in Success
+
+DEBUG 2014-05-17 19:34:59,988 Utility                WriteDebugData     - Could not find stored procedure 'pGetVendorPageData'.
+
+DEBUG 2014-05-17 19:35:31,994 Utility                WriteDebugData     - Could not find stored procedure 'pGetVendorPageData'.
+
+DEBUG 2014-05-17 19:35:52,203 Utility                WriteDebugData     - Could not find stored procedure 'pGetVendorPageData'.
+
+DEBUG 2014-05-17 19:36:17,960 Utility                WriteDebugData     - Could not find stored procedure 'pGetVendorPageData'.

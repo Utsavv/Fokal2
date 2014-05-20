@@ -9,8 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "LensRentalApp2\DAL\D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "LensRentalApp2\Logger\Logger.csproj", "{D4274273-493C-4218-AEEC-8FC5D8F1EE71}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LensRentalApp2", "LensRentalApp2\", "{A8BF7E12-5859-4B21-BFA4-066091668C7D}"
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LensRentalApp2(1)", "http://localhost:35475", "{A8BF7E12-5859-4B21-BFA4-066091668C7D}"
 	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
 		ProjectReferences = "{35225ed9-d6ed-4d85-bed2-2faab1ae70ce}|BLL.dll;{6AFFB242-7535-4051-9460-22F2B93021A4}|DAL.dll;{E69F05A4-B34A-4A64-8B30-E0CF39009275}|Model.dll;{D4274273-493C-4218-AEEC-8FC5D8F1EE71}|Logger.dll;"
 		Debug.AspNetCompiler.VirtualPath = "/LensRentalApp2"
@@ -27,7 +28,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "LensRentalApp2", "LensRenta
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		VWDPort = "35475"
+		SlnRelativePath = "LensRentalApp2\"
 	EndProjectSection
 EndProject
 Global

@@ -15,6 +15,6 @@ public partial class MailSubscription : System.Web.UI.Page
         DAL.FolksploreDAL InsertSubscription = new DAL.FolksploreDAL(System.Configuration.ConfigurationManager.ConnectionStrings["Folksplore"].ToString());
         x = InsertSubscription.InsertSubscriptionEmail(email, CType);
         this.Page.ClientScript.RegisterStartupScript(base.GetType(), "key", "alert('Thank you " + email + "! You have been successfully added to our subscription list!');", true);
-        EmailFunctions.SendEmail("sales@fokal.in", "code@fokal.in", "New subscription " + email, CType);
+        EmailFunctions.SendEmail("subscribe@fokal.in", "code@fokal.in", "New subscription " + email, CType);
     }
 }

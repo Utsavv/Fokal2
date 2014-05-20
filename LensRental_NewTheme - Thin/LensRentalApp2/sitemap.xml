@@ -8,35 +8,126 @@
 
 <url>
   <loc>http://www.fokal.in/</loc>
-</url>
-<url>
-  <loc>http://www.fokal.in/UserProfile.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://www.fokal.in/Home.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/PublishEvents/ListTours.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/PublishEvents/ListWalks.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/PublishEvents/ListCourses.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/PublishEvents/ListEvents.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/PSP/ListPSP.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/blog/blog.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/rental/home.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/VendorRegistration.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/EventRegistration.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/blog/Getting%20off%20auto%20mode%20-%205%20Things%20beginners%20need%20to%20know.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/blog/PhotoWalks.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/home.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/About.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/PrivacyPolicy.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
   <loc>http://www.fokal.in/Contact.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.fokal.in/FAQ1.aspx</loc>
+  <loc>http://www.fokal.in/Help.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.fokal.in/TermsNConditions.aspx</loc>
+  <loc>http://www.fokal.in/rental/UserProfile.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.fokal.in/FAQ2.aspx</loc>
+  <loc>http://www.fokal.in/rental/Home.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.fokal.in/FAQ3.aspx</loc>
+  <loc>http://www.fokal.in/rental/Contact.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.fokal.in/FAQ4.aspx</loc>
+  <loc>http://www.fokal.in/rental/FAQ1.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.fokal.in/FAQ5.aspx</loc>
+  <loc>http://www.fokal.in/rental/TermsNConditions.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 <url>
-  <loc>http://www.fokal.in/RentalAgreement.aspx</loc>
+  <loc>http://www.fokal.in/rental/PrivacyPolicy.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/rental/About.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/vendorregistration.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/rental/FAQ2.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/rental/FAQ3.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/rental/FAQ4.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/rental/FAQ5.aspx</loc>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.fokal.in/rental/RentalAgreement.aspx</loc>
+  <changefreq>weekly</changefreq>
 </url>
 </urlset>

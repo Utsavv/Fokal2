@@ -30,14 +30,14 @@
                 </table>
     <br>
             <h3><span>F</span>or <span>A</span>ny <span>I</span>nquiries, <span>P</span>lease <span>F</span>ill <span>o</span>ut <span>T</span>he <span>F</span>orm <span>B</span>elow.</h3>
-            <form runat="server">
+            <form>
                 <table>
                     <tr>
                         <td>
                             <label for="name"><span>N</span>ame:</label></td>
                         <td>
                             <asp:TextBox ID="txtName" runat="server" CssClass="input-style" Width="250px"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="txtNameValidator" Display="Dynamic" ControlToValidate="txtName" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="txtNameValidator" Display="Dynamic" ControlToValidate="txtName" runat="server" ErrorMessage="*" ValidationGroup="ContactGroup" ForeColor="Red"></asp:RequiredFieldValidator>
                       </td>
                     </tr>
                     <tr>
@@ -45,7 +45,7 @@
                             <label for="email"><span>E</span>mail <span>A</span>ddress:</label></td>
                         <td>
                             <asp:TextBox ID="txtEmail" runat="server" CssClass="input-style" Width="250px"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="txtEmailValidator" Display="Dynamic" ControlToValidate="txtEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="txtEmailValidator" Display="Dynamic" ControlToValidate="txtEmail" runat="server" ErrorMessage="*" ValidationGroup="ContactGroup" ForeColor="Red"></asp:RequiredFieldValidator>
                             <asp:RegularExpressionValidator ID="correctEmailValidator" Display="Dynamic" runat="server" ControlToValidate="txtEmail" ErrorMessage="Please enter valid email" ValidationGroup="InquiryGroup" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
                       </td>
 
@@ -63,7 +63,7 @@
                             <label for="subject"><span>S</span>ubject:</label></td>
                         <td>
                             <asp:TextBox ID="txtSubject" runat="server" CssClass="input-style" Width="250px"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="txtSubjectValidator" Display="Dynamic" ControlToValidate="txtSubject" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="txtSubjectValidator" Display="Dynamic" ControlToValidate="txtSubject" runat="server" ErrorMessage="*" ValidationGroup="ContactGroup" ForeColor="Red"></asp:RequiredFieldValidator>
                             </td>
                     </tr>
                     <tr>
@@ -71,7 +71,7 @@
                             <label for="message"><span>M</span>essage:</label></td>
                         <td>
                             <asp:TextBox ID="txtMessage" runat="server" TextMode="MultiLine" CssClass="input-style" Width="250px" Height="50px"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="txtMessageValidator" Display="Dynamic" ControlToValidate="txtMessage" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="txtMessageValidator" Display="Dynamic" ControlToValidate="txtMessage" runat="server" ErrorMessage="*" ValidationGroup="ContactGroup" ForeColor="Red"></asp:RequiredFieldValidator>
                         </td>
                     </tr>
                     <tr>

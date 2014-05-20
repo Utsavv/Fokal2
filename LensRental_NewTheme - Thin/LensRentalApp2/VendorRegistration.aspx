@@ -96,31 +96,32 @@
 </script>
 </asp:Content>
 <asp:Content ID="title" ContentPlaceHolderID="title" runat="server">
-<h3> Register as a Photography Services Provider</h3>
+    <h3>Photography Services Provider</h3>
+    <h6>Registration Form</h6>
  
 </asp:Content>
 <asp:Content ID="Vendorform" ContentPlaceHolderID="mainContent" runat="server">
-                 
+                 <div id="registrationforms">
             
             <%--<form runat="server">--%>
-                <div class="registrationForm">
+                <div  class="registrationForm">
                 <table>
                     
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="vendorname">Company/Club Name</label>
                             <asp:RequiredFieldValidator ID="RfvClub" runat="server" ControlToValidate="txtVendorName" ErrorMessage="Name of your Club/Organization is Mandatory Field" ValidationGroup="VendorGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtVendorName" runat="server" CssClass="eventinput-style" Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="txtVendorName" runat="server" CssClass="eventinput-style" ></asp:TextBox>
                            </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="VendorWebPage">Website <br /><small>(You may mention your FB page)</small></label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtVendorWebPage" runat="server" CssClass="eventinput-style" placeholder="http://www.website.com" Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="txtVendorWebPage" runat="server" CssClass="eventinput-style" placeholder="http://www.website.com" ></asp:TextBox>
                           
                             <%--<asp:RegularExpressionValidator ID="RevWebSite" runat="server" ControlToValidate="txtVendorWebPage" ErrorMessage="Please provide website in format 'http://www.website.com'" ValidationExpression="http(s)?://([\w-]+\.)+[\w-]+(/[\w- ./?%&amp;amp;=]*)?" ValidationGroup="VendorGroup"><small>Please use format &#39;http://www.website.com&#39;</small></asp:RegularExpressionValidator>--%>
                         </td>
@@ -135,17 +136,17 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td>
                             <label for="ContactPerson">Contact Person</label>
                             <asp:RequiredFieldValidator ID="RfvMandatoryField" runat="server" ControlToValidate="txtContactPerson" ErrorMessage="Contact Person is Mandatory" ValidationGroup="VendorGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtContactPerson" runat="server" CssClass="eventinput-style"></asp:TextBox>
+                            <asp:TextBox ID="txtContactPerson" runat="server" CssClass="eventinput-style" ></asp:TextBox>
                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="ContactNumber">Contact Number</label>
                             <asp:RequiredFieldValidator ID="RfvContactNumber" runat="server" ControlToValidate="txtContactNumber" ErrorMessage="Contact Number is Mandatory" ValidationGroup="VendorGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                         </td>
@@ -155,7 +156,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="RegisteredEmail">Email Address<br> <small>Please use this email id while registering events</small></label>
                             <asp:RequiredFieldValidator ID="RfvEmail" runat="server" ControlToValidate="txtRegisteredEmail" ErrorMessage="Email Address is Mandatory Field" ValidationGroup="VendorGroup" ForeColor="#990000">*</asp:RequiredFieldValidator>
                         </td>
@@ -176,21 +177,21 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="txtEventVenue">Address</label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtAddressLine1" runat="server" CssClass="eventinput-style" placeholder="Address Line 1" Width="300px" ></asp:TextBox>
+                            <asp:TextBox ID="txtAddressLine1" runat="server" CssClass="eventinput-style" placeholder="Address Line 1" ></asp:TextBox>
                         </td>
                     </tr>
                         <tr>
-                            <td style="width: 200px"></td>
+                            <td ></td>
                             <td>
-                                <asp:TextBox ID="txtAddressLine2" runat="server" CssClass="eventinput-style" placeholder="Address Line 2" Width="300px"></asp:TextBox>
+                                <asp:TextBox ID="txtAddressLine2" runat="server" CssClass="eventinput-style" placeholder="Address Line 2"></asp:TextBox>
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 200px">
+                            <td >
                                 <label for="Landmark">Landmark</label>
                             </td>
                             <td>
@@ -198,7 +199,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="width: 200px">
+                            <td >
                                 <label for="State">State</label>
                                 <asp:RequiredFieldValidator ID="rfvState" runat="server" ErrorMessage="State is required" ControlToValidate="ddlStates" ForeColor="#990000">*</asp:RequiredFieldValidator>
                             </td>
@@ -216,18 +217,9 @@
                     </tr>--%>
                             </td>
                         </tr>
+
                         <tr>
-                            <td style="width: 200px">
-                                <label for="Pincode">Pincode</label>
-                            </td>
-                       
-                            <td>
-                                <asp:TextBox ID="txtPincode" runat="server" CssClass="eventinput-style"></asp:TextBox>
-                       
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 200px">
+                            <td >
                                 <label for="City">City</label>
                                 <asp:RequiredFieldValidator ID="RfvCity" runat="server" ErrorMessage="City is required" ControlToValidate="ddlCity" ForeColor="#990000">*</asp:RequiredFieldValidator>
                             </td>
@@ -236,6 +228,16 @@
                                     
                                 </asp:DropDownList>
                                 <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                            </td>
+                        </tr>
+                                                <tr>
+                            <td >
+                                <label for="Pincode">Pincode</label>
+                            </td>
+                       
+                            <td>
+                                <asp:TextBox ID="txtPincode" runat="server" CssClass="eventinput-style"></asp:TextBox>
+                       
                             </td>
                         </tr>
                         </table>
@@ -248,17 +250,17 @@
                             </td>
                         </tr>
                         <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="EventType">Photography Services <br> <small>Please select atleast one</small></label>
                             <asp:CustomValidator ID="CVServices" runat="server" ClientValidationFunction="ValidateServiceList" ErrorMessage="Please select atleast one service" ValidationGroup="VendorGroup" ForeColor="#990000" >*</asp:CustomValidator>
                         </td>
                         <td>
-                            <asp:CheckBoxList ID="DDServiceType" runat="server" CssClass="eventinput-style" Height="17px" Width="161px"></asp:CheckBoxList>
+                            <asp:CheckBoxList ID="DDServiceType" runat="server" CssClass="eventinput-style" Height="17px"></asp:CheckBoxList>
                             <br />
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="VendorShortDescription">Brief descritption of your Company/club</label>
                         </td>
                         <td>
@@ -267,7 +269,7 @@
                         </td>
                     </tr>    
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="VendorLongDescription">Detailed descritption of your Company/club</label>
                         </td>
                         <td>
@@ -285,20 +287,20 @@
                         </td>
                     </tr>
                      <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="VendorFacebookPage">Facebook Page </label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtVendorFacebookPage" runat="server" CssClass="eventinput-style" Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="txtVendorFacebookPage" runat="server" CssClass="eventinput-style" ></asp:TextBox>
                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             <label for="VendorGplusPage">Google+ Page</label>
                         </td>
                         <td>
-                            <asp:TextBox ID="txtVendorGplusPage" runat="server" CssClass="eventinput-style" Width="250px"></asp:TextBox>
+                            <asp:TextBox ID="txtVendorGplusPage" runat="server" CssClass="eventinput-style"></asp:TextBox>
                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
@@ -312,19 +314,21 @@
                         </td>
                     </tr>--%>
                     <tr>
-                        <td style="width: 200px">
+                        <td >
                             &nbsp;</td>
                         <td>
                             <asp:ValidationSummary ID="ValidationSummary" runat="server" ShowMessageBox="True" ValidationGroup="VendorGroup" />
                         </td>
                     </tr>
                     <tr>
-                        <td style="width: 200px"></td>
+                        <td ></td>
                         <td>
                             <asp:Button ID="btnSubmit" runat="server" Text="Submit" CausesValidation="true" ValidationGroup="VendorGroup" OnClick="btnSubmit_Click" CssClass="submit-btn" /></td>
                     </tr>
                 </table>
                     </div>
+                     </div>
+ 
                  <asp:HiddenField ID="SelectedCity" runat="server" ClientIDMode="Static" />
                 <asp:HiddenField ID="SelectedState" runat="server" ClientIDMode="Static" />
         <%--   </form>--%>

@@ -44,17 +44,17 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     color: #ba692c;
 }
 h1,.h1 {
-font-size:2.7rem;
+font-size:2.1rem;
 margin:0;
 }
 
 h2,.h2 {
-font-size:2.3rem;
+font-size:2.0rem;
 margin:0 0 1rem;
 }
 
 h3,.h3 {
-font-size:2rem;
+font-size:1.7rem;
 /*margin-top:50px;*/
 margin:0 0 1rem;
 }
@@ -488,7 +488,7 @@ position: relative;
     width: 100%;
 }
 ul.main_nav {
-font-size: 15px;
+font-size: 1rem;
 list-style: none;
 padding: 0 0 0 1px;
 margin: 3px;
@@ -506,7 +506,7 @@ ul.main_nav li {
 background: transparent;
 float: left;
 margin: 0;
-padding: 0px 40px 0 15px;
+padding: 0px 15px 0 15px;
 position: relative;
 /*height: 39px;*/
 }
@@ -514,7 +514,7 @@ position: relative;
         display: list-item;
         float: left;
         font-family: Verdana, Arial, sans-serif;
-        font-size: 13px;
+        font-size: .9rem;
         font-style: normal;
         font-variant: normal;
         font-weight: normal;
@@ -529,18 +529,18 @@ position: relative;
         margin-top: 0px;*/
         padding-bottom: 0px;
         padding-left: 15px;
-        padding-right: 40px;
+        padding-right: 15px;
         /*padding-top: 7px;*/
         position: relative;
         text-align: left;
-        width: 85px;
+        /*width: 85px;*/
     }
     ul.main_nav li h1.navCategory {
         color:white;
         margin: 0;
         font-style:normal;
         font-weight:100;
-        font-size:16px;
+        font-size:1.1rem;
         /*vertical-align: middle;*/
     }
     ul.main_nav li h1 {
@@ -692,7 +692,7 @@ ul.tpack {
     display: block;
     overflow: hidden;
     font-weight: bold;
-    font-size: 11px;
+    font-size: .8rem;
     opacity: .99;
     filter: alpha(opacity=99);
     height: 4.273em;
@@ -754,7 +754,7 @@ ul, menu, dir {
     color: rgb(51, 51, 51);
     display: block;
     font-family: Verdana, Arial, sans-serif;
-    font-size: 13px;
+    font-size: .9rem;
     /*height: 140.75px;*/
     margin-right: -5px;
     width: 625px;
@@ -783,7 +783,8 @@ text-align: left;
 .newsWidget h2#ndheadline {
 float: left;
 margin-bottom: 0.3em;
-line-height: 1em;
+/*line-height: 1em;*/
+
 }
 .newsWidget ul.newsTabs {
 list-style: none outside none;
@@ -804,7 +805,7 @@ background-color: #F6F6F5;
 border: 1px solid #E8E8E8;
 color: #666666;
 display: block;
-font-size: 10px;
+/*font-size: 10px;*/
 font-weight: bold;
 line-height: 1.4em;
 padding: 4px 10px;
@@ -826,7 +827,7 @@ padding-bottom: 8px;
         border-color: gray;
     }
     .newsWidget small {
-        font-size: 9px;
+        /*font-size: .6rem;*/
         color: #666666;
     }
 #featuredEvent-1 {
@@ -850,7 +851,7 @@ text-align: center;
 height: 100px;*/
 }
 .fontsmall {
-font-size: 10px !important;
+font-size: .67rem!important;
 }
 .featuredEvent-name {
 margin-top: .5em;
@@ -882,15 +883,15 @@ margin-top: .5em;
         margin: 2% 4% 10px 0;
         text-indent: 5px;
         width: 90%;
-        min-width: 130px;
+        /*min-width: 130px;*/
     }
         #mc_embed_signup .customertype {
         display: block;
-        padding: 6px 0;
+        padding: 6px 7px;
         margin: 0 4% 10px 0;
         text-indent: 5px;
         width: 90%;
-        min-width: 130px;
+        /*min-width: 130px;*/
         color:#666666;
     }
     #mc_embed_signup input.button {
@@ -907,7 +908,7 @@ margin-top: .5em;
     color: #FFFFFF;
     cursor: pointer;
     display: inline-block;
-    font-size: 15px;
+    font-size: 1rem;
     font-weight: bold;
     height: 32px;
     line-height: 32px;
@@ -920,11 +921,66 @@ margin-top: .5em;
     width: auto;
 }
 
+
+#signup form {
+    display: block;
+    position: relative;
+    text-align: left;
+    padding: 10px 0 10px 3%;
+}
+
+#signup input {
+    border: 1px solid #999;
+    -webkit-appearance: none;
+}
+    #signup input.email {
+        display: block;
+        padding: 6px 0;
+        margin:  5px 5px 15px 5px;
+        text-indent: 5px;
+        width: 90%;
+        /*min-width: 130px;*/
+    }
+        #signup .customertype {
+        display: block;
+        padding: 6px 7px;
+        margin: 5px 5px 15px 5px;
+        text-indent: 5px;
+        width: 90%;
+        /*min-width: 130px;*/
+        /*color:#666666;*/
+    }
+    #signup input.button {
+        display: block;
+        width: 35%;
+        margin: 0 0 10px 0;
+        min-width: 90px;
+    }
+#signup .button {
+    clear: both;
+    background-color: #ba692c;
+    border: 0 none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 5px 10px 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: auto;
+}
 div#footer {
 background-color: #EDEDEC;
 clear: both;
 font-family: Verdana,Geneva,sans-serif;
-font-size: 11px;
+font-size: .8rem;
 padding-bottom: 12px;
 /*To make the footer fixed an overlap with everything*/
 /*position:fixed;
@@ -934,10 +990,11 @@ z-index:10;*/
 #footer .ft {
     color: rgb(51, 51, 51);
     display: block;
-    font-family: Verdana, Geneva, sans-serif;
+    /*font-family: Verdana, Geneva, sans-serif;*/
     height: 30px;
     width: 1008px;
 }
+
 div#footer hr {
 margin: 0;
 height: 1px;
@@ -963,6 +1020,9 @@ border-top: 1px dotted #CCC;
     width: 968px;
     text-align:center;
 }
+    #footer .footer p, a {
+        font-size: .8rem;
+    }
 
 /*Events Master*/
 #content-2-wide #main, #content-2-wide .maindetails_center {
@@ -977,7 +1037,7 @@ margin-bottom: 400px;
     color: rgb(51, 51, 51);
     display: block;
     font-family: Verdana, Arial, sans-serif;
-    font-size: 13px;
+    /*font-size: 13px;*/
     /*height: 447px;*/
     /*width: 968px;*/
 }
@@ -986,7 +1046,7 @@ margin-bottom: 400px;
     color: rgb(51, 51, 51);
     display: block;
     font-family: Verdana, Arial, sans-serif;
-    font-size: 13px;
+    /*font-size: 13px;*/
     /*height: 180px;*/
     /*width: 625px;*/
 }
@@ -996,7 +1056,7 @@ margin-bottom: 400px;
     display: block;
     float: right;
     font-family: Verdana, Arial, sans-serif;
-    font-size: 13px;
+    /*font-size: 13px;*/
     height: 1591.5px;
     margin-right: 20px;
 
@@ -1051,7 +1111,7 @@ ul.event {
     display: block;
     float: left;
     font-family: Verdana, Arial, sans-serif;
-    font-size: 13px;
+    /*font-size: 13px;*/
     /*height: 50%;*/
     margin-left: 20px;
     width: 646px;
@@ -1060,7 +1120,7 @@ ul.event {
     color: rgb(51, 51, 51);
     display: block;
     font-family: Verdana, Arial, sans-serif;
-    font-size: 13px;
+    /*font-size: 13px;*/
     /*height: 1000px;*/
     width: 646px;
 }
@@ -1086,11 +1146,11 @@ border-bottom: medium none;
 }
 .article h1.header span.itemprop {
 color: #333;
-font-size: 21px;
+/*font-size: 21px;*/
 font-weight: bold;
 }
 div.infobar {
-font-size: 11px;
+font-size: .8rem;
 color: #666;
 margin: 4px 0 12px;
 }
@@ -1223,10 +1283,10 @@ margin: .35em 0;
 }
     .txt-block .smallText {
 
-        font-size: 11px;
+        font-size: .8rem;
         color: #666;
     }
-h4.inline {
+/*h4.inline {
 display: inline;
 padding: 0 .5em 0 0;
 }
@@ -1235,7 +1295,7 @@ color: #666;
 font-size: 13px;
 margin: .35em 0 .25em;
 padding: 0;
-}
+}*/
 user agent stylesheeth4 {
 display: block;
 -webkit-margin-before: 1.33em;
@@ -1273,7 +1333,7 @@ background-color: #F6F6F5;
 border: 1px solid #E8E8E8;
 color: #666666;
 display: block;
-font-size: 10px;
+font-size: .67rem;
 font-weight: bold;
 line-height: 1.4em;
 padding: 4px 10px;
@@ -1308,11 +1368,9 @@ padding-bottom: 8px;
         word-spacing:2px;
     }
     #blog-content .blogs h3 {
-        font-size: 18px;
     }
         #blog-content .blogs p {
             line-height:160%;
-            font-size: 15px;
             word-wrap: break-word;
             -webkit-margin-before: 1em;
             -webkit-margin-after: 1em;
@@ -1352,6 +1410,18 @@ padding-bottom: 8px;
     width: auto;
     background-color: #FFFFFF;
 }
+#registrationforms{
+
+}
+#registrationforms tr {
+        margin-bottom: 5px;
+    }
+    #registrationforms td {
+        width: 17rem;
+    }
+    #registrationforms .eventinput-style {
+        width: 15rem;
+    }
     /*.registrationForm .tr {
         width: 100%;
     }
@@ -1384,4 +1454,132 @@ padding-bottom: 8px;
 
 .borderbottom {
     border-bottom: solid 1px #E8E8E8;
+    /*margin-bottom: 5px;*/
+    padding-bottom: 5px;
+}
+.dateSmallIcon {
+    background-image: url('../images/calendar-icon.png');
+    background-position: -808px -149px;
+    height: 46px;
+    width: 46px;
+    text-align: center;
+}
+.mainContent {
+}
+.mainContent #searchContentDisplay{
+    background: none repeat scroll 0% 0% #FFF;
+    padding: 10px;
+    height: auto;
+    margin: 0px 0px 10px;
+    position: relative;
+    z-index: 2;
+    /*border-radius: 5px;*/
+    min-height: 100px;
+    /*border: 2px solid #D8D8D8;
+    box-shadow: 3px 6px 8px #888;*/
+}
+.mainContent #searchContentDisplay .eventList{
+    margin:0px;
+}
+
+    .imagebox{
+        width:80px; padding-bottom:10px; 
+    }
+.image {
+    width: 75px; 
+    height: 75px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;;
+}
+.vendorimagebox {
+    width: 177.5px;
+    padding-bottom: 10px;
+    margin-right:10px;border-bottom: 1px solid #E8E8E8;
+}
+.vendorimage {
+    width: 177.5px;
+    height: 100px;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;;
+}
+.vendorDetails {
+    margin-left: 10px;
+    border-bottom: 1px solid #E8E8E8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+    .vendorDetails h2 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    .vendorDetails span {
+        font-weight: 600;
+        color: #2a3f93;
+    }
+.eventDetails {
+    margin-left: 10px;
+    border-bottom: 1px solid #E8E8E8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+    .eventDetails h2 {
+        margin: 0;
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .eventDetails span {
+        font-weight: 500;
+        color: #333;
+    }
+.smallimage{
+            width: 75px;
+            /*height: 75px;*/
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+.smallvendorimage{
+    width: 177.5px;
+    height: 100px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
+.dateContainer {
+    width: 70px;
+    border-bottom: 1px solid #E8E8E8;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+    .expired {
+        height: 65px;
+        margin: 0px;
+        position: relative;
+        width: 65px;
+        display: block;
+    }
+
+
+        .expired .dateSmallIcon {
+            position: absolute;
+            top: 9px;
+            left: 9px;
+            margin: 0px;
+        }
+        .dateSmallIcon p {
+    color: #FFF !important;
+    margin: 0px 0px 7px !important;
+    font-size: 11px;
+    line-height: 12px !important;
+    font-weight: 600;
+}
+        .dateSmallIcon h2 {
+    color: #222;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
 }

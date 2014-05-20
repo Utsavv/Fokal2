@@ -14,9 +14,10 @@
 <asp:Content ID="centreTopArticle" ContentPlaceHolderID="centreTopArticle" runat="Server">
 
                                 <div class="article" id="event_details">
-                                                                                        <h2 class="header">
-                                                        <span class="itemprop" itemprop="name"><asp:ContentPlaceHolder ID="eventName" runat="server"></asp:ContentPlaceHolder></span>
-                                                    </h2> 
+                                                    <h1 class="header">
+                                                        <asp:ContentPlaceHolder ID="eventName" runat="server"></asp:ContentPlaceHolder>
+                                                    </h1> 
+                                    <h6><asp:ContentPlaceHolder ID="eventType" runat="server"></asp:ContentPlaceHolder></h6>
                                                     <div class="infobar">
                                                         <a>
                                                             <asp:ContentPlaceHolder ID="eventDate" runat="server"></asp:ContentPlaceHolder>
@@ -71,13 +72,13 @@
                                                         <asp:ContentPlaceHolder ID="eventShortDescription" runat="server"></asp:ContentPlaceHolder>
                                                     </p>
                                                     <div class="txt-block" itemprop="Organizer">
-                                                        <h4 class="inline">Organizer:</h4>
+                                                        <h6 class="inline">Organizer:</h6>
                                                             
                                                                 <asp:ContentPlaceHolder ID="eventOrganizerName" runat="server"></asp:ContentPlaceHolder>
                                                             
                                                         </div>
                                                         <div class="txt-block" itemprop="Registration">
-                                                              <h4 class="inline">Registration:</h4>
+                                                              <h6 class="inline">Registration:</h6>
                                                             <a >
                                                                 <span class="itemprop" itemprop="RegistrationDetails"><asp:ContentPlaceHolder ID="eventRegistrationCharges" runat="server"></asp:ContentPlaceHolder></span>
                                                             </a>
@@ -94,7 +95,7 @@
  <%-- CENTRE BOTTOM THIRD UPCOMING/OTHER EVENTS--%> 
 <asp:Content ID="RegistrationDetails" runat="server" ContentPlaceHolderID="upcomingEvents" runat="server">
                                         
-                                    <h2>Description</h2>
+                                    <h5>Event Details</h5>
                                     <div class="">
                                         <%--<a>
                                             <img style="margin: 0px 7px 0px 0px;" src="http://ia.media-imdb.com/images/M/MV5BMTk5Mjg2ODg1MV5BMl5BanBnXkFtZTgwMTQwNDc1MTE@._V1._SY160_CR41,0,160,160_.jpg" alt="Tribeca Film Festival" border="0">
@@ -118,57 +119,72 @@
 
 <asp:Content ID="FeaturedEvents" ContentPlaceHolderID="featuredEvents" runat="server">
 
-                                 <div class="contactwidget">
-                                <h3 id="contactheadline">Registeration Details</h3>
-                                        <table>
-                                            <tbody>
-                                                <tr>
-                                                    <td width="48%" valign="top">
-                                                        <div class="contactItem">
+
+                                <h5 >Contact Details</h5>
+                                     <div style="margin-bottom:10px">
+                                         <h6>Venue</h6>
+                                            <div >
+                                                <small><asp:ContentPlaceHolder ID="eventAddressLine1" runat="server"></asp:ContentPlaceHolder></small>
+                                            </div>
+                                            <div >
+                                                <small><asp:ContentPlaceHolder ID="eventAddressLine2" runat="server"></asp:ContentPlaceHolder></small>
+                                            </div>
+                                            <div >
+                                                <small><asp:ContentPlaceHolder ID="eventAddressLandmark" runat="server"></asp:ContentPlaceHolder></small>
+                                            </div>
+                                            <div>
+                                                <small><asp:ContentPlaceHolder ID="eventAddressCityState" runat="server"></asp:ContentPlaceHolder></small>
+                                            </div>
+                                             <div >
+                                                <a><asp:ContentPlaceHolder ID="EventContactNumber" runat="server"></asp:ContentPlaceHolder></a>
+                                             </div>
+                                     </div>
+
+                                      <div >
+                                        <div style="background-color:#eee; margin:0 -10px; padding-left:10px; padding-bottom: 10px; padding-top: 10px">
+                                            <div>
+                                                <b>Web</b>:<asp:ContentPlaceHolder ID="vendorWebPage" runat="server"></asp:ContentPlaceHolder>
+                                            </div>
+                                             <div >
+                                                <b>Email</b>: <asp:ContentPlaceHolder ID="vendorEmail" runat="server"></asp:ContentPlaceHolder>
+                                            </div>
+                                          </div>
+
+                                          <div style="margin-bottom:10px">
+                                            <h6>Social</h6>
+                                         
+                                         
+                                            <div >
+                                                <asp:ContentPlaceHolder ID="vendorFacebookPage" runat="server"></asp:ContentPlaceHolder>
+                                            </div>
+                                          
+                                            <div >
+                                                <asp:ContentPlaceHolder ID="vendorGooglePage" runat="server"></asp:ContentPlaceHolder>
+                                            </div>
+                                          
+                                               
+                                        </div>
+                                          </div>
+                                        <div style="background-color:#eee; margin:0 -10px; padding-left:10px; padding-bottom: 10px; padding-top: 10px">
+                                            <h6>Register Now!</h6>
                                                             <div class="headline">
                                                                 <p><asp:ContentPlaceHolder ID="registrationHowTo" runat="server"></asp:ContentPlaceHolder></p>
                                                             </div>
 
-                                                         </div>
-                                                        <div class="contactItem">
+                                                         
                                                             <div class="headline">
-                                                                <a><asp:ContentPlaceHolder ID="registrationHowTo2" runat="server"></asp:ContentPlaceHolder></a>
+                                                                <a><asp:ContentPlaceHolder ID="ContactPerson" runat="server"></asp:ContentPlaceHolder></a>
                                                             </div>
-                                                        </div>
+                                                        <div >
+                                                <a><asp:ContentPlaceHolder ID="vendorContactNumber" runat="server"></asp:ContentPlaceHolder></a>
+                                             </div>
+                                        </div>                                      
 
-                                                    </td>
-                                                    <td>&nbsp;</td>
-                                                    <td width="48%" valign="top" style="border-left:1px dotted #D5D5D5; padding-left:7px;">
-                                                    <div class="contactItem">
-                                                        <h4 class="inline">Venue</h4>
-                                                    </div>
-                                                    <div class="contactItem">
-                                                        <div class="contactItem">
-                                                            <div class="headline">
-                                                                <a><asp:ContentPlaceHolder ID="eventAddressLine1" runat="server"></asp:ContentPlaceHolder></a>
-                                                            </div>
-                                                            <div class="headline">
-                                                                <a><asp:ContentPlaceHolder ID="eventAddressLine2" runat="server"></asp:ContentPlaceHolder></a>
-                                                            </div>
-                                                            <div class="headline">
-                                                                <a><asp:ContentPlaceHolder ID="eventAddressLandmark" runat="server"></asp:ContentPlaceHolder></a>
-                                                            </div>
-                                                            <div class="headline">
-                                                                <a><asp:ContentPlaceHolder ID="eventAddressCityState" runat="server"></asp:ContentPlaceHolder></a>
-                                                            </div>
-                                                        </div>
-                                                        </div>
-                                                    </td>
-                                                </tr>
-                                       
-                                            </tbody>
-                                        </table>                                      
-                                    </div>
 
     
-                                    <div class="contactwidget">
+<%--                                    <div class="contactwidget" style="visibility:hidden">
 
-                                       <h3 id="H1">Contact the organizer</h3>
+                                       <h6 id="H1">Contact the organizer</h6>
                                         <table>
                                             <tbody>
                                                 <tr>
@@ -211,22 +227,43 @@
                                             </tbody>
                                         </table>                                      
 
-                                </div>
+                                </div>--%>
 
-                                    
-  
-
-                                    <br class="clear">&nbsp;
-                                    <br>
-                                    <div class="see-more">
-<%--                                    <a>
-                                        See all Events</a> »--%>
-                                        </div>
 
 
 </asp:Content>
 <asp:Content ID="EventContent" ContentPlaceHolderID="featuredPhotographers" runat="server">
+    <h5> Additional Details</h5>
       <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+    </div>
+    <div class="article">
+                                <div id="signup" style="background-color:#97bef5; padding-top:10px; padding-left: 10px">
+                                <h5>Stay Updated!</h5>
+                                <label for="mce-EMAIL" >Get Latest <b><asp:ContentPlaceHolder ID="SubscribeTo" runat="server"></asp:ContentPlaceHolder></b> in your Mailbox!</label>
+                                <table>
+                                    <tr>
+                                        <td>
+                                    <asp:TextBox ID="txtEmailAddress" runat="server" placeholder="email address" CssClass="email"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="txtEmailValidator" Display="Dynamic" ControlToValidate="txtEmailAddress" runat="server" ErrorMessage="*" ValidationGroup="SubscribeGroupBottom" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="correctEmailValidator1" Display="Dynamic" runat="server" ControlToValidate="txtEmailAddress" ErrorMessage="Please enter valid Email Address" ValidationGroup="SubscribeGroupBottom" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    </td>
+                                        <td>
+                                    <asp:DropDownList Id="txtSignupType1" runat="server" DataTextField="signupType" DataValueField="id" class="customertype">
+                                        <asp:ListItem Text="" Value="0">I am a...</asp:ListItem>
+                                        <asp:ListItem Text="Beginner Photographer" Value="1"></asp:ListItem>
+                                        <asp:ListItem Text="Amateur Photographer" Value="2"></asp:ListItem>
+                                        <asp:ListItem Text="Professional Photographer" Value="3"></asp:ListItem>
+                                        <asp:ListItem Text="Photography Course Provider" Value="4"></asp:ListItem>
+                                    </asp:DropDownList>
+                                </td>
+                                        <td>
+                                <div class="clear">
+                                    <asp:Button ID="btnSubscribe" runat="server" OnClick="btnSubscribe_Click1" Text="Subscribe" ValidationGroup="SubscribeGroupBottom" class="button"/>
+                                </div>
+                                        </td>
+                                        </tr>
+                                    </table>
+                            </div>
 </asp:Content>
 
 <%-- SIDEBAR --%>

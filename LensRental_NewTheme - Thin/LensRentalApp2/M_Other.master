@@ -21,15 +21,48 @@
 
                                     
                                   
-                                    <div class="">
+                                    <div class="mainContent">
                                         
                                        
                                             <asp:ContentPlaceHolder ID="mainContent" runat="server"></asp:ContentPlaceHolder>
                                         
-                                        <div class="see-more clear">
+                                        <%--<div class="see-more clear">--%>
                                             <asp:ContentPlaceHolder ID="shareBar" runat="server"></asp:ContentPlaceHolder>
-                                        </div>
+                                        <%--</div>--%>
                                     </div>
+
+                                </div>
+           <div class="article">
+
+                                    
+                                        <div id="signup" style="background-color:#97bef5; padding-top:10px; padding-left: 10px">
+                                <h5>Stay Updated!</h5>
+                                <label for="mce-EMAIL" >Get Latest <b><asp:ContentPlaceHolder ID="SubscribeTo" runat="server"></asp:ContentPlaceHolder></b> in your Mailbox!</label>
+                                <table>
+                                    <tr>
+                                        <td>
+                                    <asp:TextBox ID="txtEmailAddress" runat="server" placeholder="email address" CssClass="email"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="txtEmailValidator" Display="Dynamic" ControlToValidate="txtEmailAddress" runat="server" ErrorMessage="*" ValidationGroup="SubscribeGroupBottom" ForeColor="Red"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="correctEmailValidator1" Display="Dynamic" runat="server" ControlToValidate="txtEmailAddress" ErrorMessage="Please enter valid Email Address" ValidationGroup="SubscribeGroupBottom" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red"></asp:RegularExpressionValidator>
+                                    </td>
+                                        <td>
+                                    <asp:DropDownList Id="txtSignupType1" runat="server" DataTextField="signupType" DataValueField="id" class="customertype">
+                                        <asp:ListItem Text="" Value="0">I am a...</asp:ListItem>
+                                        <asp:ListItem Text="Beginner Photographer" Value="1"></asp:ListItem>
+                                        <asp:ListItem Text="Amateur Photographer" Value="2"></asp:ListItem>
+                                        <asp:ListItem Text="Professional Photographer" Value="3"></asp:ListItem>
+                                        <asp:ListItem Text="Photography Course Provider" Value="4"></asp:ListItem>
+                                    </asp:DropDownList>
+                                </td>
+                                        <td>
+                                <div class="clear">
+                                    <asp:Button ID="btnSubscribe" runat="server" OnClick="btnSubscribe_Click1" Text="Subscribe" ValidationGroup="SubscribeGroupBottom" class="button"/>
+                                </div>
+                                        </td>
+                                        </tr>
+                                    </table>
+                            </div>
+
 
                                 </div>
         <div class="article">
