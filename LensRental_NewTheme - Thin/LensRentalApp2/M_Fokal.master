@@ -24,7 +24,7 @@
     <script type="text/javascript" src="/js/jquery.fancybox.pack.js"></script>
     <script type='text/javascript' src='/js/login.js'></script>
     
-<%--<script type="text/javascript" src="/js/jquery.js"></script>--%>
+<script type="text/javascript" src="/js/jquery.js"></script>
  <script type="text/javascript" src="/js/jRating.jquery.js"></script> 
      <script type="text/javascript" src="/js/jRating.jquery.min.js"></script> 
     <%-- GOGLE ANALYTICS --%>
@@ -91,8 +91,9 @@
                     <div id="supertab">
                       
                         <span id="home_img_holder">
-                            <asp:HyperLink ID="home" runat="server" NavigateUrl="~/Home.aspx"><img alt="Home | Fokal.in" src="http://www.fokal.in/images/logo-v2.jpg" /></asp:HyperLink>
+                            <asp:HyperLink ID="home" runat="server" NavigateUrl="~/Home.aspx"><img style="width:200px" alt="Home | Fokal.in" src="./images/logo-final-beta.png" /></asp:HyperLink>
                         </span>
+                        
                     </div>
                     <div id="navbar">
 

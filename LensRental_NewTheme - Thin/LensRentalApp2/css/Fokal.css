@@ -434,7 +434,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, nav, sectio
     font-weight: normal;
     height: auto;
     line-height: normal;
-    width: auto;
+    width: 200px;
     margin-left: 20px;
 }
 #home_img {

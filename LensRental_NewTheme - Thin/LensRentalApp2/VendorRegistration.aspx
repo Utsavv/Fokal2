@@ -1,4 +1,13 @@
-﻿<%@ Page Title="Vendor Registration | Fokal.in" Language="C#" MasterPageFile="~/m_other.master" AutoEventWireup="true" CodeFile="VendorRegistration.aspx.cs" Inherits="Contact" EnableEventValidation="false" EnableViewState="true"%>
+﻿<%@ Page 
+    Title="Vendor Registration | Fokal.in" 
+    Language="C#" 
+    MasterPageFile="~/m_other.master" 
+    AutoEventWireup="true" 
+    CodeFile="VendorRegistration.aspx.cs" 
+    Inherits="Contact" 
+    EnableEventValidation="false" 
+    EnableViewState="true"%>
+
 <asp:Content ID="headContent" ContentPlaceHolderID="headscript" runat="server">
     <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
 <script>
@@ -50,6 +59,7 @@
                         
                         states += "<option value=" + result.d[i].replace(" ","_") + ">" + result.d[i] + "</option>";
                         if (i == 0) {
+
                             $('#SelectedState').val(result.d[i].replace(" ", "_"));
                             fillCities(result.d[i]);
                         }

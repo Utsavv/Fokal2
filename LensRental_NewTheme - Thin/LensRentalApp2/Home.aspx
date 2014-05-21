@@ -4,7 +4,7 @@
 </asp:Content>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="fokalDescription" runat="server">
-Fokal.in  provides you a platform to find relevant information during your photography journey! Discover photography courses, photo-walks, photo-tours and events near you. Find the service providers around your city. Click and Grow!!
+Fokal.in  provides a platform to find relevant information during your photography journey! Discover photography courses, photo-walks, photo-tours and events in your city. Find the service providers around your city. Click and sGrow!!
 </asp:Content>
 
 <asp:Content ID="EventLinkImage1" ContentPlaceHolderID="EventLinkImage1" runat="server">

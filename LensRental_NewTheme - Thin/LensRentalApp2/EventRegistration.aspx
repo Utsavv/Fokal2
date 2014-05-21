@@ -1,22 +1,33 @@
-﻿<%@ Page Title="Event Registration | Fokal.in" Language="C#" MasterPageFile="~/m_other.master" AutoEventWireup="true" CodeFile="EventRegistration.aspx.cs" EnableEventValidation="false" Inherits="Contact" %>
-<%--<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>--%>
+﻿<%@ Page 
+    Title="Event Registration | Fokal.in" 
+    Language="C#" 
+    MasterPageFile="~/m_other.master" 
+    AutoEventWireup="true" 
+    CodeFile="EventRegistration.aspx.cs" 
+    EnableEventValidation="false" 
+    Inherits="Contact"
+    EnableViewState="true"
+     %>
+
 <asp:Content ID="headscript" ContentPlaceHolderID="headscript" runat="Server">
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css" />
- <%-- <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>--%>
 
   <script>
+      
       $(function () {
+          alert("1");
           $("input[id$=txtEventStartDate]").datepicker({
               changeMonth: true,
               changeYear: true,
               dateFormat: 'dd/mm/yy'
           });
+          alert("1");
           $("input[id$=txtEventEndDate]").datepicker({
               changeMonth: true,
               changeYear: true,
               dateFormat: 'dd/mm/yy'
           });
+          alert("1");
           $("input[id$=EventRegistrationLastDate]").datepicker({
               changeMonth: true,
               changeYear: true,
@@ -26,7 +37,8 @@
           fillStates();
       });
 
-    function ValidateServiceList(source, args) {
+      function ValidateServiceList(source, args) {
+          
         var chkListModules = document.getElementById('<%=DDServiceType.ClientID %>');
         var chkListinputs = chkListModules.getElementsByTagName("input");
         for (var i = 0; i < chkListinputs.length; i++) {
@@ -40,7 +52,7 @@
 
 
     function fillStates() {
-
+        
         $('#ddlStates').change(function () {
             var val = $(this).val();
             $('#SelectedState').val(val);
@@ -64,17 +76,19 @@
                 alert("Request: " + XMLHttpRequest.toString() + "\n\nStatus: " + textStatus + "\n\nError: " + errorThrown);
             },
             success: function (result) {
+                alert("inside");
                 if (result.hasOwnProperty("d")) {
                     var states = "";
                     for (var i = 0; i < result.d.length; i++) {                        
                         states += "<option value=" + result.d[i].replace(" ", "_") + ">" + result.d[i] + "</option>";
+                        
                         if (i == 0) {
                             $('#SelectedState').val(result.d[i].replace(" ", "_"));
                             fillCities(result.d[i]);
                         }
                     }
                     
-                    $('#ddlStates').html(states);
+                    $('#<%=ddlStates.ClientID %>').html(states);
                     
 
                 }
@@ -277,7 +291,7 @@
                                 <asp:ListItem Text="Yes" Value=1></asp:ListItem>
                             </asp:DropDownList>
                            
-                                <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>                             <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator2" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>                            <%--<asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                                
                         </td>
                         </tr>
                     <tr>
