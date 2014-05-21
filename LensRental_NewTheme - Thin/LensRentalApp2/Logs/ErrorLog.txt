@@ -617,3 +617,7 @@ DEBUG 2014-05-17 19:35:31,994 Utility                WriteDebugData     - Could 
 DEBUG 2014-05-17 19:35:52,203 Utility                WriteDebugData     - Could not find stored procedure 'pGetVendorPageData'.
 
 DEBUG 2014-05-17 19:36:17,960 Utility                WriteDebugData     - Could not find stored procedure 'pGetVendorPageData'.
+
+INFO  2014-05-20 22:32:10,631 Utility                WriteInfo          - entries@fgfvvvg.in Success
+
+INFO  2014-05-20 22:43:25,232 Utility                WriteInfo          - entries2@betterphotography.in Success

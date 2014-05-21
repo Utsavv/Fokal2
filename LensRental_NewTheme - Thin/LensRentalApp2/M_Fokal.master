@@ -205,8 +205,8 @@
                                                 <b>Increase your business </b> 
                                                 <p>✓ Reach more Photography Aspirants</p>
                                                 <p>✓ Connect with Photographers</p>
-                                                        <asp:HyperLink runat="server" ID="lnkVendorRegistrationForm" NavigateUrl="~/VendorRegistration.aspx">Register & </asp:HyperLink>
-                                                        <asp:HyperLink runat="server" ID="lnkEventRegistrationForm" NavigateUrl="~/EventRegistration.aspx">Create your Event Page</asp:HyperLink>
+                                                        <asp:HyperLink runat="server" ID="lnkVendorRegistrationForm" NavigateUrl="~/VendorRegistration.aspx"><b>Register </b></asp:HyperLink>& Create your 
+                                                        <asp:HyperLink runat="server" ID="lnkEventRegistrationForm" NavigateUrl="~/EventRegistration.aspx"><b>Event Page</b></asp:HyperLink>
                                                 
                                                 <p>No strings attached a.k.a Free!!</p>   
                                             </div>

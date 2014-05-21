@@ -71,7 +71,10 @@ public partial class Contact : System.Web.UI.Page
             txtVendorLongDescription.Text,
             txtVendorWebPage.Text,
             txtVendorFacebookPage.Text,
-            txtVendorGplusPage.Text
+            txtVendorGplusPage.Text,
+            null, //Area of Operation
+            null, //LinkedIn
+            txtVendorTwitterPage.Text
             );
         if (InquiryResult == 1)
         {

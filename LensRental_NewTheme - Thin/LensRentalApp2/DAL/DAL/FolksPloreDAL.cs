@@ -607,7 +607,8 @@ namespace DAL
            string FacebookLink = null,
            string GooglePlusLink = null,
            string AreaOfOperation = null,
-           string LinkedInLink = null
+           string LinkedInLink = null,
+            string TwitterLink = null
 
                )
         {
@@ -644,7 +645,7 @@ namespace DAL
                 //,@PicasaLink varchar(200)=NULL
                 //,@Px500Link varchar(200)=NULL
                 cmd.Parameters.Add(new SqlParameter("@LinkedInLink", LinkedInLink));
-                //,@TwitterLink varchar(200)=NULL
+                cmd.Parameters.Add(new SqlParameter("@TwitterLink", TwitterLink));
                 //,@BbmPin varchar(20)=NULL
                 cmd.Parameters.Add(new SqlParameter("@GooglePlusLink", GooglePlusLink));
                 //,@BlogLink varchar(200)=NULL

@@ -295,6 +295,15 @@
                            <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
                         </td>
                     </tr>
+                        <tr>
+                        <td >
+                            <label for="VendorTwitterPage">Twitter</label>
+                        </td>
+                        <td>
+                            <asp:TextBox ID="txtVendorTwitterPage" runat="server" CssClass="eventinput-style" ></asp:TextBox>
+                           <%-- <asp:RequiredFieldValidator ID="RequiredFieldValidator3" Display="Dynamic" ControlToValidate="txtRegisteredEmail" runat="server" ErrorMessage="*" ValidationGroup="InquiryGroup" ForeColor="Red"></asp:RequiredFieldValidator>--%>
+                        </td>
+                    </tr>
                     <tr>
                         <td >
                             <label for="VendorGplusPage">Google+ Page</label>
